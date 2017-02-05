@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Mooplog - Uncategorized</title><link href="https://www.moop.org.uk/" rel="alternate"></link><link href="https://www.moop.org.uk/feeds/uncategorized.atom.xml" rel="self"></link><id>https://www.moop.org.uk/</id><updated>2013-12-12T21:21:00+00:00</updated><entry><title>STOMP STOMP STOMP STOMP</title><link href="https://www.moop.org.uk/stomp-stomp-stomp-stomp.html" rel="alternate"></link><published>2013-12-12T21:21:00+00:00</published><updated>2013-12-12T21:21:00+00:00</updated><author><name>moop</name></author><id>tag:www.moop.org.uk,2013-12-12:/stomp-stomp-stomp-stomp.html</id><summary type="html">&lt;p&gt;I've been a bit quiet on here for a while, and slacking on the PCB
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Mooplog - Uncategorized</title><link href="https://mooped.github.io/" rel="alternate"></link><link href="https://mooped.github.io/feeds/uncategorized.atom.xml" rel="self"></link><id>https://mooped.github.io/</id><updated>2013-12-12T21:21:00+00:00</updated><entry><title>STOMP STOMP STOMP STOMP</title><link href="https://mooped.github.io/stomp-stomp-stomp-stomp.html" rel="alternate"></link><published>2013-12-12T21:21:00+00:00</published><updated>2013-12-12T21:21:00+00:00</updated><author><name>moop</name></author><id>tag:mooped.github.io,2013-12-12:/stomp-stomp-stomp-stomp.html</id><summary type="html">&lt;p&gt;I've been a bit quiet on here for a while, and slacking on the PCB
 milling experiments I've been meaning to do, though I have made some
 progress on that front.&lt;/p&gt;
 &lt;p&gt;Anyway, here's what I got sidetracked by building:&lt;/p&gt;
@@ -29,7 +29,7 @@ width=&amp;quot;2592&amp;quot;]&lt;a class="reference external" href="http://www
 &lt;/div&gt;
 &lt;p&gt;I'll hopefully post a full making of post on the hexapod soon, but for
 now I just wanted to post a video of some stomping!&lt;/p&gt;
-</content></entry><entry><title>The Minigun (A mini Super Gun)</title><link href="https://www.moop.org.uk/the-minigun-a-mini-super-gun.html" rel="alternate"></link><published>2013-11-24T14:54:00+00:00</published><updated>2013-11-24T14:54:00+00:00</updated><author><name>charlie</name></author><id>tag:www.moop.org.uk,2013-11-24:/the-minigun-a-mini-super-gun.html</id><summary type="html">&lt;p&gt;&lt;em&gt;Guest post by Charlie again as he continues his quest to take over
+</content></entry><entry><title>The Minigun (A mini Super Gun)</title><link href="https://mooped.github.io/the-minigun-a-mini-super-gun.html" rel="alternate"></link><published>2013-11-24T14:54:00+00:00</published><updated>2013-11-24T14:54:00+00:00</updated><author><name>charlie</name></author><id>tag:mooped.github.io,2013-11-24:/the-minigun-a-mini-super-gun.html</id><summary type="html">&lt;p&gt;&lt;em&gt;Guest post by Charlie again as he continues his quest to take over
 Moop's blog with his super long posts:&lt;/em&gt;&lt;/p&gt;
 &lt;div class="section" id="tl-dr"&gt;
 &lt;h2&gt;TL;DR?&lt;/h2&gt;
@@ -218,7 +218,7 @@ don't use this in my home-brew controllers so I left it unconnected but
 if you did want to use AES controllers you may have to solder a jumper
 wire between these points.&lt;/p&gt;
 &lt;/div&gt;
-</content></entry><entry><title>Lightwave RF Mood Controller Hack</title><link href="https://www.moop.org.uk/lightwaverfmoodcontrollerhack.html" rel="alternate"></link><published>2013-08-25T21:46:00+01:00</published><updated>2013-08-25T21:46:00+01:00</updated><author><name>charlie</name></author><id>tag:www.moop.org.uk,2013-08-25:/lightwaverfmoodcontrollerhack.html</id><summary type="html">&lt;p&gt;It's me, Charlie again, continuing with my scheme to take over Moop's
+</content></entry><entry><title>Lightwave RF Mood Controller Hack</title><link href="https://mooped.github.io/lightwaverfmoodcontrollerhack.html" rel="alternate"></link><published>2013-08-25T21:46:00+01:00</published><updated>2013-08-25T21:46:00+01:00</updated><author><name>charlie</name></author><id>tag:mooped.github.io,2013-08-25:/lightwaverfmoodcontrollerhack.html</id><summary type="html">&lt;p&gt;It's me, Charlie again, continuing with my scheme to take over Moop's
 blog with nothing but home automation articles.&lt;/p&gt;
 &lt;p&gt;Readers of this blog will know that I've been playing around with
 LightwaveRF's home automation stuff a lot recently. Mainly setting up
@@ -277,7 +277,7 @@ one of the three lines low or keep them all high to select device 4.&lt;/p&gt;
 &lt;p&gt;As always the source for the Pi program can be downloaded
 at&amp;nbsp;&lt;a class="reference external" href="http://www.moop.org.uk/wp-content/uploads/2013/08/remote.c"&gt;Lightwave Hack
 Source&lt;/a&gt;.&lt;/p&gt;
-</content></entry><entry><title>Siri, control my lights</title><link href="https://www.moop.org.uk/siri-control-my-lights.html" rel="alternate"></link><published>2013-08-15T20:08:00+01:00</published><updated>2013-08-15T20:08:00+01:00</updated><author><name>charlie</name></author><id>tag:www.moop.org.uk,2013-08-15:/siri-control-my-lights.html</id><summary type="html">&lt;p&gt;Once again, it's not moop but Charlie, so we're talking home automation
+</content></entry><entry><title>Siri, control my lights</title><link href="https://mooped.github.io/siri-control-my-lights.html" rel="alternate"></link><published>2013-08-15T20:08:00+01:00</published><updated>2013-08-15T20:08:00+01:00</updated><author><name>charlie</name></author><id>tag:mooped.github.io,2013-08-15:/siri-control-my-lights.html</id><summary type="html">&lt;p&gt;Once again, it's not moop but Charlie, so we're talking home automation
 instead of planes.&lt;/p&gt;
 &lt;p&gt;My last video on home automation turned out to be surprisingly popular!
 So, to celebrate I've done a quick follow up on the same idea. One thing
@@ -354,7 +354,7 @@ possibility anyone would try.&lt;/p&gt;
 a go at implementing their own system.&lt;/p&gt;
 &lt;p&gt;If you want to look at my code, you can get it by clicking
 this&amp;nbsp;&lt;a class="reference external" href="http://www.moop.org.uk/wp-content/uploads/2013/08/siriproxy-lightwave.zip"&gt;siriproxy-lightwave&lt;/a&gt;.&lt;/p&gt;
-</content></entry><entry><title>Space saving wall art</title><link href="https://www.moop.org.uk/space-saving-wall-art.html" rel="alternate"></link><published>2013-02-02T22:44:00+00:00</published><updated>2013-02-02T22:44:00+00:00</updated><author><name>moop</name></author><id>tag:www.moop.org.uk,2013-02-02:/space-saving-wall-art.html</id><summary type="html">&lt;p&gt;I seem to have too many model planes nowadays, and storage was fast
+</content></entry><entry><title>Space saving wall art</title><link href="https://mooped.github.io/space-saving-wall-art.html" rel="alternate"></link><published>2013-02-02T22:44:00+00:00</published><updated>2013-02-02T22:44:00+00:00</updated><author><name>moop</name></author><id>tag:mooped.github.io,2013-02-02:/space-saving-wall-art.html</id><summary type="html">&lt;p&gt;I seem to have too many model planes nowadays, and storage was fast
 becoming a problem. During a bout of boredom, I dug up some screws and
 hooks and attached them to the wall above my desk. Now they look cool,
 and I have loads of extra space!&lt;/p&gt;
