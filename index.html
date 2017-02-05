@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Mooplog</title>
+        <link rel="stylesheet" href="https://www.moop.org.uk/theme/css/main.css" />
+        <link href="https://www.moop.org.uk/index.php/feed" type="application/atom+xml" rel="alternate" title="Mooplog Atom Feed" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="https://www.moop.org.uk/">Mooplog </a></h1>
+                <nav><ul>
+                    <li><a href="https://www.moop.org.uk/category/arcade-controllers-things.html">Arcade Controllers, Things</a></li>
+                    <li><a href="https://www.moop.org.uk/category/foobot-games.html">Foobot, Games</a></li>
+                    <li><a href="https://www.moop.org.uk/category/games-loot-of-the-forest-ludum-dare.html">Games, Loot of the Forest, Ludum Dare</a></li>
+                    <li><a href="https://www.moop.org.uk/category/hi-fly-maiden-flights-things.html">Hi-Fly, Maiden Flights, Things</a></li>
+                    <li><a href="https://www.moop.org.uk/category/hi-fly-things.html">Hi-Fly, Things</a></li>
+                    <li><a href="https://www.moop.org.uk/category/hot-wire-things.html">Hot Wire, Things</a></li>
+                    <li><a href="https://www.moop.org.uk/category/maiden-flights-things-tricopter.html">Maiden Flights, Things, TriCopter</a></li>
+                    <li><a href="https://www.moop.org.uk/category/misc.html">misc</a></li>
+                    <li><a href="https://www.moop.org.uk/category/pcb-drilling-jig-things.html">PCB Drilling Jig, Things</a></li>
+                    <li><a href="https://www.moop.org.uk/category/rc2014-retrochallenge.html">RC2014, Retrochallenge</a></li>
+                    <li><a href="https://www.moop.org.uk/category/rc2014-things.html">RC2014, Things</a></li>
+                    <li><a href="https://www.moop.org.uk/category/shapeoko-speed-twin-things.html">ShapeOko, Speed Twin, Things</a></li>
+                    <li><a href="https://www.moop.org.uk/category/shapeoko-speed-twin-things-unholy-chalupa.html">ShapeOko, Speed Twin, Things, Unholy Chalupa</a></li>
+                    <li><a href="https://www.moop.org.uk/category/shapeoko-things.html">ShapeOko, Things</a></li>
+                    <li><a href="https://www.moop.org.uk/category/speed-twin-things.html">Speed Twin, Things</a></li>
+                    <li><a href="https://www.moop.org.uk/category/things.html">Things</a></li>
+                    <li><a href="https://www.moop.org.uk/category/things-unholy-chalupa.html">Things, Unholy Chalupa</a></li>
+                    <li><a href="https://www.moop.org.uk/category/uncategorized.html">Uncategorized</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="https://www.moop.org.uk/retrochallenge-201610-one-bodge-to-fix-them-all.html">RetroChallenge 2016/10 - One bodge to fix them all</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2016-11-02T21:35:00+00:00">
+                Published: Wed 02 November 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://www.moop.org.uk/author/moop.html">moop</a>
+        </address>
+<p>In <a href="https://www.moop.org.uk/category/rc2014-retrochallenge.html">RC2014, Retrochallenge</a>.</p>
+
+</footer><!-- /.post-info --><p>It's two days past the deadline, but I found an extra moment to work on
+my SD card interface today and I have it working!</p>
+<p>I switched the clock output to the SD card from SH_CLK to /SH_CLK to
+move the rising edge of the clock to a point where the output from the
+shift register is stable, and now it works nicely.</p>
+<p>[caption id=&quot;attachment_1031&quot; align=&quot;alignnone&quot; width=&quot;1024&quot;]<a class="reference external" href="http://www.moop.org.uk/index.php/2016/11/02/retrochallenge-201610-one-bodge-to-fix-them-all/img_20161102_210914-jpg-sm/"><img alt="It's always a one character Fix!" class="size-full wp-image-1031" src="http://www.moop.org.uk/wp-content/uploads/2016/11/IMG_20161102_210914.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /></a> It's always a one character Fix![/caption]</p>
+<p>This eliminated the critical timing that the Bus Pirate was have gotten
+away with but my circuit did not.</p>
+<p>[caption id=&quot;attachment_1027&quot; align=&quot;alignnone&quot; width=&quot;1024&quot;]<a class="reference external" href="http://www.moop.org.uk/index.php/2016/11/02/retrochallenge-201610-one-bodge-to-fix-them-all/img_20161102_200157-jpg-sm/"><img alt="0x40" class="size-full wp-image-1027" src="http://www.moop.org.uk/wp-content/uploads/2016/11/IMG_20161102_200157.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /></a>
+0x40[/caption]</p>
+<p>[caption id=&quot;attachment_1028&quot; align=&quot;alignnone&quot; width=&quot;1024&quot;]<a class="reference external" href="http://www.moop.org.uk/index.php/2016/11/02/retrochallenge-201610-one-bodge-to-fix-them-all/img_20161102_200226-jpg-sm/"><img alt="0x95 and a response" class="size-full wp-image-1028" src="http://www.moop.org.uk/wp-content/uploads/2016/11/IMG_20161102_200226.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /></a> 0x95 and a response (0x01)[/caption]</p>
+<p>[caption id=&quot;attachment_1029&quot; align=&quot;alignnone&quot; width=&quot;1024&quot;]<a class="reference external" href="http://www.moop.org.uk/index.php/2016/11/02/retrochallenge-201610-one-bodge-to-fix-them-all/img_20161102_200335-jpg-sm/"><img alt="SPI Decoder" class="size-full wp-image-1029" src="http://www.moop.org.uk/wp-content/uploads/2016/11/IMG_20161102_200335.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /></a> SPI Decoder[/caption]</p>
+<p>Once I had this working I checked that the 74HCT595 was clocking the
+data coming back from the SD correctly. Since my test program soft
+resets the rc2014 when it finishes I was able to check this from BASIC.</p>
+<p>[caption id=&quot;attachment_1030&quot; align=&quot;alignnone&quot; width=&quot;1024&quot;]<a class="reference external" href="http://www.moop.org.uk/index.php/2016/11/02/retrochallenge-201610-one-bodge-to-fix-them-all/img_20161102_200739-jpg-sm/"><img alt="Reading back the response" class="size-full wp-image-1030" src="http://www.moop.org.uk/wp-content/uploads/2016/11/IMG_20161102_200739.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /></a> Reading back the response[/caption]</p>
+<p>Now that this is working I need to write a (less messy) program to fully
+initialise the SD card and switch to fast mode. Once that is done I will
+verify the schematic by rebuilding the circuit on stripboard from the
+schematic, before designing a proper PCB for the circuit including a
+proper SD card socket.</p>
+<p>There are also a couple of potential minor hardware improvements to
+investigate:</p>
+<ul class="simple">
+<li>As noted in my last post that it's likely that I can get rid of the
+second 74HCT374 and switch to just using the simple edge trigger
+circuit.</li>
+<li>Fast mode should be pretty optimal when used with the Z80 OTIR
+instruction to write many bytes of data from memory straight to an IO
+port, however for reading data from the card I currently need to
+alternate writing 0xff and then read the result back with with an IN
+instruction. I can use the INI instruction to automatically keep
+track of where the read bytes should go in memory but I can't use the
+INIR instruction which would be faster. Some extra logic to
+(optionally) trigger a write after a read would allow me to use INIR
+to read blocks of data with the implicit write priming the input
+shift register with the next byte after each read.</li>
+</ul>
+<p>Finally, here's the final schematic:</p>
+<p>[caption id=&quot;attachment_1032&quot; align=&quot;alignnone&quot; width=&quot;1488&quot;]<a class="reference external" href="http://www.moop.org.uk/index.php/2016/11/02/retrochallenge-201610-one-bodge-to-fix-them-all/z80_sd_interface-sch-2/"><img alt="Final Schematic" class="size-full wp-image-1032" src="http://www.moop.org.uk/wp-content/uploads/2016/11/z80_sd_interface.sch_.png" style="width: 1488px; height: 1052px;" /></a> Final Schematic[/caption]</p>
+<p>Even though I didn't quite get it done within the deadline I can call
+this RetroChallenge a success (it was definitely good motivation).</p>
+<p>For bonus points I managed to use exactly all the gates in the 7400 quad
+NAND and 7404 hex inverter that make up my glue logic.</p>
+<p>Now it's probably time to start reading the CP/M BIOS Alteration Guide!</p>
+                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://www.moop.org.uk/retrochallenge-201610-tools.html" rel="bookmark"
+                           title="Permalink to Retrochallenge 2016/10 - Tools">Retrochallenge 2016/10 - Tools</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-11-01T20:00:00+00:00">
+                Published: Tue 01 November 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://www.moop.org.uk/author/moop.html">moop</a>
+        </address>
+<p>In <a href="https://www.moop.org.uk/category/rc2014-retrochallenge.html">RC2014, Retrochallenge</a>.</p>
+
+</footer><!-- /.post-info -->                <p>During <a class="reference external" href="http://retrochallenge.net/">Retro Challenge</a> I needed a way
+to run machine code on my rc2014, as BASIC was incapable of the
+performance needed to initialise the SD card in bitbang mode.</p>
+<p>I didn't (and still don't) have an EEPROM burner when I first got my
+rc2014, and although the version of …</p>
+                <a class="readmore" href="https://www.moop.org.uk/retrochallenge-201610-tools.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://www.moop.org.uk/retrochallenge-201610-deadline.html" rel="bookmark"
+                           title="Permalink to Retrochallenge 2016/10 - Deadline">Retrochallenge 2016/10 - Deadline</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-10-31T23:08:00+00:00">
+                Published: Mon 31 October 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://www.moop.org.uk/author/moop.html">moop</a>
+        </address>
+<p>In <a href="https://www.moop.org.uk/category/rc2014-retrochallenge.html">RC2014, Retrochallenge</a>.</p>
+
+</footer><!-- /.post-info -->                <p>I'm at my deadline for RetroChallenge 2016/10 and unfortunately I'm
+tantalisingly close to having something that works, but not quite there.</p>
+<p>I have the bitbang/slow mode working and generating pulses that match
+the output I get from my Bus Pirate when using it to talk to the SD …</p>
+                <a class="readmore" href="https://www.moop.org.uk/retrochallenge-201610-deadline.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://www.moop.org.uk/retrochallenge-201610-state-of-play.html" rel="bookmark"
+                           title="Permalink to Retrochallenge 2016/10 - State of Play">Retrochallenge 2016/10 - State of Play</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-10-31T17:11:00+00:00">
+                Published: Mon 31 October 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://www.moop.org.uk/author/moop.html">moop</a>
+        </address>
+<p>In <a href="https://www.moop.org.uk/category/rc2014-retrochallenge.html">RC2014, Retrochallenge</a>.</p>
+
+</footer><!-- /.post-info -->                <p>As it stands my RetroChallenge entry is close to working, but not quite
+there.</p>
+<p>The fast mode appears to work and I was able to decode the SPI packets
+sent to the SD card with
+<a class="reference external" href="http://dangerousprototypes.com/blog/open-logic-sniffer/">OpenLogicSniffer's</a>
+SPI analyser module.</p>
+<p>[caption id=&quot;attachment_996&quot; align=&quot;alignnone&quot; width=&quot;1024&quot;]<a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/30/retrochallenge-201610-breadboard-fun/img_20161030_211120-jpg-sm/"><img alt="Decoded Messages" class="size-full wp-image-996" src="http://www.moop.org.uk/wp-content/uploads/2016/10/IMG_20161030_211120.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /></a> Decoded Messages[/caption]</p>
+<p>The …</p>
+                <a class="readmore" href="https://www.moop.org.uk/retrochallenge-201610-state-of-play.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://www.moop.org.uk/retrochallenge-201610-breadboard-fun.html" rel="bookmark"
+                           title="Permalink to Retrochallenge 2016/10 - Breadboard Fun">Retrochallenge 2016/10 - Breadboard Fun</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-10-30T23:13:00+00:00">
+                Published: Sun 30 October 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://www.moop.org.uk/author/moop.html">moop</a>
+        </address>
+<p>In <a href="https://www.moop.org.uk/category/rc2014-things.html">RC2014, Things</a>.</p>
+
+</footer><!-- /.post-info -->                <p>Having finally found time to start breadboarding my SD card interface I
+first made sure that the edge trigger circuit I had tested in ModelSim
+would work when built with real components.</p>
+<p>An issue I had encountered previously when breadboarding RC2014
+peripherals was that if I wanted to disconnect the …</p>
+                <a class="readmore" href="https://www.moop.org.uk/retrochallenge-201610-breadboard-fun.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://www.moop.org.uk/retrochallenge-201610-due-diligence.html" rel="bookmark"
+                           title="Permalink to Retrochallenge 2016/10 - Due diligence">Retrochallenge 2016/10 - Due diligence</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-10-30T22:45:00+00:00">
+                Published: Sun 30 October 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://www.moop.org.uk/author/moop.html">moop</a>
+        </address>
+<p>In <a href="https://www.moop.org.uk/category/rc2014-retrochallenge.html">RC2014, Retrochallenge</a>.</p>
+
+</footer><!-- /.post-info -->                <p>To avoid the work done designing my SD interface being wasted I decided
+to verify the concept before going any further.</p>
+<p>I used my <a class="reference external" href="http://dangerousprototypes.com/docs/Bus_Pirate">Bus
+Pirate</a> to verify
+that the SD card I have would respond to the commands I expected using
+the protocol I expected.</p>
+<p>The Bus Pirate supports …</p>
+                <a class="readmore" href="https://www.moop.org.uk/retrochallenge-201610-due-diligence.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://www.moop.org.uk/retrochallenge-201610-building-retro-computers-with-modern-tools.html" rel="bookmark"
+                           title="Permalink to Retrochallenge 2016/10 - Building retro computers with modern tools">Retrochallenge 2016/10 - Building retro computers with modern tools</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-10-23T20:26:00+01:00">
+                Published: Sun 23 October 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://www.moop.org.uk/author/moop.html">moop</a>
+        </address>
+<p>In <a href="https://www.moop.org.uk/category/rc2014-retrochallenge.html">RC2014, Retrochallenge</a>.</p>
+
+</footer><!-- /.post-info -->                <p>I've been struggling for free time this month for poking around with
+breadboards and other fun things. To work around this, and still
+(hopefully) get my RetroChallenge entry done, I decided to use a
+simulator so I could work on it with my laptop whenever and wherever
+there was time …</p>
+                <a class="readmore" href="https://www.moop.org.uk/retrochallenge-201610-building-retro-computers-with-modern-tools.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://www.moop.org.uk/retrochallenge-201610-previous-version-and-problems.html" rel="bookmark"
+                           title="Permalink to Retrochallenge 2016/10 - Previous version and problems">Retrochallenge 2016/10 - Previous version and problems</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-10-15T13:51:00+01:00">
+                Published: Sat 15 October 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://www.moop.org.uk/author/moop.html">moop</a>
+        </address>
+<p>In <a href="https://www.moop.org.uk/category/rc2014-retrochallenge.html">RC2014, Retrochallenge</a>.</p>
+
+</footer><!-- /.post-info -->                <p>In my previous post I promised to show the previous implementation of my
+Z80 SD interface, and to run through the problems which I intend to fix
+this month.</p>
+<p>[caption id=&quot;attachment_966&quot; align=&quot;alignnone&quot; width=&quot;2048&quot;]<a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/15/retrochallenge-201610-previous-version-and-problems/z80-sd-interface-74hc299-schematic_2048/"><img alt="Original Z80 SD Interface Schematic" class="size-full wp-image-966" src="http://www.moop.org.uk/wp-content/uploads/2016/10/Z80-SD-Interface-74HC299-Schematic_2048.png" style="width: 2048px; height: 1448px;" /></a> Original Z80 SD Interface Schematic (Click
+to Zoom)[/caption]</p>
+<p>The 74138 (U1) in the …</p>
+                <a class="readmore" href="https://www.moop.org.uk/retrochallenge-201610-previous-version-and-problems.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://www.moop.org.uk/retrochallenge-201610.html" rel="bookmark"
+                           title="Permalink to Retrochallenge 2016/10">Retrochallenge 2016/10</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-10-05T20:04:00+01:00">
+                Published: Wed 05 October 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://www.moop.org.uk/author/moop.html">moop</a>
+        </address>
+<p>In <a href="https://www.moop.org.uk/category/rc2014-retrochallenge.html">RC2014, Retrochallenge</a>.</p>
+
+</footer><!-- /.post-info -->                <p>I decided to join in with
+` &lt;<a class="reference external" href="http://www.wickensonline.co.uk/retrochallenge-2012sc/">http://www.wickensonline.co.uk/retrochallenge-2012sc/</a>&gt;`__Retrochallenge
+2016/10 this October. I'm also hoping this will provide some incentive
+to write more posts and updates about other projects once I'm back into
+the swing of things!</p>
+<p>[caption id=&quot;attachment_952&quot; align=&quot;alignnone&quot; width=&quot;1024&quot;]<a class="reference external" href="http://www.moop.org.uk/?attachment_id=952"><img alt="RC2014 Z80 computer" class="size-full wp-image-952" src="http://www.moop.org.uk/wp-content/uploads/2016/10/rc2104.jpg" style="width: 1024px; height: 576px;" /></a> RC2014 …</p>
+                <a class="readmore" href="https://www.moop.org.uk/retrochallenge-201610.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://www.moop.org.uk/speedtwin-update.html" rel="bookmark"
+                           title="Permalink to SpeedTwin Update">SpeedTwin Update</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-08-02T19:59:00+01:00">
+                Published: Sun 02 August 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://www.moop.org.uk/author/moop.html">moop</a>
+        </address>
+<p>In <a href="https://www.moop.org.uk/category/speed-twin-things.html">Speed Twin, Things</a>.</p>
+
+</footer><!-- /.post-info -->                <p>Recently I've been focussed on finishing off my radio controlled model
+SpeedTwin ST-2. This guy is not the biggest model I've built in terms of
+wingspan, but it wins in terms of chunkiness and complexity. I started
+it in 2012, but it stalled at some point because everything was blocked …</p>
+                <a class="readmore" href="https://www.moop.org.uk/speedtwin-update.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://www.moop.org.uk/cnc-cut-control-horns.html" rel="bookmark"
+                           title="Permalink to CNC cut control horns">CNC cut control horns</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-05-04T19:35:00+01:00">
+                Published: Mon 04 May 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://www.moop.org.uk/author/moop.html">moop</a>
+        </address>
+<p>In <a href="https://www.moop.org.uk/category/shapeoko-speed-twin-things.html">ShapeOko, Speed Twin, Things</a>.</p>
+
+</footer><!-- /.post-info -->                <p>I was at a loose end during today's bank holiday so I decided to do a
+mini-project (with bonus recycling features) and make a set of control
+horns for my radio controlled SpeedTwin ST-2.</p>
+<p><a class="reference external" href="http://www.moop.org.uk/index.php/2015/05/04/cnc-cut-control-horns/drawing/"><img alt="Control horns in DraftSight" class="alignnone size-full wp-image-829" src="http://www.moop.org.uk/wp-content/uploads/2015/05/drawing.png" style="width: 1024px; height: 576px;" /></a></p>
+<p>After deciding on a sensible size for the control horns I drew them up
+in DraftSight …</p>
+                <a class="readmore" href="https://www.moop.org.uk/cnc-cut-control-horns.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://www.moop.org.uk/hot-wire-cutter.html" rel="bookmark"
+                           title="Permalink to Hot Wire Cutter">Hot Wire Cutter</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-03-15T21:58:00+00:00">
+                Published: Sun 15 March 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://www.moop.org.uk/author/moop.html">moop</a>
+        </address>
+<p>In <a href="https://www.moop.org.uk/category/hot-wire-things.html">Hot Wire, Things</a>.</p>
+
+</footer><!-- /.post-info -->                <p>While building my model SpeedTwin ST2 I needed to neatly cut some foam.
+Since I had a bunch of 6mm laser safe ply available and needed to cut
+some other bits the next day I decided to design my own hot wire cutter
+and cut the parts out at the …</p>
+                <a class="readmore" href="https://www.moop.org.uk/hot-wire-cutter.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://www.moop.org.uk/foobot.html" rel="bookmark"
+                           title="Permalink to Foobot">Foobot</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-03-15T21:25:00+00:00">
+                Published: Sun 15 March 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://www.moop.org.uk/author/moop.html">moop</a>
+        </address>
+<p>In <a href="https://www.moop.org.uk/category/foobot-games.html">Foobot, Games</a>.</p>
+
+</footer><!-- /.post-info -->                <p>Foobot is a project I started around November 2014. It's still a work in
+progress, but the time when I should have written it up is more than
+due.</p>
+<p><a class="reference external" href="http://www.moop.org.uk/index.php/2015/03/15/foobot/foobot_complete/"><img alt="Foobot" class="alignnone size-full wp-image-804" src="http://www.moop.org.uk/wp-content/uploads/2015/03/foobot_complete.jpg" style="width: 1024px; height: 576px;" /></a></p>
+<p>Foobot is robot table football game, with two teams of two tiny adorable
+robots. The robots are controlled by classic Nintendo …</p>
+                <a class="readmore" href="https://www.moop.org.uk/foobot.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://www.moop.org.uk/tricopter.html" rel="bookmark"
+                           title="Permalink to Tricopter">Tricopter</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2014-12-28T16:12:00+00:00">
+                Published: Sun 28 December 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://www.moop.org.uk/author/moop.html">moop</a>
+        </address>
+<p>In <a href="https://www.moop.org.uk/category/maiden-flights-things-tricopter.html">Maiden Flights, Things, TriCopter</a>.</p>
+
+</footer><!-- /.post-info -->                <p><a class="reference external" href="http://www.moop.org.uk/index.php/2014/12/28/tricopter/20140914_124309/"><img alt="Finished Tricopter" class="alignnone size-full wp-image-782" src="http://www.moop.org.uk/wp-content/uploads/2014/12/20140914_124309.jpg" style="width: 938px; height: 528px;" /></a></p>
+<p>I've been neglecting this blog recently due to various distractions but
+have several projects I want to write up. Around April I found myself
+with the urge to build a multicopter. In the end I settled on a
+tricopter design as it's a little unusual and because the wider angle …</p>
+                <a class="readmore" href="https://www.moop.org.uk/tricopter.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://www.moop.org.uk/eshapeoko-part-3-tidying-up.html" rel="bookmark"
+                           title="Permalink to eShapeOko Part 3 - Tidying up">eShapeOko Part 3 - Tidying up</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2014-09-13T22:53:00+01:00">
+                Published: Sat 13 September 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://www.moop.org.uk/author/moop.html">moop</a>
+        </address>
+<p>In <a href="https://www.moop.org.uk/category/shapeoko-things.html">ShapeOko, Things</a>.</p>
+
+</footer><!-- /.post-info -->                <p>Having had the ShapeOko for over a year now I've used it for quite a few
+projects, but nowhere near as many as I intended. Part of the reason for
+this is that the controller for the machine was still rather jury rigged
+so setting it up was a hassle …</p>
+                <a class="readmore" href="https://www.moop.org.uk/eshapeoko-part-3-tidying-up.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://www.moop.org.uk/simple-pcb-drilling-jig.html" rel="bookmark"
+                           title="Permalink to Simple PCB drilling jig">Simple PCB drilling jig</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2014-06-12T21:16:00+01:00">
+                Published: Thu 12 June 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://www.moop.org.uk/author/moop.html">moop</a>
+        </address>
+<p>In <a href="https://www.moop.org.uk/category/pcb-drilling-jig-things.html">PCB Drilling Jig, Things</a>.</p>
+
+</footer><!-- /.post-info -->                <p><a class="reference external" href="http://www.moop.org.uk/index.php/2014/06/12/simple-pcb-drilling-jig/20140612_165348/"><img alt="Drilling jig in action" class="alignnone size-full wp-image-709" src="http://www.moop.org.uk/wp-content/uploads/2014/06/20140612_165348.jpg" style="width: 935px; height: 526px;" /></a></p>
+<p>Recently I've been making a lot of printed circuit boards. One of the
+common problems I run into is aligning holes correctly when hand
+drilling. This is especially troublesome on boards with large arrays of
+pins, such as my hexapod controller (I promise I'll write that up
+soon!). A misaligned …</p>
+                <a class="readmore" href="https://www.moop.org.uk/simple-pcb-drilling-jig.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://www.moop.org.uk/arcade-control-panels.html" rel="bookmark"
+                           title="Permalink to Arcade Control Panels">Arcade Control Panels</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2014-02-17T23:20:00+00:00">
+                Published: Mon 17 February 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://www.moop.org.uk/author/moop.html">moop</a>
+        </address>
+<p>In <a href="https://www.moop.org.uk/category/arcade-controllers-things.html">Arcade Controllers, Things</a>.</p>
+
+</footer><!-- /.post-info -->                <p>Charlie's SuperGun had me inspired to build my own at some point, but I
+thought I'd start at the other end and build some appropriate
+controllers first. Partly as a birthday present to myself I decided to
+make a pair of arcade control panels.</p>
+<p>After a long time reading
+<a class="reference external" href="http://slagcoin.com/joystick.html">SlagCoin …</a></p>
+                <a class="readmore" href="https://www.moop.org.uk/arcade-control-panels.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://www.moop.org.uk/loot-of-the-forest.html" rel="bookmark"
+                           title="Permalink to Loot of the Forest">Loot of the Forest</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-12-15T23:18:00+00:00">
+                Published: Sun 15 December 2013
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://www.moop.org.uk/author/moop.html">moop</a>
+        </address>
+<p>In <a href="https://www.moop.org.uk/category/games-loot-of-the-forest-ludum-dare.html">Games, Loot of the Forest, Ludum Dare</a>.</p>
+
+</footer><!-- /.post-info -->                <p>I just finished participating in the 28th Ludum Dare game jam. This time
+around the theme was 'You Only Get One'.</p>
+<p>I chose to interpret this fairly literally as a game mechanic and came
+up with Loot of the Forest. It's a game about bribing forest guardian
+creatures as you …</p>
+                <a class="readmore" href="https://www.moop.org.uk/loot-of-the-forest.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://www.moop.org.uk/stomp-stomp-stomp-stomp.html" rel="bookmark"
+                           title="Permalink to STOMP STOMP STOMP STOMP">STOMP STOMP STOMP STOMP</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-12-12T21:21:00+00:00">
+                Published: Thu 12 December 2013
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://www.moop.org.uk/author/moop.html">moop</a>
+        </address>
+<p>In <a href="https://www.moop.org.uk/category/uncategorized.html">Uncategorized</a>.</p>
+
+</footer><!-- /.post-info -->                <p>I've been a bit quiet on here for a while, and slacking on the PCB
+milling experiments I've been meaning to do, though I have made some
+progress on that front.</p>
+<p>Anyway, here's what I got sidetracked by building:</p>
+<p>This is a small budget hexapod, using 18 of the cheapest …</p>
+                <a class="readmore" href="https://www.moop.org.uk/stomp-stomp-stomp-stomp.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://www.moop.org.uk/the-minigun-a-mini-super-gun.html" rel="bookmark"
+                           title="Permalink to The Minigun (A mini Super Gun)">The Minigun (A mini Super Gun)</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-11-24T14:54:00+00:00">
+                Published: Sun 24 November 2013
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://www.moop.org.uk/author/charlie.html">charlie</a>
+        </address>
+<p>In <a href="https://www.moop.org.uk/category/uncategorized.html">Uncategorized</a>.</p>
+
+</footer><!-- /.post-info -->                <p><em>Guest post by Charlie again as he continues his quest to take over
+Moop's blog with his super long posts:</em></p>
+<div class="section" id="tl-dr">
+<h2>TL;DR?</h2>
+<p>Then here's a video instead...</p>
+<p><a class="reference external" href="http://youtu.be/AGSSvxihYZs">http://youtu.be/AGSSvxihYZs</a></p>
+</div>
+<div class="section" id="preamble">
+<h2>Preamble</h2>
+<p>Recently I got into arcade boards. They can be found <em>reasonably</em>
+cheaply on eBay and as most use …</p></div>
+                <a class="readmore" href="https://www.moop.org.uk/the-minigun-a-mini-super-gun.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://www.moop.org.uk/eshapeoko-part-2-mechanicals.html" rel="bookmark"
+                           title="Permalink to eShapeOko Part 2 - Mechanicals">eShapeOko Part 2 - Mechanicals</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-10-22T21:01:00+01:00">
+                Published: Tue 22 October 2013
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://www.moop.org.uk/author/moop.html">moop</a>
+        </address>
+<p>In <a href="https://www.moop.org.uk/category/shapeoko-things.html">ShapeOko, Things</a>.</p>
+
+</footer><!-- /.post-info -->                <p>Building the mechanical parts of the eShapeOko was fairly
+straightforward, but there are some problems and modifications I made
+that are worth writing about.</p>
+<p><a class="reference external" href="http://www.moop.org.uk/index.php/2013/08/27/eshapeoko-part-1/2013-04-24-17-30-15/"><img alt="eShapeOko parts" class="alignnone size-full wp-image-398" src="http://www.moop.org.uk/wp-content/uploads/2013/08/2013-04-24-17.30.15.jpg" style="width: 1024px; height: 613px;" /></a></p>
+<p>The first task of the assembly was to tap the MakerSlide sections to add
+a screw thread. This was my first try at tapping anything, but …</p>
+                <a class="readmore" href="https://www.moop.org.uk/eshapeoko-part-2-mechanicals.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://www.moop.org.uk/eshapeoko-part-1.html" rel="bookmark"
+                           title="Permalink to eShapeOko Part 1">eShapeOko Part 1</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-08-27T18:28:00+01:00">
+                Published: Tue 27 August 2013
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://www.moop.org.uk/author/moop.html">moop</a>
+        </address>
+<p>In <a href="https://www.moop.org.uk/category/shapeoko-things.html">ShapeOko, Things</a>.</p>
+
+</footer><!-- /.post-info -->                <p>I was partway through writing a draft for a post about PCB milling when
+I realised I hadn't yet written anything about the machine I've been
+using, so I think it's about time for a post about the
+<a class="reference external" href="http://www.makerslideeurope.com/eshapeoko-kits.html">eShapeOko</a> CNC
+machine I built.</p>
+<p>I ordered the mechanical kit only, so …</p>
+                <a class="readmore" href="https://www.moop.org.uk/eshapeoko-part-1.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://www.moop.org.uk/lightwaverfmoodcontrollerhack.html" rel="bookmark"
+                           title="Permalink to Lightwave RF Mood Controller Hack">Lightwave RF Mood Controller Hack</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-08-25T21:46:00+01:00">
+                Published: Sun 25 August 2013
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://www.moop.org.uk/author/charlie.html">charlie</a>
+        </address>
+<p>In <a href="https://www.moop.org.uk/category/uncategorized.html">Uncategorized</a>.</p>
+
+</footer><!-- /.post-info -->                <p>It's me, Charlie again, continuing with my scheme to take over Moop's
+blog with nothing but home automation articles.</p>
+<p>Readers of this blog will know that I've been playing around with
+LightwaveRF's home automation stuff a lot recently. Mainly setting up
+voice control systems for it. One thing that irked …</p>
+                <a class="readmore" href="https://www.moop.org.uk/lightwaverfmoodcontrollerhack.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://www.moop.org.uk/siri-control-my-lights.html" rel="bookmark"
+                           title="Permalink to Siri, control my lights">Siri, control my lights</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-08-15T20:08:00+01:00">
+                Published: Thu 15 August 2013
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://www.moop.org.uk/author/charlie.html">charlie</a>
+        </address>
+<p>In <a href="https://www.moop.org.uk/category/uncategorized.html">Uncategorized</a>.</p>
+
+</footer><!-- /.post-info -->                <p>Once again, it's not moop but Charlie, so we're talking home automation
+instead of planes.</p>
+<p>My last video on home automation turned out to be surprisingly popular!
+So, to celebrate I've done a quick follow up on the same idea. One thing
+people commented on was that I should have …</p>
+                <a class="readmore" href="https://www.moop.org.uk/siri-control-my-lights.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://www.moop.org.uk/voice-controlled-lights.html" rel="bookmark"
+                           title="Permalink to Voice Controlled Lights">Voice Controlled Lights</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-08-10T16:07:00+01:00">
+                Published: Sat 10 August 2013
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://www.moop.org.uk/author/charlie.html">charlie</a>
+        </address>
+<p>In <a href="https://www.moop.org.uk/category/things.html">Things</a>.</p>
+
+</footer><!-- /.post-info -->                <p>It's not moop today but me again returning as a guest contributor. So,
+it's not planes or lathes today but wireless plugs and stuff.</p>
+<p>If you read my last blog post
+(<a class="reference external" href="http://www.moop.org.uk/index.php/2013/05/27/homemade-wireless-plug/">http://www.moop.org.uk/index.php/2013/05/27/homemade-wireless-plug/</a>)&nbsp;you'll
+know that I tried building a cheap …</p>
+                <a class="readmore" href="https://www.moop.org.uk/voice-controlled-lights.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://www.moop.org.uk/unholy-chalupa-mkiii.html" rel="bookmark"
+                           title="Permalink to Unholy Chalupa MKIII">Unholy Chalupa MKIII</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-07-08T20:58:00+01:00">
+                Published: Mon 08 July 2013
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://www.moop.org.uk/author/moop.html">moop</a>
+        </address>
+<p>In <a href="https://www.moop.org.uk/category/things-unholy-chalupa.html">Things, Unholy Chalupa</a>.</p>
+
+</footer><!-- /.post-info -->                <p>Beware: unreasonably long post ahead. I probably should've posted this
+in chunks, but was hoping to fly the model first. That always seemed to
+be just around the corner, but thanks to British weather and seasonal
+man-flu that still hasn't happened.</p>
+<p>The original Chalupa is a model aircraft I designed …</p>
+                <a class="readmore" href="https://www.moop.org.uk/unholy-chalupa-mkiii.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://www.moop.org.uk/homemade-wireless-plug.html" rel="bookmark"
+                           title="Permalink to Homemade Wireless Plug">Homemade Wireless Plug</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-05-27T15:02:00+01:00">
+                Published: Mon 27 May 2013
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://www.moop.org.uk/author/charlie.html">charlie</a>
+        </address>
+<p>In <a href="https://www.moop.org.uk/category/things.html">Things</a>.</p>
+<p>tags: <a href="https://www.moop.org.uk/tag/avr.html">AVR</a> <a href="https://www.moop.org.uk/tag/bluetooth.html">Bluetooth</a> <a href="https://www.moop.org.uk/tag/digispark.html">DigiSpark</a> <a href="https://www.moop.org.uk/tag/electronics.html">Electronics</a> <a href="https://www.moop.org.uk/tag/home-automation.html">Home automation</a> <a href="https://www.moop.org.uk/tag/wireless.html">Wireless</a> </p>
+</footer><!-- /.post-info -->                <p>Hello readers! First off, if you were expecting one of Moop's awesome
+posts then prepare for disappointment as today you have me, Charlie,
+posting instead as a special guest contributor.</p>
+<div class="section" id="the-design">
+<h2>The design</h2>
+<p>So, I wanted to automate my home. Nothing too exciting, just turn off an
+on lights and plug …</p></div>
+                <a class="readmore" href="https://www.moop.org.uk/homemade-wireless-plug.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://www.moop.org.uk/update.html" rel="bookmark"
+                           title="Permalink to Update">Update</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-05-19T13:04:00+01:00">
+                Published: Sun 19 May 2013
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://www.moop.org.uk/author/moop.html">moop</a>
+        </address>
+<p>In <a href="https://www.moop.org.uk/category/shapeoko-speed-twin-things-unholy-chalupa.html">ShapeOko, Speed Twin, Things, Unholy Chalupa</a>.</p>
+
+</footer><!-- /.post-info -->                <p>I've had a sudden burst of motivation this morning, possibly due to a
+nice model flying day finally turning up (maybe the second this year!).
+I thought I'd use this to make a post since I've not updated in a while.
+I have a bunch of projects on the go …</p>
+                <a class="readmore" href="https://www.moop.org.uk/update.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://www.moop.org.uk/glider-restoration-part-4-finishing-touches.html" rel="bookmark"
+                           title="Permalink to Glider Restoration Part 4 - Finishing touches">Glider Restoration Part 4 - Finishing touches</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-03-03T00:31:00+00:00">
+                Published: Sun 03 March 2013
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://www.moop.org.uk/author/moop.html">moop</a>
+        </address>
+<p>In <a href="https://www.moop.org.uk/category/hi-fly-maiden-flights-things.html">Hi-Fly, Maiden Flights, Things</a>.</p>
+
+</footer><!-- /.post-info -->                <p>The weather today was unexpectedly awesome so it would have been a crime
+to not try and take the glider out for a flight. I had to quickly make a
+few finishing touches before it was ready to go.</p>
+<p>First off the connectors were soldered to the motor and ESC …</p>
+                <a class="readmore" href="https://www.moop.org.uk/glider-restoration-part-4-finishing-touches.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://www.moop.org.uk/glider-restoration-part-3-fuselage.html" rel="bookmark"
+                           title="Permalink to Glider Restoration Part 3 - Fuselage">Glider Restoration Part 3 - Fuselage</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-02-24T13:41:00+00:00">
+                Published: Sun 24 February 2013
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://www.moop.org.uk/author/moop.html">moop</a>
+        </address>
+<p>In <a href="https://www.moop.org.uk/category/hi-fly-things.html">Hi-Fly, Things</a>.</p>
+
+</footer><!-- /.post-info -->                <p>With the wings complete I moved on to restoring the fuselage of the
+glider. I'd originally intended to &nbsp;use the existing fuselage and just
+straighten it up. Unfortunately, when I came to look at it closer the
+plywood construction had warped more than I thought. I started trying to
+disassemble …</p>
+                <a class="readmore" href="https://www.moop.org.uk/glider-restoration-part-3-fuselage.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://www.moop.org.uk/glider-restoration-part-2-finishing-the-wings.html" rel="bookmark"
+                           title="Permalink to Glider Restoration Part 2 - Finishing the wings">Glider Restoration Part 2 - Finishing the wings</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-02-19T22:23:00+00:00">
+                Published: Tue 19 February 2013
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://www.moop.org.uk/author/moop.html">moop</a>
+        </address>
+<p>In <a href="https://www.moop.org.uk/category/hi-fly-things.html">Hi-Fly, Things</a>.</p>
+
+</footer><!-- /.post-info -->                <p>To finish off the wingtips, I cut off the spars at an angle and cut some
+tip skins based on the plans. These were glued and pinned into place
+then sanded to provide a smooth finish and to blend in with the leading
+and trailing edges.</p>
+<p>[caption id=&quot;attachment_145&quot; align …</p>
+                <a class="readmore" href="https://www.moop.org.uk/glider-restoration-part-2-finishing-the-wings.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://www.moop.org.uk/space-saving-wall-art.html" rel="bookmark"
+                           title="Permalink to Space saving wall art">Space saving wall art</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-02-02T22:44:00+00:00">
+                Published: Sat 02 February 2013
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://www.moop.org.uk/author/moop.html">moop</a>
+        </address>
+<p>In <a href="https://www.moop.org.uk/category/uncategorized.html">Uncategorized</a>.</p>
+
+</footer><!-- /.post-info -->                <p>I seem to have too many model planes nowadays, and storage was fast
+becoming a problem. During a bout of boredom, I dug up some screws and
+hooks and attached them to the wall above my desk. Now they look cool,
+and I have loads of extra space!</p>
+<p>[caption id …</p>
+                <a class="readmore" href="https://www.moop.org.uk/space-saving-wall-art.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://www.moop.org.uk/model-glider-restoration.html" rel="bookmark"
+                           title="Permalink to Model glider restoration">Model glider restoration</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-02-02T22:35:00+00:00">
+                Published: Sat 02 February 2013
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://www.moop.org.uk/author/moop.html">moop</a>
+        </address>
+<p>In <a href="https://www.moop.org.uk/category/hi-fly-things.html">Hi-Fly, Things</a>.</p>
+
+</footer><!-- /.post-info -->                <p>I've had a Precedent Hi-Fly model glider lying around waiting to be
+repaired for years now. I originally built it with my dad. Well, he did
+most of the building; I suspect my main contribution was nagging him to
+get it finished. Unfortunately, we didn't really know what we were …</p>
+                <a class="readmore" href="https://www.moop.org.uk/model-glider-restoration.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://www.moop.org.uk/mittens-and-snowdrop-action-figures.html" rel="bookmark"
+                           title="Permalink to Mittens and Snowdrop action figures">Mittens and Snowdrop action figures</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-12-28T18:43:00+00:00">
+                Published: Fri 28 December 2012
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://www.moop.org.uk/author/moop.html">moop</a>
+        </address>
+<p>In <a href="https://www.moop.org.uk/category/things.html">Things</a>.</p>
+
+</footer><!-- /.post-info -->                <p>I got close to biting off more than I could chew recently in the process
+of making a Secret Santa gift. &nbsp;With Mata as my 'victim' I decided to
+make some little action figures of the&nbsp;<a class="reference external" href="http://www.matazone.co.uk/animpages/kitty1.html">Mittens and
+Snowdrop</a>&nbsp;characters
+from one of his animations.</p>
+<p>The initial plan was to …</p>
+                <a class="readmore" href="https://www.moop.org.uk/mittens-and-snowdrop-action-figures.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://www.moop.org.uk/diy-mini-lathe.html" rel="bookmark"
+                           title="Permalink to DIY Mini Lathe">DIY Mini Lathe</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-12-23T14:27:00+00:00">
+                Published: Sun 23 December 2012
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://www.moop.org.uk/author/moop.html">moop</a>
+        </address>
+<p>In <a href="https://www.moop.org.uk/category/things.html">Things</a>.</p>
+<p>tags: <a href="https://www.moop.org.uk/tag/mini-lathe.html">Mini Lathe</a> </p>
+</footer><!-- /.post-info -->                <p><a class="reference external" href="http://www.moop.org.uk/index.php/2012/12/23/diy-mini-lathe/2012-12-23-12-05-48/"><img alt="Mini Lathe" class="alignnone wp-image-7" src="http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-23-12.05.48.jpg" style="width: 933px; height: 559px;" /></a></p>
+<p>I needed some smooth round parts recently for some models I was building
+and chose to take an unconventional approach by building a mini lathe on
+which to turn them.</p>
+<p>The parts were designed in Draftsight and cut from 3mm ply on
+<a class="reference external" href="http://www.nottinghack.co.uk/">Nottingham Hackspace's</a> laser cutter.
+The lathe is built …</p>
+                <a class="readmore" href="https://www.moop.org.uk/diy-mini-lathe.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://www.moop.org.uk/about.html" rel="bookmark"
+                           title="Permalink to About">About</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-12-22T19:01:00+00:00">
+                Published: Sat 22 December 2012
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://www.moop.org.uk/author/moop.html">moop</a>
+        </address>
+<p>In <a href="https://www.moop.org.uk/category/misc.html">misc</a>.</p>
+
+</footer><!-- /.post-info -->                <p>Hi, I'm moop and I have a habit of making things.</p>
+<p>Hopefully this will turn into a place to write about them, instead of
+resigning them to the back of a cupboard.</p>
+
+                <a class="readmore" href="https://www.moop.org.uk/about.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+                </ol><!-- /#posts-list -->
+                </section><!-- /#content -->
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="https://www.moop.org.uk/index.php/feed" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

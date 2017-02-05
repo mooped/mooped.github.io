@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Siri, control my lights</title>
+        <link rel="stylesheet" href="https://www.moop.org.uk/theme/css/main.css" />
+        <link href="https://www.moop.org.uk/index.php/feed" type="application/atom+xml" rel="alternate" title="Mooplog Atom Feed" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="https://www.moop.org.uk/">Mooplog </a></h1>
+                <nav><ul>
+                    <li><a href="https://www.moop.org.uk/category/arcade-controllers-things.html">Arcade Controllers, Things</a></li>
+                    <li><a href="https://www.moop.org.uk/category/foobot-games.html">Foobot, Games</a></li>
+                    <li><a href="https://www.moop.org.uk/category/games-loot-of-the-forest-ludum-dare.html">Games, Loot of the Forest, Ludum Dare</a></li>
+                    <li><a href="https://www.moop.org.uk/category/hi-fly-maiden-flights-things.html">Hi-Fly, Maiden Flights, Things</a></li>
+                    <li><a href="https://www.moop.org.uk/category/hi-fly-things.html">Hi-Fly, Things</a></li>
+                    <li><a href="https://www.moop.org.uk/category/hot-wire-things.html">Hot Wire, Things</a></li>
+                    <li><a href="https://www.moop.org.uk/category/maiden-flights-things-tricopter.html">Maiden Flights, Things, TriCopter</a></li>
+                    <li><a href="https://www.moop.org.uk/category/misc.html">misc</a></li>
+                    <li><a href="https://www.moop.org.uk/category/pcb-drilling-jig-things.html">PCB Drilling Jig, Things</a></li>
+                    <li><a href="https://www.moop.org.uk/category/rc2014-retrochallenge.html">RC2014, Retrochallenge</a></li>
+                    <li><a href="https://www.moop.org.uk/category/rc2014-things.html">RC2014, Things</a></li>
+                    <li><a href="https://www.moop.org.uk/category/shapeoko-speed-twin-things.html">ShapeOko, Speed Twin, Things</a></li>
+                    <li><a href="https://www.moop.org.uk/category/shapeoko-speed-twin-things-unholy-chalupa.html">ShapeOko, Speed Twin, Things, Unholy Chalupa</a></li>
+                    <li><a href="https://www.moop.org.uk/category/shapeoko-things.html">ShapeOko, Things</a></li>
+                    <li><a href="https://www.moop.org.uk/category/speed-twin-things.html">Speed Twin, Things</a></li>
+                    <li><a href="https://www.moop.org.uk/category/things.html">Things</a></li>
+                    <li><a href="https://www.moop.org.uk/category/things-unholy-chalupa.html">Things, Unholy Chalupa</a></li>
+                    <li class="active"><a href="https://www.moop.org.uk/category/uncategorized.html">Uncategorized</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="https://www.moop.org.uk/siri-control-my-lights.html" rel="bookmark"
+           title="Permalink to Siri, control my lights">Siri, control my lights</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-08-15T20:08:00+01:00">
+                Published: Thu 15 August 2013
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://www.moop.org.uk/author/charlie.html">charlie</a>
+        </address>
+<p>In <a href="https://www.moop.org.uk/category/uncategorized.html">Uncategorized</a>.</p>
+
+</footer><!-- /.post-info -->      <p>Once again, it's not moop but Charlie, so we're talking home automation
+instead of planes.</p>
+<p>My last video on home automation turned out to be surprisingly popular!
+So, to celebrate I've done a quick follow up on the same idea. One thing
+people commented on was that I should have used SiriProxy. I had
+considered this when writing Jeeves
+(<a class="reference external" href="http://www.youtube.com/watch?v=gZkwvSX0_Os">http://www.youtube.com/watch?v=gZkwvSX0_Os</a>). I felt it wasn't quite as
+cool as having a device that listens all the time though. However,
+SiriProxy doesn't seem to require a huge amount of processor time so can
+run happily next to Jeeves even on a Raspberry Pi, so I thought I'd give
+it a go.</p>
+<p><a class="reference external" href="http://youtu.be/Z7gtugR2umI">http://youtu.be/Z7gtugR2umI</a></p>
+<p>Setting up was amazingly easy. I basically followed the instructions
+verbatim from the main SiriProxy page
+(<a class="reference external" href="https://github.com/plamoni/SiriProxy">https://github.com/plamoni/SiriProxy</a>). There's a lot of complicated
+guides for old versions of SiriProxy but the latest version is quite
+simple to setup, so just follow the instructions from the main page.</p>
+<p>The only thing I did differently to the instructions was that I had to
+copy my .siriproxy directory from my user directory to /root/.siriproxy.
+This is probably because when I generated the certificates, I wasn't
+root. You should be able to run SiriProxy as an unprivileged user but I
+didn't get that to work. It's only on the Pi so, I don't have any
+reservations about running SiriProxy as root anyway, so I just went with
+it.</p>
+<p>Once the Pi was set up and running, all that was left was to set up my
+phone. This required e-mailing the generated certificate and changing
+the WiFi settings so that the DNS server pointed at the Pi.</p>
+<p>With that working, next was the fun part of actually making a plugin for
+SiriProxy so it would do my bidding. There's already a LightwaveRF
+plugin but what's the fun of being like everyone else! Naturally I wrote
+my own. It's might be worse that the existing plugin, I didn't check
+before writing my own version.</p>
+<p>The first hurdle to overcome was that the plugins need writing in Ruby.
+I'd never even seen Ruby code until I wrote the plugin so I probably
+didn't do things in the most efficient way but it was easy to get
+something working.</p>
+<p>The main bulk of the plugin consists of these clauses...</p>
+<pre class="literal-block">
+listen_for /some regex/ do |variables,to,store,matches|
+&nbsp; say &quot;Hey I recognised that&quot;
+&nbsp; request_completed
+end
+</pre>
+<p>Adding the lightwaveRF UDP protocol was easy from Ruby. First a socket
+is created and the host/port set up with...</p>
+<pre class="literal-block">
+s = UDPSocket.new
+port = 9760
+host = &quot;192.168.0.10&quot;
+</pre>
+<p>To turn on a device can then be done with only one line...</p>
+<pre class="literal-block">
+s.send(&quot;000,!R1D1F1|Siri|On&quot;, 0, host, port)
+</pre>
+<p>Each room contains a list of sockets that it has. When saying &quot;There is
+a desklamp in the left socket&quot;, it first matches via a regular
+expression and extracts the two important bits, &quot;desklamp&quot; and &quot;left
+socket&quot;. Next it verifies that &quot;left socket&quot; is a socket it knows about.
+If it is, then it inserts a new entry into the &quot;items&quot; hash map linking
+&quot;desklamp&quot; to the left socket.</p>
+<p>When you say &quot;Turn on desklamp&quot;, the word &quot;desklamp&quot; is looked up in the
+items hash map. If it finds a match then it sends the required command
+to the socket it was registered with. If it doesn't find anything in the
+map then it will check for a socket called &quot;desklamp&quot;. Being a lazy
+programmer, the lights use this trick as they are implemented as just
+another socket. I could say &quot;There is a banana in the lights&quot; and I
+would be able to turn on my lights by saying &quot;Switch on banana&quot;. That
+sort of bug, I don't mind letting slip through though as it's a remote
+possibility anyone would try.</p>
+<p>I think that pretty much covers it. I hope someone finds it fun and has
+a go at implementing their own system.</p>
+<p>If you want to look at my code, you can get it by clicking
+this&nbsp;<a class="reference external" href="http://www.moop.org.uk/wp-content/uploads/2013/08/siriproxy-lightwave.zip">siriproxy-lightwave</a>.</p>
+
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="https://www.moop.org.uk/index.php/feed" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

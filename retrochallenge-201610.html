@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Retrochallenge 2016/10</title>
+        <link rel="stylesheet" href="https://www.moop.org.uk/theme/css/main.css" />
+        <link href="https://www.moop.org.uk/index.php/feed" type="application/atom+xml" rel="alternate" title="Mooplog Atom Feed" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="https://www.moop.org.uk/">Mooplog </a></h1>
+                <nav><ul>
+                    <li><a href="https://www.moop.org.uk/category/arcade-controllers-things.html">Arcade Controllers, Things</a></li>
+                    <li><a href="https://www.moop.org.uk/category/foobot-games.html">Foobot, Games</a></li>
+                    <li><a href="https://www.moop.org.uk/category/games-loot-of-the-forest-ludum-dare.html">Games, Loot of the Forest, Ludum Dare</a></li>
+                    <li><a href="https://www.moop.org.uk/category/hi-fly-maiden-flights-things.html">Hi-Fly, Maiden Flights, Things</a></li>
+                    <li><a href="https://www.moop.org.uk/category/hi-fly-things.html">Hi-Fly, Things</a></li>
+                    <li><a href="https://www.moop.org.uk/category/hot-wire-things.html">Hot Wire, Things</a></li>
+                    <li><a href="https://www.moop.org.uk/category/maiden-flights-things-tricopter.html">Maiden Flights, Things, TriCopter</a></li>
+                    <li><a href="https://www.moop.org.uk/category/misc.html">misc</a></li>
+                    <li><a href="https://www.moop.org.uk/category/pcb-drilling-jig-things.html">PCB Drilling Jig, Things</a></li>
+                    <li class="active"><a href="https://www.moop.org.uk/category/rc2014-retrochallenge.html">RC2014, Retrochallenge</a></li>
+                    <li><a href="https://www.moop.org.uk/category/rc2014-things.html">RC2014, Things</a></li>
+                    <li><a href="https://www.moop.org.uk/category/shapeoko-speed-twin-things.html">ShapeOko, Speed Twin, Things</a></li>
+                    <li><a href="https://www.moop.org.uk/category/shapeoko-speed-twin-things-unholy-chalupa.html">ShapeOko, Speed Twin, Things, Unholy Chalupa</a></li>
+                    <li><a href="https://www.moop.org.uk/category/shapeoko-things.html">ShapeOko, Things</a></li>
+                    <li><a href="https://www.moop.org.uk/category/speed-twin-things.html">Speed Twin, Things</a></li>
+                    <li><a href="https://www.moop.org.uk/category/things.html">Things</a></li>
+                    <li><a href="https://www.moop.org.uk/category/things-unholy-chalupa.html">Things, Unholy Chalupa</a></li>
+                    <li><a href="https://www.moop.org.uk/category/uncategorized.html">Uncategorized</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="https://www.moop.org.uk/retrochallenge-201610.html" rel="bookmark"
+           title="Permalink to Retrochallenge 2016/10">Retrochallenge 2016/10</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-10-05T20:04:00+01:00">
+                Published: Wed 05 October 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://www.moop.org.uk/author/moop.html">moop</a>
+        </address>
+<p>In <a href="https://www.moop.org.uk/category/rc2014-retrochallenge.html">RC2014, Retrochallenge</a>.</p>
+
+</footer><!-- /.post-info -->      <p>I decided to join in with
+` &lt;<a class="reference external" href="http://www.wickensonline.co.uk/retrochallenge-2012sc/">http://www.wickensonline.co.uk/retrochallenge-2012sc/</a>&gt;`__Retrochallenge
+2016/10 this October. I'm also hoping this will provide some incentive
+to write more posts and updates about other projects once I'm back into
+the swing of things!</p>
+<p>[caption id=&quot;attachment_952&quot; align=&quot;alignnone&quot; width=&quot;1024&quot;]<a class="reference external" href="http://www.moop.org.uk/?attachment_id=952"><img alt="RC2014 Z80 computer" class="size-full wp-image-952" src="http://www.moop.org.uk/wp-content/uploads/2016/10/rc2104.jpg" style="width: 1024px; height: 576px;" /></a> RC2014 Z80 computer[/caption]</p>
+<p>My goal for this Retrochallenge is to finish an SD card interface I
+started designing for Spencer Owen's ` &lt;<a class="reference external" href="http://rc2014.co.uk/">http://rc2014.co.uk/</a>&gt;`__RC2014
+Z80 based computer (which was spawned by a previous Retrochallenge,
+hence the name). This should work with most Z80 computers that don't do
+anything crazy to the I/O interface, so I may also get it working on a
+ZX Spectrum if there is time.</p>
+<p>I'm intending to build my SD interface from 74 series and similar
+discrete logic ICs. This is partly for fun and partly because the
+microcontroller in the SD card is likely already more powerful than the
+RC2014. Adding another microcontroller into the mix to interface with
+the one in the SD card is just a step too far.</p>
+<p>I'll be using the SPI-like mode of the SD card protocol, not least
+because information on the faster SD mode is not publicly available. The
+SPI-like interface should allow me to use shift registers for
+communication with the SD card.</p>
+<p>I was initially planning to use a 74ALS299 universal shift register to
+reduce chip count. Unfortunately, in addition to being somewhat hard to
+get, the interface on this chip is troublesome as the shift, shift
+direction, and output enable are all synchronous and controlled via two
+pins that set the operation. The extra glue logic needed to deal with
+this completely nullifies the benefit of using a single universal shift
+register. Because of this I'm planning to redesign around a pair of
+shift registers: a 75HCT595 serial-in-parallel-out register and a
+75HTC165 parallel-in-serial-out register.</p>
+<p>The SD card requires a slow clock pulse for initialisation (around
+100khz), but once initialised supports faster clock speeds. The design
+is complicated by the need to run at both speeds, but I have a scheme to
+cope with this.</p>
+<p>My intended interface uses a pair of registers mapped to the Z80's I/O
+space.</p>
+<ul>
+<li><p><strong>DATA</strong></p>
+</li><ul class="simple">
+<li>Writes to this address latch the byte from the Z80 data bus into the
+74HTC165 which is used to send data to the SD card.</li>
+<li>Reads from this address enable the outputs on the 74HTC595 shift
+register which receives data from the SD card.</li>
+</ul>
+<li><p><strong>CONFIG</strong></p>
+</li>
+<ul>
+<li><p>Writes to this address update a 74HTC374 register holding a
+configuration byte. The following bits are currently used:</p>
+</li><ul class="simple">
+<li><strong>autoshift</strong> - Automatically shift 8 bits from the shift registers
+to the SD card and back after a write to the <strong>DATA</strong> address. This
+is used for the SD card's &quot;normal&quot; high speed mode and should allow
+fast enough I/O that the Z80 becomes the bottleneck.</li>
+<li><strong>clock</strong> - OR'd with the automatic clock signal to the shift
+registers and SD card, allowing communication at a speed controlled
+directly by the Z80 to provide a 'bitbang' mode. This mode is not
+efficient, but allows the slower speed required for the SD card
+initialisation process without much extra logic.</li>
+</ul>
+</ul>
+</ul><p>[caption id=&quot;attachment_953&quot; align=&quot;alignnone&quot; width=&quot;1024&quot;]<a class="reference external" href="http://www.moop.org.uk/?attachment_id=953"><img alt="Original version on breadboard" class="size-full wp-image-953" src="http://www.moop.org.uk/wp-content/uploads/2016/10/original_breadboard.jpg" style="width: 1024px; height: 576px;" /></a> Original version on breadboard[/caption]</p>
+<p>An initial version similar to this design has been built on a breadboard
+using a 74ALS299. In addition to the issues with the synchronous control
+signals needed to load this shift register, there were also
+compatibility issues with the timing of the Z80's I/O control signals.
+This requires additional glue logic and a redesign of automatic shifting
+logic that enables the high speed mode to work.</p>
+<p>Before I take the previous version apart to rebuild, I'll take some
+logic analyser captures indicating the timing issues, and write up (and
+remind myself of) the problems.</p>
+
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="https://www.moop.org.uk/index.php/feed" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

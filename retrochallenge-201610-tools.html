@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Retrochallenge 2016/10 - Tools</title>
+        <link rel="stylesheet" href="https://www.moop.org.uk/theme/css/main.css" />
+        <link href="https://www.moop.org.uk/index.php/feed" type="application/atom+xml" rel="alternate" title="Mooplog Atom Feed" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="https://www.moop.org.uk/">Mooplog </a></h1>
+                <nav><ul>
+                    <li><a href="https://www.moop.org.uk/category/arcade-controllers-things.html">Arcade Controllers, Things</a></li>
+                    <li><a href="https://www.moop.org.uk/category/foobot-games.html">Foobot, Games</a></li>
+                    <li><a href="https://www.moop.org.uk/category/games-loot-of-the-forest-ludum-dare.html">Games, Loot of the Forest, Ludum Dare</a></li>
+                    <li><a href="https://www.moop.org.uk/category/hi-fly-maiden-flights-things.html">Hi-Fly, Maiden Flights, Things</a></li>
+                    <li><a href="https://www.moop.org.uk/category/hi-fly-things.html">Hi-Fly, Things</a></li>
+                    <li><a href="https://www.moop.org.uk/category/hot-wire-things.html">Hot Wire, Things</a></li>
+                    <li><a href="https://www.moop.org.uk/category/maiden-flights-things-tricopter.html">Maiden Flights, Things, TriCopter</a></li>
+                    <li><a href="https://www.moop.org.uk/category/misc.html">misc</a></li>
+                    <li><a href="https://www.moop.org.uk/category/pcb-drilling-jig-things.html">PCB Drilling Jig, Things</a></li>
+                    <li class="active"><a href="https://www.moop.org.uk/category/rc2014-retrochallenge.html">RC2014, Retrochallenge</a></li>
+                    <li><a href="https://www.moop.org.uk/category/rc2014-things.html">RC2014, Things</a></li>
+                    <li><a href="https://www.moop.org.uk/category/shapeoko-speed-twin-things.html">ShapeOko, Speed Twin, Things</a></li>
+                    <li><a href="https://www.moop.org.uk/category/shapeoko-speed-twin-things-unholy-chalupa.html">ShapeOko, Speed Twin, Things, Unholy Chalupa</a></li>
+                    <li><a href="https://www.moop.org.uk/category/shapeoko-things.html">ShapeOko, Things</a></li>
+                    <li><a href="https://www.moop.org.uk/category/speed-twin-things.html">Speed Twin, Things</a></li>
+                    <li><a href="https://www.moop.org.uk/category/things.html">Things</a></li>
+                    <li><a href="https://www.moop.org.uk/category/things-unholy-chalupa.html">Things, Unholy Chalupa</a></li>
+                    <li><a href="https://www.moop.org.uk/category/uncategorized.html">Uncategorized</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="https://www.moop.org.uk/retrochallenge-201610-tools.html" rel="bookmark"
+           title="Permalink to Retrochallenge 2016/10 - Tools">Retrochallenge 2016/10 - Tools</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-11-01T20:00:00+00:00">
+                Published: Tue 01 November 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://www.moop.org.uk/author/moop.html">moop</a>
+        </address>
+<p>In <a href="https://www.moop.org.uk/category/rc2014-retrochallenge.html">RC2014, Retrochallenge</a>.</p>
+
+</footer><!-- /.post-info -->      <p>During <a class="reference external" href="http://retrochallenge.net/">Retro Challenge</a> I needed a way
+to run machine code on my rc2014, as BASIC was incapable of the
+performance needed to initialise the SD card in bitbang mode.</p>
+<p>I didn't (and still don't) have an EEPROM burner when I first got my
+rc2014, and although the version of BASIC in the stock rc2014 ROM does
+support the USR() function it appears to jump to a hardcoded address
+within the ROM so this didn't help me much.</p>
+<p>I ended up finding the assembly language source of the BASIC interpreter
+(or one very similar) and noticed that the address the USR() function
+jumps to is not looked up directly from the ROM, but copied to a block
+of information kept in RAM. Once I knew the address of that block I was
+able to modify it so USR(0) would jump to an arbitrary address.</p>
+<p>
+<script src="https://gist.github.com/mooped/2965d60b2d19a12425ddbc265453a48b.js"></script>
+</p><p>With this method I was able to poke in arbitrary code and execute it,
+but this was far from an ideal workflow.</p>
+<p>To improve this I wrote some Python scripts which would output the BASIC
+code to load a binary image into the RC2014's memory at a given address
+or run code from a given address. Once appropriate delays were added to
+avoid overflowing the (1 byte) input buffer on the RC2014's serial port
+I was able to combine these scripts with
+<a class="reference external" href="http://www.nongnu.org/z80asm/">z80asm</a> and a makefile to make a nice
+toolchain for rapidly deploying and testing programs to the RC2014.</p>
+<p>
+<script src="https://gist.github.com/mooped/535401475bb524e03f12773798c578db.js"></script>
+</p><p>By writing the program such that the RC2014 jumps back to the reset
+vector at address 0x0000 programs can be developed without the need to
+constantly reset the RC2014 (unless something goes wrong in the
+program).</p>
+<p>I set up my Makefile with additional commands to output hex dumps of the
+program, annotated assembly, or to run a program that is already
+resident in memory.</p>
+<p>
+<script src="https://gist.github.com/mooped/496e506143abd79d0c97941d3800e8e9.js"></script>
+</p><p>The only issue I've encountered with this system so far is that it is
+quite slow to load large programs. For my Retro Challenge project the
+load time was so long that I had to wait for it to finish before
+reissuing the run command. The automatically sent run program was lost
+because the loader was still running.</p>
+<p>This could be improved by writing a faster loader in assembly which
+could be bootstrapped with a very small BASIC program. If I had an
+EEPROM burner a replacement boot ROM could be made which would boot
+straight into the fast version of the monitor program.</p>
+<p>The scripts and Makefile I used are on my GitHub under the <a class="reference external" href="https://github.com/mooped/rc2014_tools">RC2014
+Tools</a> project. They will
+work on a Linux system or similar, or on Windows with some
+modifications.</p>
+
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="https://www.moop.org.uk/index.php/feed" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

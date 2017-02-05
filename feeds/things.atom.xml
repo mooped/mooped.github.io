@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Mooplog - Things</title><link href="https://www.moop.org.uk/" rel="alternate"></link><link href="https://www.moop.org.uk/feeds/things.atom.xml" rel="self"></link><id>https://www.moop.org.uk/</id><updated>2013-08-10T16:07:00+01:00</updated><entry><title>Voice Controlled Lights</title><link href="https://www.moop.org.uk/voice-controlled-lights.html" rel="alternate"></link><published>2013-08-10T16:07:00+01:00</published><updated>2013-08-10T16:07:00+01:00</updated><author><name>charlie</name></author><id>tag:www.moop.org.uk,2013-08-10:/voice-controlled-lights.html</id><summary type="html">&lt;p&gt;It's not moop today but me again returning as a guest contributor. So,
+it's not planes or lathes today but wireless plugs and stuff.&lt;/p&gt;
+&lt;p&gt;If you read my last blog post
+(&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/05/27/homemade-wireless-plug/"&gt;http://www.moop.org.uk/index.php/2013/05/27/homemade-wireless-plug/&lt;/a&gt;)&amp;nbsp;you'll
+know that I tried building a cheap …&lt;/p&gt;</summary><content type="html">&lt;p&gt;It's not moop today but me again returning as a guest contributor. So,
+it's not planes or lathes today but wireless plugs and stuff.&lt;/p&gt;
+&lt;p&gt;If you read my last blog post
+(&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/05/27/homemade-wireless-plug/"&gt;http://www.moop.org.uk/index.php/2013/05/27/homemade-wireless-plug/&lt;/a&gt;)&amp;nbsp;you'll
+know that I tried building a cheap Bluetooth controlled plug socket
+that'd fit in a standard back box. When it came to actually installing
+though I got cold feet. There are safety and legal issue to fitting
+something like that into the wall so instead I opted for a commercially
+available version. I choose the LightwaveRF range of plug sockets and
+dimmer switches. These are just like what I was designing in that they
+just replace the standard fittings and are switchable remotely. With the
+LightwaveRF Wireless Controller this also includes controlling them
+across the network. They are pricey compared to my design but on the
+other hand, look a lot nicer and far less likely to catch fire.&lt;/p&gt;
+&lt;p&gt;The LightwaveRF network protocol is a fairly simple UDP scheme that's
+very easy to hook into (&lt;a class="reference external" href="http://blog.networkedsolutions.co.uk/?p=149"&gt;http://blog.networkedsolutions.co.uk/?p=149&lt;/a&gt;).
+The only strangeness is having to send a message with ID 533 first time
+to get the LightwaveRF box to prompt to register a new device. Coding
+this only took a few minutes and once that was working the only thing
+left was to think of something to do with it!&lt;/p&gt;
+&lt;p&gt;The most obvious thing to me was to live out Star Trek
+(&lt;a class="reference external" href="http://www.youtube.com/watch?v=hShY6xZWVGE"&gt;http://www.youtube.com/watch?v=hShY6xZWVGE&lt;/a&gt;)&amp;nbsp;by controlling things in my
+house by talking to them. &amp;quot;Computer, lights on&amp;quot; for example. I didn't
+want to leave a computer running all the time but I did have a Raspberry
+Pi lying around which I've been wanting to find a use for.&lt;/p&gt;
+&lt;p&gt;So, I started by looking for voice recognition technology to use. Doing
+a quick Google, bought up a lot of suggestions to use Google's voice API
+(they would say that! ;)). As much as I like Google, I don't really want
+everything I ever say getting sent to their servers, so that was out.
+Next best choice seemed to be CMU Sphinx. pocketsphinx is designed for
+embedded systems so seemed a good fit for the Pi.&lt;/p&gt;
+&lt;p&gt;On first impressions I was very unimpressed with CMU Sphinx. The
+accuracy of recognition seemed absolutely terrible. However it does have
+facilities to work with a subset of words for doing digit recognition
+for example. With a text file of commands I wanted it to recognise the
+lmtool (&lt;a class="reference external" href="http://www.speech.cs.cmu.edu/tools/lmtool-new.html"&gt;http://www.speech.cs.cmu.edu/tools/lmtool-new.html&lt;/a&gt;) creates all
+the files needed. Using these files the quality of recognition improved
+considerably. However there were still problems distinguishing &amp;quot;on&amp;quot; and
+&amp;quot;off&amp;quot;. Also the word &amp;quot;Computer&amp;quot; was frequently misunderstood. So
+accepting this as a limitation of voice control, &amp;quot;Computer, lights on&amp;quot;
+became &amp;quot;Jeeves, lights up&amp;quot;. Finally I adapted the voice model
+(&lt;a class="reference external" href="http://cmusphinx.sourceforge.net/wiki/tutorialadapt"&gt;http://cmusphinx.sourceforge.net/wiki/tutorialadapt&lt;/a&gt;) which improved the
+voice recognition even further.&lt;/p&gt;
+&lt;p&gt;Up until this point I'd been doing everything on my laptop but moving
+this to the Pi was fairly straight forward. I now needed some sort of
+microphone though. I tried Singstar mics at first. These worked straight
+off but didn't really do a very good job unless speaking directly into
+them. So next I tried another of my discarded game accessories, a PS3
+Eye camera. This worked much better when picking up sound from across
+the room.&lt;/p&gt;
+&lt;p&gt;For sound output I used a pair of cheap PC speakers which I could
+connect to the 3.5mm audio jack on the Pi. I had spent some time trying
+to sort out a problem where the first second or so of audio when using
+HDMI output was silent. I tried updating the firmware and googled around
+for the answer. In the end I worked around this by appending a second of
+silence to the start of my audio output with sox. However when using the
+speakers the problem just went away anyway much to my relief.&lt;/p&gt;
+&lt;p&gt;As a finishing touch I made a quick LED display to indicate when the Pi
+was ready to accept the next command. While doing this, I decided to
+also wire up an IR LED so I could control the television too. Not having
+IR LEDs in my parts draw I just cracked open an old remote and took the
+LED out of there. I connect this to GPIO 7 as an arbitrary clock can be
+generated on that pin. I used this to provide the 38KHz modulation
+needed for my TV. I then toggled that pin between clock and a zero
+output in software to encode the commands to control the TV. This did
+not work at first. I could see on my laptop's webcam that the IR LED was
+flashing away but the TV did not respond. Cracking out the oscilloscope
+I found that the pulses when the output was a clock were all around
+200us too long. I assume this is due to a delay in toggling the state. I
+decided to take the easy way out and just adjusted these timings. After
+these adjustments I was successfully able to control my TV using just an
+IR LED and a resister.&lt;/p&gt;
+&lt;p&gt;So enough talk, here it is in action...&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.youtube.com/watch?v=gZkwvSX0_Os"&gt;http://www.youtube.com/watch?v=gZkwvSX0_Os&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Nb. The source is downloadable here&amp;nbsp;&lt;a class="reference external" href="http://www.moop.org.uk/wp-content/uploads/2013/08/lightwave.zip"&gt;Lightwave
+Source&lt;/a&gt;.&amp;nbsp;I
+warn you now though it's some pretty ugly code. A lot of this coding was
+done crouched on the floor working directly on the Pi. Getting back off
+the floor was my top priority, not following any coding standards. Still
+thought I should include it just in case anyone wanted some reference.
+The main guts, speech.c is just a modified version of the pocketsphinx
+continuous speech sample. irTrans turns the TV on and off and
+lightwave.c deals with the network side of things. speaker.c just keeps
+festival open so I don't have to pay the start up time when doing voice
+synthesis. Hope it's helpful to someone.&lt;/p&gt;
+</content></entry><entry><title>Homemade Wireless Plug</title><link href="https://www.moop.org.uk/homemade-wireless-plug.html" rel="alternate"></link><published>2013-05-27T15:02:00+01:00</published><updated>2013-05-27T15:02:00+01:00</updated><author><name>charlie</name></author><id>tag:www.moop.org.uk,2013-05-27:/homemade-wireless-plug.html</id><summary type="html">&lt;p&gt;Hello readers! First off, if you were expecting one of Moop's awesome
+posts then prepare for disappointment as today you have me, Charlie,
+posting instead as a special guest contributor.&lt;/p&gt;
+&lt;div class="section" id="the-design"&gt;
+&lt;h2&gt;The design&lt;/h2&gt;
+&lt;p&gt;So, I wanted to automate my home. Nothing too exciting, just turn off an
+on lights and plug …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;Hello readers! First off, if you were expecting one of Moop's awesome
+posts then prepare for disappointment as today you have me, Charlie,
+posting instead as a special guest contributor.&lt;/p&gt;
+&lt;div class="section" id="the-design"&gt;
+&lt;h2&gt;The design&lt;/h2&gt;
+&lt;p&gt;So, I wanted to automate my home. Nothing too exciting, just turn off an
+on lights and plug sockets using my phone.&lt;/p&gt;
+&lt;p&gt;So, the design main goals were...&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Functional : It's got to work&lt;/li&gt;
+&lt;li&gt;Cheap : I aimed for a final price of under £10 per socket&lt;/li&gt;
+&lt;li&gt;Small : It had to fit within a standard wall socket/switch cavity&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Reason for wanting it to fit within a standard wall cavity was mainly to
+make the installation both easy and invisible. The reason for wanting
+them to be cheap is because I'm weirdly cheap when it comes to building
+stuff. Maybe it's a hang up from doing similar projects as a student
+when I really had to to get the part spend down as low as possible. In
+any case I like the challenge of trying to design stuff on a shoe
+string.&lt;/p&gt;
+&lt;p&gt;Being a programmer I went straight to wanting a microcontroller of some
+kind. I had three ATtiny based DigiSpark boards from when I backed the
+project on Kickstarter
+(&lt;a class="reference external" href="http://www.kickstarter.com/projects/digistump/digispark-the-tiny-arduino-enabled-usb-dev-board"&gt;http://www.kickstarter.com/projects/digistump/digispark-the-tiny-arduino-enabled-usb-dev-board&lt;/a&gt;).
+This has almost blown my budget straight away but was rather convenient.
+It was around $8 from what I remember.&lt;/p&gt;
+&lt;p&gt;Next up, the communication. The most straight forward method seemed to
+be Bluetooth. It doesn't have much of a range but enough for our
+purposes. Originally I thought I could connect to the sockets directly
+from my iPhone however when I went to implement it, it became clear that
+Apple only support the new Bluetooth 4 Low Energy profile, which no
+cheap Bluetooth modules do at the moment. So instead, the idea became to
+run a web server on something like a Raspberry Pi that would have a
+Bluetooth module to talk to the sockets. This had the advantage of
+allowing things like trivially turning every socket into a timer socket
+with a nice web interface.&lt;/p&gt;
+&lt;p&gt;The Bluetooth module I went with was an HC-05. These are easy to find on
+eBay and with shipping cost just $5. A datasheet is here
+&lt;a class="reference external" href="http://www.mcu-turkey.com/wp-content/uploads/2013/01/HC-Serial-Bluetooth-Products-201104.pdf"&gt;http://www.mcu-turkey.com/wp-content/uploads/2013/01/HC-Serial-Bluetooth-Products-201104.pdf&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We now need something to switch the mains current with. A relay seems
+the obvious solution for this. So back to eBay. I ended up with a relay
+that could be switched with 10mA current at 5V and could take 250V AC up
+to 10 amps. More than enough for almost any single appliance. I was
+mainly thinking about lighting so 2.5kW was more than enough. Cost
+including shipping: $1.50&lt;/p&gt;
+&lt;p&gt;Finally, we needed a transformer of some kind. I originally thought of
+building some sort of rectifier and voltage regulator to get the
+required power as the amperage I needed was so low. However, even at the
+small currents the amount of wasted energy would still be quite large,
+which would cause heat dispersion problems, so I went for a transformer
+instead. The ones I got were sold as LED drivers for things like
+Christmas lights. For our purposes it was very cheap and very small.
+This was around $3.&lt;/p&gt;
+&lt;p&gt;So all in, around $17.50 or £11.50, so a bit over the initial budget of
+£10 per socket. If we had an in system programmer we could use a plain
+ATtiny which would have only been around 60p ($1) instead of the $8
+DigiSpark. Also ordering in bulk would have reduced the cost of the
+other components as the prices all included shipping.&lt;/p&gt;
+&lt;p&gt;The circuit was so simple that a schematic probably isn't needed. The
+transformer was wired into the mains power coming into the socket and
+the 5V side powered the microcontroller, Bluetooth module and relay
+module. The live wire of the mains went through the high voltage part of
+the relay to the socket. The control of the relay went to an IO pin on
+the DigiSpark. Three more IO pins were used by the Bluetooth module (RX,
+TX and KEY).&lt;/p&gt;
+&lt;p&gt;The Bluetooth module was 3.3V chip but the ATtiny is 5V. I didn't
+initially realise this until half way through building. I thought the
+ATtiny was 3.3V too. This was mainly due to measuring the voltage at Vin
+on the DigiSpark and seeing around 3.3V. This was the pin I powered the
+Bluetooth module from. However, this was actually caused by a voltage
+drop across a diode just there to protect the voltage regulator from
+being connected up in reverse (D'oh!). To prevent over driving&amp;nbsp;the input
+pins of the Bluetooth module I also added diodes to the RX and KEY lines
+as a quick fix.&lt;/p&gt;
+&lt;p&gt;I connected the relay to default to on so if it was to break the
+light/socket would still be functional. The original idea was to wire up
+the transformer to the socket's switch as well, although this turned out
+to be difficult in practice. The reasoning behind this was that by
+turning the switch off it would not only stop the internals drawing
+power but if anything went wrong, there was a way to reset the
+microcontroller and if the system fell into disuse all the switch would
+still operate normally.&lt;/p&gt;
+&lt;p&gt;I also wired up the Bluetooth status LED as it was trivial to do and
+quite helpful during testing. In practice this wasn't a good idea as the
+flashing could be seen outside the socket.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="the-build"&gt;
+&lt;h2&gt;The build&lt;/h2&gt;
+&lt;p&gt;First thing was to turn the surface mount Bluetooth module into
+something a bit easier to work with. I'd never worked with surface mount
+parts before, so I decided to turn it in to a through hole part by
+attaching it to a bit of PCB. The spacing was quite small so couldn't
+use stripboard or the like. In another first, I thought I'd try printing
+my own circuit board. First, I cut a small piece of copper board. Then
+holding the Bluetooth module on with a bit of tape, I then drew draw up
+to the contacts that I wanted with an etch resist pen. Extending these I
+created pads for where I would eventually drill through to connect the
+wires. Then it was simply a matter of etching. This did take a long time
+(it was very cold that day and I was just doing it in a tray) but
+eventually patience paid off and I had my PCB. I then drilled the holes
+and finally soldered on the part which was straight forward.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/05/27/homemade-wireless-plug/module/"&gt;&lt;img alt="Bluetooth Module" class="aligncenter size-full wp-image-250" src="http://www.moop.org.uk/wp-content/uploads/2013/05/module.jpg" style="width: 480px; height: 640px;" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;At this point, I realised I'd completely destroyed my trousers! Pro tip:
+Don't wear your best trousers when working with acid.&lt;/p&gt;
+&lt;p&gt;With the most difficult part over, it was then just a case of soldering
+the parts together according to the design.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/05/27/homemade-wireless-plug/together/"&gt;&lt;img alt="Wireless plug on bench" class="aligncenter size-full wp-image-251" src="http://www.moop.org.uk/wp-content/uploads/2013/05/together.jpg" style="width: 640px; height: 480px;" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="the-software"&gt;
+&lt;h2&gt;The software&lt;/h2&gt;
+&lt;p&gt;So, on to the software. The ATtiny just needs to setup the Bluetooth
+module then wait to receive commands for switching the relay.&lt;/p&gt;
+&lt;p&gt;The Bluetooth module uses the RS232 interface. I originally thought I
+would have to do something complex to allow full duplex sending and
+receiving but in practice a very simple send, then wait for response
+worked perfectly well.&lt;/p&gt;
+&lt;p&gt;Format was 1 start bit, followed by 8 bits ASCII followed by a stop bit.
+Sending was as simple as...&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+// start bit
+digitalWrite(TX, LOW);
+delayMicroseconds(BAUD_RATE);
+//character
+digitalWrite(TX, (c&amp;amp;1)?HIGH:LOW);
+delayMicroseconds(BAUD_RATE);
+...
+digitalWrite(TX, (c&amp;amp;128)?HIGH:LOW);
+delayMicroseconds(BAUD_RATE);
+//stop bit
+digitalWrite(TX, HIGH);
+delayMicroseconds(BAUD_RATE);
+&lt;/pre&gt;
+&lt;p&gt;After sending a command string, it would then wait for a response using
+almost the complete reverse.&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+// wait for start of start bit
+while (digitalRead(RX));
+// delay to get the middle of first bit of character
+delayMicroseconds(BAUD_RATE+BAUD_RATE/2);
+// character
+c|=(digitalRead(RX)==HIGH)?1:0;
+delayMicroseconds(BAUD_RATE);
+...
+c|=(digitalRead(RX)==HIGH)?128:0;
+delayMicroseconds(BAUD_RATE);
+// could check for stop bit here as verification
+&lt;/pre&gt;
+&lt;p&gt;The receiving would just loop until a newline character was read. This
+was assumed to be the end of the response.&lt;/p&gt;
+&lt;p&gt;Before we could start sending commands, we set up all the IO lines, then
+pulsed the KEY line low to get the Bluetooth module to start up in 9600
+baud AT command mode. We could then start sending the AT commands to
+setup the module. In a real world case this would set up passcodes etc
+(so your neighbours couldn't control your lights). But for now we just
+gave it a name and made sure we got OK back.&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+SPARK: AT+NAME=PLUG\r\n
+BLUETOOTH: OK\r\n
+&lt;/pre&gt;
+&lt;p&gt;From this point the KEY line was returned to low to switch the module to
+communication mode. Once done it just waited to receive a character like
+we did before. A '0' would turn the relay off or a '1' would turn the
+relay on.&lt;/p&gt;
+&lt;p&gt;Next up was to code the web server. This needed to interface with a web
+page and send the 0 or 1 to the Bluetooth module.&lt;/p&gt;
+&lt;p&gt;Being trendy, I thought a Websocket's interface would be the way to go.
+Instead of doing the sensible thing and downloading a library, I decided
+to do everything myself. This turned out not to be a great idea. Firstly
+the websockets protocol seems needlessly complex. First, a key is sent
+which you have to transform and send back. This transformation isn't the
+easiest when you're trying to write everything yourself in C. First the
+key gets a magic string appended, then a SHA1 hash of this is generated
+and finally that hash is encoded in base64 ready to be returned. Even
+when the connection is established you then need to XOR everything you
+send. Not super complicated but lots of code to write. Weirdly although
+this worked perfectly with Chrome, both Safari and Firefox didn't accept
+my Websocket connection response. Moral of this lesson, don't pointless
+write functionality you could just download a library to do.&lt;/p&gt;
+&lt;p&gt;Although I planned eventually to run the server on a Raspberry Pi or
+similar, I started off programming on my laptop which meant I wrote the
+Bluetooth communication code using OSX's IOBluetooth interface. This
+allowed automatically pairing with the plug and the sending of the
+control signals. Not having done much OSX programming before, I spent a
+good hour or two pulling my hair out until I realised I didn't get
+callbacks unless I called CFRunLoopRun(). Once I realised this,
+everything went a lot smoother. Below is a cut down version of my
+pairing code (ie. no error checking etc).&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+inquiry=[IOBluetoothDeviceInquiry inquiryWithDelegate:self];
+[inquiry setSearchCriteria:0 majorDeviceClass:kBluetoothDeviceClassMajorUnclassified minorDeviceClass:kBluetoothDeviceClassMinorComputerUnclassified];
+if ([inquiry start]==kIOReturnSuccess)
+{
+  CFRunLoopRun();
+  NSArray *devices = [inquiry foundDevices];
+  for (IOBluetoothDevice *device in devices)
+  {
+    if (![device isPaired])
+    {
+      IOBluetoothDevicePair *pair=[IOBluetoothDevicePair pairWithDevice:device];
+      [pair setDelegate:self];
+      if ([pair start]==kIOReturnSuccess)
+      {
+        CFRunLoopRun();
+      }
+    }
+    if ([device openConnection]==kIOReturnSuccess)
+    {
+      IOBluetoothRFCOMMChannel *rfChannel;
+      if ([device openRFCOMMChannelSync:&amp;amp;rfChannel withChannelID:1 delegate:self]==kIOReturnSuccess)
+      {
+        // Now you can communicate on rfChannel
+        // ie. [rfChannel writeSync:(void*)str length:strlen(str)];
+      }
+    }
+  }
+}
+&lt;/pre&gt;
+&lt;p&gt;The object needs to implement callbacks but mostly these just consist of
+calling CFRunLoopStop(CFRunLoopGetCurrent()) when the complete callbacks
+is received. The only one I really had to implement was the PIN code
+exchange.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="the-wrap-up"&gt;
+&lt;h2&gt;The wrap up&lt;/h2&gt;
+&lt;p&gt;Next up was just to cram everything into the socket...&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/05/27/homemade-wireless-plug/cram/"&gt;&lt;img alt="Wireless plug socket" class="aligncenter size-full wp-image-252" src="http://www.moop.org.uk/wp-content/uploads/2013/05/cram.jpg" style="width: 640px; height: 480px;" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;And try it out...&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.youtube.com/watch?v=GBEqYxaKBfM"&gt;http://www.youtube.com/watch?v=GBEqYxaKBfM&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;So, I didn't actually meet my price goal or get it to fit snugly inside
+a standard socket. But it isn't too far off. I have a smaller (and
+cheaper!) transformer but haven't tried it yet. Also, there's lots of
+space to save by integrating parts like the ATtiny, Bluetooth module and
+relay driver into one PCB.&lt;/p&gt;
+&lt;p&gt;The relay might need some work too as it wasn't too impressive. After
+some time (a few minutes) it tends to return to it's default state
+(power on) even though it's input pin is still high. I mainly blame this
+on the power supply not being able to maintain a high enough voltage but
+that's just a hunch.&lt;/p&gt;
+&lt;p&gt;In practice I never put these in any sockets in the house. This was
+mainly due to safety (ie. fire) and legal issues (probably is illegal to
+replace sockets with own uncertified modifications). I am still
+interested in home automation but will probably play it safe and stick
+to the commercially available products.&lt;/p&gt;
+&lt;/div&gt;
+</content><category term="AVR"></category><category term="Bluetooth"></category><category term="DigiSpark"></category><category term="Electronics"></category><category term="Home automation"></category><category term="Wireless"></category></entry><entry><title>Mittens and Snowdrop action figures</title><link href="https://www.moop.org.uk/mittens-and-snowdrop-action-figures.html" rel="alternate"></link><published>2012-12-28T18:43:00+00:00</published><updated>2012-12-28T18:43:00+00:00</updated><author><name>moop</name></author><id>tag:www.moop.org.uk,2012-12-28:/mittens-and-snowdrop-action-figures.html</id><summary type="html">&lt;p&gt;I got close to biting off more than I could chew recently in the process
+of making a Secret Santa gift. &amp;nbsp;With Mata as my 'victim' I decided to
+make some little action figures of the&amp;nbsp;&lt;a class="reference external" href="http://www.matazone.co.uk/animpages/kitty1.html"&gt;Mittens and
+Snowdrop&lt;/a&gt;&amp;nbsp;characters
+from one of his animations.&lt;/p&gt;
+&lt;p&gt;The initial plan was to …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I got close to biting off more than I could chew recently in the process
+of making a Secret Santa gift. &amp;nbsp;With Mata as my 'victim' I decided to
+make some little action figures of the&amp;nbsp;&lt;a class="reference external" href="http://www.matazone.co.uk/animpages/kitty1.html"&gt;Mittens and
+Snowdrop&lt;/a&gt;&amp;nbsp;characters
+from one of his animations.&lt;/p&gt;
+&lt;p&gt;The initial plan was to just build and paint the figures, but partway
+through I decided to cast them in resin. &amp;nbsp;This has the advantage of
+being stronger than the master model (depending on materials) and as a
+bonus let me make a set for myself.&lt;/p&gt;
+&lt;p&gt;First up, here's the finished product:&lt;/p&gt;
+&lt;p&gt;[caption id=&amp;quot;attachment_83&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-17-19-50-12/"&gt;&lt;img alt="Finished Product" class="wp-image-83" src="http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-17-19-50-12.jpeg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt; Finished Product[/caption]&lt;/p&gt;
+&lt;p&gt;To start off with I decided to have some fun, and ended up building a
+mini lathe to make the basic body shape. &amp;nbsp;This allowed me to use cheap
+3/4 inch balsa dowel as stock material instead of wasting (slightly
+more) expensive putty, it also made getting the body shape smooth and
+uniform a lot easier.&lt;/p&gt;
+&lt;p&gt;[caption id=&amp;quot;attachment_73&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-05-20-41-33/"&gt;&lt;img alt="Mini lathe in action" class="size-full wp-image-73" src="http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-05-20-41-33.jpeg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt; Mini lathe in action[/caption]&lt;/p&gt;
+&lt;p&gt;The lathe is very light duty but works well to shape a piece of balsa
+with sandpaper or a craft knife. There's a &lt;a class="reference external" href="http://www.moop.org.uk/index.php/2012/12/23/diy-mini-lathe/"&gt;separate blog
+post&lt;/a&gt; on
+how I made the lathe.&lt;/p&gt;
+&lt;p&gt;Once I had the body shape I started adding details. &amp;nbsp;Mittens' mouth was
+just cut out with a razor saw and then the throat drilled out. After
+that, a lip and uvula were sculpted with Milliput epoxy putty. &amp;nbsp;Eyes and
+feet were added in a similar fashion over several days to allow the
+putty to cure and prevent accidental damage to bits of detail that were
+still setting.&lt;/p&gt;
+&lt;p&gt;[caption id=&amp;quot;attachment_74&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-07-06-18-45/"&gt;&lt;img alt="Basic Body Shapes" class="size-full wp-image-74" src="http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-07-06-18-45.jpeg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt; Basic Body Shapes[/caption]&lt;/p&gt;
+&lt;p&gt;More complex features such as Mittens' hands and the ears were made by
+rolling out sheets of putty and cutting it to shape with a sharp
+sculpting tool. &amp;nbsp;In the case of the ears they were rolled onto a curved
+bit of clay and cut to shape then allowed to cure and trimmed down to
+size before being attached with fillets of putty.&lt;/p&gt;
+&lt;p&gt;[caption id=&amp;quot;attachment_75&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-12-06-35-41/"&gt;&lt;img alt="Masters" class="size-full wp-image-75" src="http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-12-06-35-41.jpeg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt;
+Masters[/caption]&lt;/p&gt;
+&lt;p&gt;Once the masters were finished I brushed them with polyurethane varnish
+to ensure they'd release cleanly from the mould. &amp;nbsp;I should have used
+some filler at this point to get rid of the woodgrain finish, but since
+I didn't think about it at the time I had to clean this up later.&lt;/p&gt;
+&lt;p&gt;I ordered some RTV (Room Temperature Vulcanising) silicone rubber online
+in order to make the mould. &amp;nbsp;The correct way to make a two part mould is
+to build a box and fill the bottom half with clay, then press the
+masters into the clay and pour silicone over. &amp;nbsp;Unfortunately the clay I
+had dried up, so I ended up using salt dough and surprisingly it worked
+well though it was very soft.&lt;/p&gt;
+&lt;p&gt;[caption id=&amp;quot;attachment_76&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-12-22-15-35/"&gt;&lt;img alt="The first mould half is poured" class="size-full wp-image-76" src="http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-12-22-15-35.jpeg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt; The first mould half is poured[/caption]&lt;/p&gt;
+&lt;p&gt;I build the mould box out of cardboard protected with parcel tape. &amp;nbsp;The
+base is some 0.5mm sheet styrene I had lying around. &amp;nbsp;The card was just
+formed into a box and taped closed I packed the bottom half with salt
+dough. &amp;nbsp;I added more dough around the box to seal the edges. &amp;nbsp;The master
+models were then pressed into the dough making sure there was a tight
+enough seal all around. &amp;nbsp;I then mixed up the silicone thoroughly and
+poured it from as high as possible. It's best to pour into the corner of
+the mould and allow it to flow over the models of its own accord to
+prevent air bubbles and voids in the mould.&lt;/p&gt;
+&lt;p&gt;To make it easy to line up the two mould halves it's worth pressing the
+handle of a paint brush or similar into the clay to make some small
+alignment nubs in the first mould half. &amp;nbsp;These will translate to
+matching holes in the second half. &amp;nbsp;I made once larger than the others
+to make it obvious which corners should match up.&lt;/p&gt;
+&lt;p&gt;[caption id=&amp;quot;attachment_77&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;941&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-13-21-24-31/"&gt;&lt;img alt="First mould half" class="size-full wp-image-77" src="http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-13-21-24-31.jpeg" style="width: 941px; height: 768px;" /&gt;&lt;/a&gt; First mould half[/caption]&lt;/p&gt;
+&lt;p&gt;After leaving this overnight I removed the box and washed off the salt
+dough from the models. &amp;nbsp;A downside of the salt dough is that it gets
+very sticky but it wasn't difficult to remove. &amp;nbsp;Although it's advised
+against I cracked part of one of the models out of the mould to check
+that it released properly.&lt;/p&gt;
+&lt;p&gt;Before pouring the second half of the mould I painted a thin layer of
+Vaseline over the rubber (but not the models) to act as a mould release
+and avoid the two halves bonding together. &amp;nbsp;I realised at this point
+that I hadn't added any vents or pour channels into the mould so I had
+to hack them in with some clay. &amp;nbsp;These would have been much easier to
+add when making the first mould half as they could be set into the clay.
+&amp;nbsp;The Vaseline didn't help either as everything was very slippy at this
+point.&lt;/p&gt;
+&lt;p&gt;[caption id=&amp;quot;attachment_78&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-13-21-47-51/"&gt;&lt;img alt="Adding vents (a little late)" class="size-full wp-image-78" src="http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-13-21-47-51.jpeg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt; Adding vents (a little late)[/caption]&lt;/p&gt;
+&lt;p&gt;The second mould half was then poured in a similar fashion to the first.
+&amp;nbsp;A day later once it had cured I cracked open the box and managed to
+separate the two mould halves with relatively little hack and slash with
+the craft knife.&lt;/p&gt;
+&lt;p&gt;[caption id=&amp;quot;attachment_79&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-14-23-04-24/"&gt;&lt;img alt="Completed mould" class="size-full wp-image-79" src="http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-14-23-04-24.jpeg" style="width: 1024px; height: 710px;" /&gt;&lt;/a&gt; Completed mould[/caption]&lt;/p&gt;
+&lt;p&gt;Once the mould was complete I mixed up some resin and did a test pour.
+&amp;nbsp;The results were quite promising but highlighted a few flaws in the
+mould. &amp;nbsp;The pour channels had to be opened up a bit with the craft knife
+to let more resin in. &amp;nbsp;Additionally since the feet were above the point
+where the pour channel hits the body they trapped pockets of air. &amp;nbsp;I
+solved this by skewering the silicone with a cocktail stick through to
+the tips of the feet and inserting some 'biro inner' style nylon tube to
+prevent the channels from closing up. &amp;nbsp;The resin doesn't stick to the
+nylon so they can be easily removed with some pliers, leaving a little
+stick of cast resin which easily breaks off (useful for parts that can't
+be aligned with the mould line).&lt;/p&gt;
+&lt;p&gt;[caption id=&amp;quot;attachment_80&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-15-01-09-58/"&gt;&lt;img alt="Pouring the resin" class="size-full wp-image-80" src="http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-15-01-09-58.jpeg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt; Pouring the resin[/caption]&lt;/p&gt;
+&lt;p&gt;I used some more sheet styrene and elastic bands to hold the mould shut.
+&amp;nbsp;It doesn't need too much pressure as the resin is quite thick and you
+can warp the mould.&lt;/p&gt;
+&lt;p&gt;It's worth noting that the resin and silicone I used required mixing in
+roughly 10:1 ratio with a catalyst, which required some very accurate
+scales. &amp;nbsp;It's possible to get stuff that can be mixed 1:1 by volume
+which is a lot less hassle if you can get it conveniently.&lt;/p&gt;
+&lt;p&gt;[caption id=&amp;quot;attachment_81&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;460&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-17-16-57-51-2/"&gt;&lt;img alt="Finished, primed, painted" class="size-full wp-image-81" src="http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-17-16-57-51-2.jpeg" style="width: 460px; height: 768px;" /&gt;&lt;/a&gt; Finished, primed, painted[/caption]&lt;/p&gt;
+&lt;p&gt;Once the resin was cured and cracked out of the mould I trimmed off the
+flashing where the mould halves joined and primed them with grey spray
+on primer. &amp;nbsp;At this point I noticed the woodgrain had transferred
+through from some parts of the bodies and other parts were not so
+smooth. To fix this I used some filler and a few rounds of
+sanding/filing and re-priming until I was happy with the finish.&lt;/p&gt;
+&lt;p&gt;[caption id=&amp;quot;attachment_82&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-17-17-15-01/"&gt;&lt;img alt="Paints" class="size-full wp-image-82" src="http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-17-17-15-01.jpeg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt;
+Paints[/caption]&lt;/p&gt;
+&lt;p&gt;Finally I painted the models with a mix of Citadel and Vallejo paints I
+had to hand and varnished them with some EzeCote polyurethane.&lt;/p&gt;
+&lt;p&gt;[caption id=&amp;quot;attachment_84&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-17-20-55-00/"&gt;&lt;img alt="Finished product" class="size-full wp-image-84" src="http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-17-20.55.00.jpeg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt; Finished product[/caption]&lt;/p&gt;
+</content></entry><entry><title>DIY Mini Lathe</title><link href="https://www.moop.org.uk/diy-mini-lathe.html" rel="alternate"></link><published>2012-12-23T14:27:00+00:00</published><updated>2012-12-23T14:27:00+00:00</updated><author><name>moop</name></author><id>tag:www.moop.org.uk,2012-12-23:/diy-mini-lathe.html</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2012/12/23/diy-mini-lathe/2012-12-23-12-05-48/"&gt;&lt;img alt="Mini Lathe" class="alignnone wp-image-7" src="http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-23-12.05.48.jpg" style="width: 933px; height: 559px;" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I needed some smooth round parts recently for some models I was building
+and chose to take an unconventional approach by building a mini lathe on
+which to turn them.&lt;/p&gt;
+&lt;p&gt;The parts were designed in Draftsight and cut from 3mm ply on
+&lt;a class="reference external" href="http://www.nottinghack.co.uk/"&gt;Nottingham Hackspace's&lt;/a&gt; laser cutter.
+The lathe is built …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2012/12/23/diy-mini-lathe/2012-12-23-12-05-48/"&gt;&lt;img alt="Mini Lathe" class="alignnone wp-image-7" src="http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-23-12.05.48.jpg" style="width: 933px; height: 559px;" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I needed some smooth round parts recently for some models I was building
+and chose to take an unconventional approach by building a mini lathe on
+which to turn them.&lt;/p&gt;
+&lt;p&gt;The parts were designed in Draftsight and cut from 3mm ply on
+&lt;a class="reference external" href="http://www.nottinghack.co.uk/"&gt;Nottingham Hackspace's&lt;/a&gt; laser cutter.
+The lathe is built from two finger jointed boxes on a base plate. One of
+the two boxes has plates screwed inside and outside of the faces to hold
+a pair of bearings that support a free spinning motor shaft. The second
+box has an old GWS brushless motor mounted inside. The friction fit
+seems sturdy enough but two rails of beech engine bearer stock are
+screwed to the sides for extra rigidity and the base is clamped to a
+worktop to reduce vibration.&lt;/p&gt;
+&lt;p&gt;A suitable electronic speed controller and lithium polymer battery
+provide power to the motor. Control signals for the ESC are provided by
+a cheap servo tester.&lt;/p&gt;
+&lt;p&gt;[gallery ids=&amp;quot;19,30,33&amp;quot;]&lt;/p&gt;
+&lt;p&gt;The work piece is drilled out slightly smaller than the two shafts and
+threaded on. The friction fit acts as a clutch helping to prevent damage
+to the motor or drawing excess current and puffing the battery if it
+stalls.&lt;/p&gt;
+&lt;p&gt;For tooling I used various forms of sandpaper and a craft knife.
+Anything that will cut or erode the workpiece without stalling the motor
+should work okay. I've found it takes a delicate touch but it is easy to
+shape the workpiece with some practice.&lt;/p&gt;
+&lt;p&gt;[gallery ids=&amp;quot;35,43,11&amp;quot;]&lt;/p&gt;
+&lt;p&gt;There are a few downsides to the simple construction: the rails need to
+be unscrewed and the boxes removed to insert or remove the work piece,
+and the lathe is only suitable for turning very soft wood such as balsa
+dowel. Regardless of this the very low cost and simple task required of
+it it did an excellent job, though I won't take responsibility for any
+fingers lost attempting to replicate it.&lt;/p&gt;
+</content><category term="Mini Lathe"></category></entry></feed>
