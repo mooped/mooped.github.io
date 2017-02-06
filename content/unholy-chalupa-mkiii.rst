@@ -1,0 +1,309 @@
+Unholy Chalupa MKIII
+####################
+:date: 2013-07-08 20:58
+:author: moop
+:category: Things, Unholy Chalupa
+:slug: unholy-chalupa-mkiii
+:status: published
+
+Beware: unreasonably long post ahead. I probably should've posted this
+in chunks, but was hoping to fly the model first. That always seemed to
+be just around the corner, but thanks to British weather and seasonal
+man-flu that still hasn't happened.
+
+The original Chalupa is a model aircraft I designed that was built over
+the Easter bank holiday last year. It was pretty simple but fun to fly,
+though not very pretty and the wing construction was rather flimsy.
+After it was built I continued tweaking the CAD drawing of the model.
+One of these tweaks was a lasercut version of the wing with an
+interlocking design that was a lot easier to build. Unfortunately, due
+to the hacks required to mount it to the old fuselage, it was still not
+brilliant structurally. When the second wing broke early this year I
+decided to do a full rebuild of the model, using the latest version of
+the drawing.
+
+[gallery ids="241,314"]
+
+The most major change to the model was the wing mounting system. The
+original and lasercut wings were built as a single panel held by a tab
+and a magnet under the fuselage. The intention of this system was to
+provide a quick release effect in the case of a crash or bad landing.
+Unfortunately, the wing tended to detach even in a good landing, and
+yank on the wing servo cables, in one case ripping off the housing from
+one servo and spilling tiny gears across the field. This also put a lot
+of stress on the center section of the wing in many cases. In the new
+design, the wing is built in two panels. A pair of carbon rods slide
+through holes in the fuselage. The rods continue through holes in the
+inner three sets of wing ribs. They should have enough flex in them to
+absorb some impact in the case of a bad landing.
+
+As you can see from the comparison above, I also redesigned the fuselage
+to be much less boxy.
+
+[caption id="attachment\_243" align="alignnone" width="2592"]\ |MKIII
+Chalupa Parts| MKIII Chalupa Parts[/caption]
+
+I cut the parts for the MKIII Unholy Chalupa at the start of May, using
+the laser cutter at Nottingham Hackspace. The model was finished around
+the 21st of June. Since then it's mostly been cluttering up my desk,
+waiting for a good day for a test flight.
+
+[caption id="attachment\_263" align="alignnone" width="1024"]\ |Fuselage
+sides| Fuselage sides[/caption]
+
+The first step was to build up the fuselage sides. The side panels could
+have been built as a single piece if they were hand cut, but using the
+laser meant I could rely on the accuracy of the wing mounting holes.
+This allowed me to use the holes to perfectly align the doublers. This
+is important on this model, as the positioning of these holes will
+ensure that the wing sits exactly perpendicular to the fuselage. Once
+the doublers were on I attached the fuselage formers to the sides,
+unfortunately there were some errors in the CAD drawing, so I had to do
+a bit of trimming at this stage to get them to fit correctly. You can
+also see the 1/8th square balsa strip running along the top of the
+fuselage side. This is left unglued at the tail section for the time
+being so that the sides can be bent inward later.
+
+[gallery ids="265,266"]
+
+Once the glue on the formers had set, I carefully aligned the two
+fuselage halves and glued them together. A variety of clamps and blocks
+was used to ensure that everything was aligned and that the fuselage
+sides were vertical. The grain on the rear former runs vertically. This
+prevents it snapping if it is pushed from the top, but leaves it weak
+laterally so it could break if the fuselage is squeezed hard. To solve
+this problem, a cross grain doubler was added to the top portion of this
+former. A 1/8" square strip was slotted in temporarily to keep it
+aligned. This doubler also provides extra surface area for gluing, which
+will come in handy later.
+
+[gallery ids="267,268,269"]
+
+Once the fuselage sides and formers were in, the bottom sheeting was
+fitted. In the straight section of the fuselage this was
+straightforward. In the tail section this was slightly more complex,
+made more so by the fact that I had to trim part of the tail bottom
+section due to a CAD error. This prompted a rethink of how I link
+dimensions in my drawings, which I may write about later. Once trimmed
+the tail sheeting was pinned to the work surface and pressed firmly onto
+the rear former to ensure it remained straight. Once glue was applied,
+the sides were pulled in, held vertical using blocks and set squares. I
+also glued the 1/8th strips to the top of the tail section at this
+point, to lock in the bend.
+
+[caption id="attachment\_270" align="alignnone" width="1024"]\ |Desk
+fly| Desk fly[/caption]
+
+At this point it was possible to put the model together to see how it
+would look and provide a motivation boost. The wings were held together
+by friction.
+
+[gallery ids="271,273,275,276,277"]
+
+The next phase of the build was to skin to the top part of the fuselage.
+The first part to be skinned was the hatch. This section detaches to
+provide access to the batteries and radio gear. Since it is separate it
+could easily be rebuilt if something went wrong. A 1/8" square spine was
+fitted into the notches at the top of the formers to support the 1/32"
+sheet was used for the skin. This was a slow process as it was initially
+glued vertically to the side of the hatch, then glued and pinned in
+sections once the glue set. This took several days, but very little
+actual work. Most of the time was spent waiting for the glue to dry.
+
+[caption id="attachment\_274" align="alignnone" width="1024"]\ |Spine|
+Spine[/caption]
+
+The spine for the rest of the fuselage was glued in sections, taking
+advantage of the doubler on the rear former to provide extra surface
+area. At this point some 1/16" strip was added to provide a nice area
+for the sheeting to seat as well as additional glueing area.
+
+[gallery ids="278,280,279,285"]
+
+The sheeting for the cockpit and turtle deck was a bit more complex than
+that of the hatch. It was held in place and traced from the underside of
+the model, then cut and test fitted. A few attempts and some trimming
+were required to get this right. I left the rear end of the turtle deck
+untrimmed until I knew how the tail surfaces would fit.
+
+[gallery ids="281,282,284"]
+
+I originally intended to use the tail from the previous version of the
+model, but changed my mind after some consideration. On the original the
+elevator was a single piece with a slot in the vertical fin to allow it
+to move. This led to a lack of surface area on the fin and some yaw
+issues in flight. Because of this, I modified the plan to use a slot in
+the elevator with a just a small notch in the rudder for it to pass
+through. At this point power supply issues had taken the laser cutter
+out of action, so I had to make the extra parts by hand. I printed and
+traced the plans then cut them out. Since the notches on the cross grain
+parts of the surfaces were quite intricate I built the main sections
+first, then traced the notches on the cross grain parts from the real
+cut. After a few attempts I managed to get a nice tight fit.
+
+It's important that the horizontal stabiliser and fin remain
+perpendicular, so blocks and clamps were used to hold them in place
+while the glue cured. A tiny sub fin was attached below the stabiliser,
+to give a place to hinge the lower part of the rudder. On the original
+model this was a big problem and lead to a very sloppy rudder response.
+
+[caption id="attachment\_286" align="alignnone" width="1024"]\ |Complete
+fuselage| Complete fuselage[/caption]
+
+At this point the fuselage was mostly complete, and I moved onto the
+wings. You can see here that I've shortened the model a bit since the
+last picture of the fuselage. The original intention was to hide the
+motor away, but the problems accessing the mount made me change my mind.
+I think the model still looks good with the motor exposed.
+
+[gallery ids="288,290,289"]
+
+The wings are quite simple, but it's important that they are built
+straight. Because of this they were glued in several phases, with blocks
+and clamps ensuring that everything is straight and true. Unfortunately,
+for reasons I no longer recall, my original parts had tiny difference in
+the rib spacing in the outer panel. Despite taking great care to make
+sure the leading and trailing edges matched, I still managed to mess
+this up on one wing. This left the wing ribs slightly skewed, but in the
+end it doesn't cause a big problem once the wings were attached. Even
+so, I fixed this up on the plans so it won't be an issue should I build
+another.
+
+You can also see that while the glue was setting the wings were placed
+back to back. This was to make any misalignment visible, so I could
+correct it before the glue set. I also measured the height of the
+trailing edge at each end of each panel to try and eliminate any twist.
+If I build another, I intend to make a jig that will slot over each rib
+of the wing, keeping them all at the same angle to the work surface.
+
+[gallery ids="291,292"]
+
+Whilst the glue was setting on the wings I installed the radio gear into
+the fuselage. On this model it's a tight fit, and the receiver will be
+difficult to get at once the model is covered. Fortunately this
+shouldn't be necessary except in rare cases, in which case the covering
+can be cut off to gain access.
+
+[caption id="attachment\_293" align="alignnone" width="460"]\ |Wingtip
+installation.| Wingtip installation[/caption]
+
+The wingtips were installed with the wings attached and the model
+standing on its nose. I used some 1/8" strip packed around the tips to
+to keep them horizontal, as the slight bevel left by the laser cutter
+would create problems if they were just glued on directly.
+
+[caption id="attachment\_294" align="alignnone" width="1024"]\ |Servo
+hatch| Servo hatch[/caption]
+
+Sub ribs were added to the wings for servo mounting. They slot onto the
+wing spars and the carbon rods that attach the wings to the fuselage.
+The servo is screwed into a slot the thicker of these sub ribs. The
+thinner two sub ribs provide a mounting surface for the sheeting around
+the servo horn, giving a place to attach the covering around the gap.
+
+[gallery ids="295,296,297"]
+
+To hold the wings in place, I settled on nylon bolts that fit into
+T-nuts in the inner rib. Since there were no holes for the bolts in the
+plans I had to manually drill these. I fitted the wing in place and
+pressed on the T-nut to leave in impression on the fuselage side,
+marking where the holes should be drilled. Although this holds the wing
+well, it is difficult to insert and remove them, so it's not the best
+method if the wing needs to be removed regularly. I need to put a bit
+more thought into a nicer mechanism at some point.
+
+[gallery ids="300,299,316"]
+
+Another benefit of the carbon rod wing attachment is that they provide a
+good hardpoint against which the landing gear can be be mounted. This
+was my first attempt at wing mounted landing gear and I'm fairly happy
+with how it turned out. It should transfer a lot of the landing loads to
+the rods instead of the wing.
+
+[gallery ids="301,304,305"]
+
+The leading edge of the wing was built up from a stack of 1/8" and 1/16"
+strip. I used parcel tape to protect the wing ribs while sanding these
+to match the desired profile.
+
+[caption id="attachment\_307" align="alignnone" width="1024"]\ |Tail
+install| Tail install[/caption]
+
+After covering the tail and fuselage, I installed the tail. I took a lot
+of care to make sure it sat correctly and that the stabiliser was
+horizontal, before adding glue and clamping it in place.
+
+[gallery ids="308,309,310,312,311,313"]
+
+I waited until after the model was covered to fit the control linkages.
+The tail surfaces required relatively long pushrods, so I used
+adjustable EZ-link style fittings to make them easily adjustable, rather
+than risk messing up fixed length pushrods. This also keeps them
+removable as they are only bent at one end. For the aileron surfaces I
+used fixed length linkages since they are short and would be easy to
+replace if the length came out wrong.
+
+Once a few more minor tasks were out of the way, the model was mostly
+finished and ready to go.
+
+Unfortunately, thanks to the weather I haven't had chance to fly it yet,
+so it's been cluttering my desk. Since I was out of hooks to wall mount
+it in the usual way, I ended up bending a large wire hook that clips to
+the landing gear and could be screwed to the wall.
+
+[caption id="attachment\_315" align="alignnone" width="1024"]\ |Wall
+mounting| Wall mounting[/caption]
+
+[caption id="attachment\_318" align="alignnone" width="1024"]\ |Wall
+mounted| Wall mounted[/caption]
+
+.. |MKIII Chalupa Parts| image:: http://www.moop.org.uk/wp-content/uploads/2013/05/2013-05-05-17.10.25.jpg
+   :class: size-full wp-image-243
+   :width: 2592px
+   :height: 1552px
+   :target: http://www.moop.org.uk/index.php/2013/05/19/update/2013-05-05-17-10-25/
+.. |Fuselage sides| image:: http://www.moop.org.uk/wp-content/uploads/2013/07/2013-05-20-20.56.28.jpg
+   :class: size-full wp-image-263
+   :width: 1024px
+   :height: 613px
+   :target: http://www.moop.org.uk/index.php/2013/07/08/unholy-chalupa-mkiii/2013-05-20-20-56-28/
+.. |Desk fly| image:: http://www.moop.org.uk/wp-content/uploads/2013/07/2013-05-24-22.56.58.jpg
+   :class: size-full wp-image-270
+   :width: 1024px
+   :height: 613px
+   :target: http://www.moop.org.uk/index.php/2013/07/08/unholy-chalupa-mkiii/2013-05-24-22-56-58/
+.. |Spine| image:: http://www.moop.org.uk/wp-content/uploads/2013/07/2013-05-27-00.58.11.jpg
+   :class: size-full wp-image-274
+   :width: 1024px
+   :height: 613px
+   :target: http://www.moop.org.uk/index.php/2013/07/08/unholy-chalupa-mkiii/2013-05-27-00-58-11/
+.. |Complete fuselage| image:: http://www.moop.org.uk/wp-content/uploads/2013/07/2013-05-30-21.40.35.jpg
+   :class: size-full wp-image-286
+   :width: 1024px
+   :height: 613px
+   :target: http://www.moop.org.uk/index.php/2013/07/08/unholy-chalupa-mkiii/2013-05-30-21-40-35/
+.. |Wingtip installation.| image:: http://www.moop.org.uk/wp-content/uploads/2013/07/2013-06-02-18.14.22.jpg
+   :class: size-full wp-image-293
+   :width: 460px
+   :height: 768px
+   :target: http://www.moop.org.uk/index.php/2013/07/08/unholy-chalupa-mkiii/2013-06-02-18-14-22/
+.. |Servo hatch| image:: http://www.moop.org.uk/wp-content/uploads/2013/07/2013-06-02-18.55.36.jpg
+   :class: size-full wp-image-294
+   :width: 1024px
+   :height: 613px
+   :target: http://www.moop.org.uk/index.php/2013/07/08/unholy-chalupa-mkiii/2013-06-02-18-55-36/
+.. |Tail install| image:: http://www.moop.org.uk/wp-content/uploads/2013/07/2013-06-10-22.47.21.jpg
+   :class: size-full wp-image-307
+   :width: 1024px
+   :height: 613px
+   :target: http://www.moop.org.uk/index.php/2013/07/08/unholy-chalupa-mkiii/2013-06-10-22-47-21/
+.. |Wall mounting| image:: http://www.moop.org.uk/wp-content/uploads/2013/07/2013-07-07-20.09.38.jpg
+   :class: size-full wp-image-315
+   :width: 1024px
+   :height: 613px
+   :target: http://www.moop.org.uk/index.php/2013/07/08/unholy-chalupa-mkiii/2013-07-07-20-09-38/
+.. |Wall mounted| image:: http://www.moop.org.uk/wp-content/uploads/2013/07/2013-07-07-12.26.20.jpg
+   :class: size-full wp-image-318
+   :width: 1024px
+   :height: 613px
+   :target: http://www.moop.org.uk/index.php/2013/07/08/unholy-chalupa-mkiii/2013-07-07-12-26-20/
