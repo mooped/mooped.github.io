@@ -2,7 +2,8 @@ Tricopter
 #########
 :date: 2014-12-28 16:12
 :author: moop
-:category: Maiden Flights, Things, TriCopter
+:category: Things
+:tags: Maiden Flights, Things, TriCopter
 :slug: tricopter
 :status: published
 
@@ -122,38 +123,46 @@ and I'd enjoy hearing about it if anyone uses them in a project.
    :width: 938px
    :height: 528px
    :target: http://www.moop.org.uk/index.php/2014/12/28/tricopter/20140914_124309/
+   :alt: Finished Tricopter
 .. |Bare frame| image:: http://www.moop.org.uk/wp-content/uploads/2014/12/20140626_212027.jpg
    :class: alignnone size-full wp-image-769
    :width: 938px
    :height: 528px
    :target: http://www.moop.org.uk/index.php/2014/12/28/tricopter/20140626_212027/
+   :alt: Bare frame
 .. |Folded| image:: http://www.moop.org.uk/wp-content/uploads/2014/12/20140914_124330.jpg
    :class: alignnone size-full wp-image-783
    :width: 413px
    :height: 734px
    :target: http://www.moop.org.uk/index.php/2014/12/28/tricopter/20140914_124330/
+   :alt: Folded
 .. |Swivel Mount| image:: http://www.moop.org.uk/wp-content/uploads/2014/12/20140626_222614.jpg
    :class: alignnone size-full wp-image-771
    :width: 413px
    :height: 734px
    :target: http://www.moop.org.uk/index.php/2014/12/28/tricopter/20140626_222614/
+   :alt: Swivel Mount
 .. |Rear ESC modifications| image:: http://www.moop.org.uk/wp-content/uploads/2014/12/20140703_214613.jpg
    :class: alignnone size-full wp-image-776
    :width: 938px
    :height: 528px
    :target: http://www.moop.org.uk/index.php/2014/12/28/tricopter/20140703_214613/
+   :alt: Rear ESC modifications
 .. |Tricopter Wiring Diagram| image:: http://www.moop.org.uk/wp-content/uploads/2014/12/tricopter-wiring.png
    :class: alignnone size-full wp-image-795
    :width: 1368px
    :height: 692px
    :target: http://www.moop.org.uk/index.php/2014/12/28/tricopter/tricopter-wiring/
+   :alt: Tricopter Wiring Diagram
 .. |Top View| image:: http://www.moop.org.uk/wp-content/uploads/2014/12/20140703_214719.jpg
    :class: alignnone size-full wp-image-778
    :width: 938px
    :height: 528px
    :target: http://www.moop.org.uk/index.php/2014/12/28/tricopter/20140703_214719/
+   :alt: Top View
 .. |Mobius Cam| image:: http://www.moop.org.uk/wp-content/uploads/2014/12/20141016_221414.jpg
    :class: alignnone size-full wp-image-786
    :width: 938px
    :height: 528px
    :target: http://www.moop.org.uk/index.php/2014/12/28/tricopter/20141016_221414/
+   :alt: Mobius Cam

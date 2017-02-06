@@ -2,7 +2,8 @@ Lightwave RF Mood Controller Hack
 #################################
 :date: 2013-08-25 21:46
 :author: charlie
-:category: Uncategorized
+:category: Things
+:tags: Charlie
 :slug: lightwaverfmoodcontrollerhack
 :status: published
 
@@ -79,13 +80,16 @@ Source <http://www.moop.org.uk/wp-content/uploads/2013/08/remote.c>`__.
    :width: 960px
    :height: 1280px
    :target: http://www.moop.org.uk/wp-content/uploads/2013/08/6Buttons.jpg
+   :alt: Six Buttons
 .. |Controller With Header| image:: http://www.moop.org.uk/wp-content/uploads/2013/08/AllDone.jpg
    :class: aligncenter size-full wp-image-364
    :width: 960px
    :height: 1280px
    :target: http://www.moop.org.uk/wp-content/uploads/2013/08/AllDone.jpg
+   :alt: Controller With Header
 .. |Controller Connected to Pi| image:: http://www.moop.org.uk/wp-content/uploads/2013/08/Connected.jpg
    :class: aligncenter size-full wp-image-365
    :width: 960px
    :height: 1280px
    :target: http://www.moop.org.uk/wp-content/uploads/2013/08/Connected.jpg
+   :alt: Controller Connected to Pi

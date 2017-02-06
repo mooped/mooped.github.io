@@ -2,7 +2,8 @@ Glider Restoration Part 4 - Finishing touches
 #############################################
 :date: 2013-03-03 00:31
 :author: moop
-:category: Hi-Fly, Maiden Flights, Things
+:category: Things
+:tags: Hi-Fly, Maiden Flights, Things
 :slug: glider-restoration-part-4-finishing-touches
 :status: published
 
@@ -16,8 +17,7 @@ work, but I'd like to make sure the motor is suited to the job before
 doing anything more permanent. The elastic band will keep the wires
 clear of the prop.
 
-[caption id="attachment\_224" align="alignnone" width="1024"]\ |Motor
-pod/pylon| Motor pod/pylon[/caption]
+|Motor pod/pylon|
 
 The clearance between the pod and the wing limits the prop to about 5
 inches. I'm running a 5x5 prop with a 1650Kv (ie. 1650 RPM/volt) motor
@@ -37,8 +37,7 @@ With this done the model is now in a state where it is ready to fly, and
 can be stored fully assembled. This made storing it a bit easier since
 it can hang on the wall above my desk.
 
-[caption id="attachment\_222" align="alignnone" width="1024"]\ |New
-home| New home[/caption]
+|New home|
 
 Finally, I took it out to the field for a test flight. Fortunately a few
 other members of the Derby Model Aero Club were also out making use of
@@ -56,8 +55,10 @@ larger battery so I can gain enough altitude for a proper test.
    :width: 1024px
    :height: 613px
    :target: http://www.moop.org.uk/?attachment_id=224
+   :alt: Motor pod
 .. |New home| image:: http://www.moop.org.uk/wp-content/uploads/2013/03/2013-03-02-22.06.37.jpg
    :class: size-full wp-image-222
    :width: 1024px
    :height: 613px
    :target: http://www.moop.org.uk/?attachment_id=222
+   :alt: New home

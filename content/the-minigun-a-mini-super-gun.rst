@@ -2,7 +2,8 @@ The Minigun (A mini Super Gun)
 ##############################
 :date: 2013-11-24 14:54
 :author: charlie
-:category: Uncategorized
+:category: Things
+:tags: Charlie
 :slug: the-minigun-a-mini-super-gun
 :status: published
 

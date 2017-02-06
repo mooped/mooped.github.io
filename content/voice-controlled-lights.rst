@@ -3,6 +3,7 @@ Voice Controlled Lights
 :date: 2013-08-10 16:07
 :author: charlie
 :category: Things
+:tags: Charlie
 :slug: voice-controlled-lights
 :status: published
 

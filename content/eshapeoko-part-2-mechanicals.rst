@@ -2,7 +2,8 @@ eShapeOko Part 2 - Mechanicals
 ##############################
 :date: 2013-10-22 21:01
 :author: moop
-:category: ShapeOko, Things
+:category: Things
+:tags: ShapeOko, Things
 :slug: eshapeoko-part-2-mechanicals
 :status: published
 

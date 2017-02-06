@@ -2,7 +2,8 @@ Glider Restoration Part 3 - Fuselage
 ####################################
 :date: 2013-02-24 13:41
 :author: moop
-:category: Hi-Fly, Things
+:category: Things
+:tags: Hi-Fly, Things
 :slug: glider-restoration-part-3-fuselage
 :status: published
 

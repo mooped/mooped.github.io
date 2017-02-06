@@ -2,7 +2,8 @@ eShapeOko Part 1
 ################
 :date: 2013-08-27 18:28
 :author: moop
-:category: ShapeOko, Things
+:category: Things
+:tags: ShapeOko, Things
 :slug: eshapeoko-part-1
 :status: published
 
@@ -27,9 +28,7 @@ simplicity of the stepper controllers I had it driving the motors nicely
 within an hour, though unfortunately I shortly after discovered several
 ways to fry the Allegro A3967 chip that the EasyDriver is based on.
 
-[caption id="attachment\_380" align="alignnone"
-width="1024"]\ |EasyDriver stepper boards| EasyDriver stepper
-boards[/caption]
+|EasyDriver stepper boards|
 
 The first mistake was forgetting to power off the boards while
 unplugging a motor. The controller keeps the coils in the stepper motor
@@ -73,8 +72,7 @@ provided by Reading Hackspace. With a Minimus acting as a USB to serial
 adapter, I had the electronics side of the machine in place (albeit
 cobbled together).
 
-[caption id="attachment\_390" align="alignnone" width="1024"]\ |Cobbled
-together CNC controller| Cobbled together CNC controller[/caption]
+|Cobbled together CNC controller|
 
 I'll cover the mechanical side of it in another post.
 
@@ -83,8 +81,10 @@ I'll cover the mechanical side of it in another post.
    :width: 1024px
    :height: 613px
    :target: http://www.moop.org.uk/index.php/2013/08/27/eshapeoko-part-1/2013-03-01-06-31-13/
+   :alt: EasyDriver stepper boards
 .. |Cobbled together CNC controller| image:: http://www.moop.org.uk/wp-content/uploads/2013/08/2013-04-06-13.00.37.jpg
    :class: size-full wp-image-390
    :width: 1024px
    :height: 613px
    :target: http://www.moop.org.uk/index.php/2013/08/27/eshapeoko-part-1/2013-04-06-13-00-37/
+   :alt: Cobbled together CNC controller

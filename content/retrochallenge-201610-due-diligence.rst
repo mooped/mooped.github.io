@@ -2,7 +2,8 @@ Retrochallenge 2016/10 - Due diligence
 ######################################
 :date: 2016-10-30 22:45
 :author: moop
-:category: RC2014, Retrochallenge
+:category: Retrochallenge
+:tags: RC2014, Retrochallenge
 :slug: retrochallenge-201610-due-diligence
 :status: published
 
@@ -22,16 +23,14 @@ card with a standard SD adapter and soldering some right angle pin
 headers to the pads. This gave me an SD adapter that would plug into a
 breadboard.
 
-[caption id="attachment\_987" align="alignnone"
-width="1024"]\ |Makeshift SD Adapter| Makeshift SD Adapter[/caption]
+|Makeshift SD Adapter|
 
 I initially used the Bus Pirate's probe cable as a quick way to connect
 to this adapter, but this got frustrating as the mini grabbers had a
 habit of letting go at inconvenient times. To get around this I made a
 quick adapter on some stripboard.
 
-[caption id="attachment\_988" align="alignnone" width="1024"]\ |Bus
-Pirate SD Adapter| Bus Pirate SD Adapter[/caption]
+|Bus Pirate SD Adapter|
 
 This little adapter also makes it easy to remove the SD adapter from the
 Bus Pirate without having to look up the pinout again. It should come in
@@ -48,8 +47,10 @@ would be worthwhile.
    :width: 1024px
    :height: 766px
    :target: http://www.moop.org.uk/index.php/2016/10/30/retrochallenge-201610-due-diligence/sd1/
+   :alt: Makeshift SD Adapter
 .. |Bus Pirate SD Adapter| image:: http://www.moop.org.uk/wp-content/uploads/2016/10/SD2.jpg
    :class: size-full wp-image-988
    :width: 1024px
    :height: 766px
    :target: http://www.moop.org.uk/index.php/2016/10/30/retrochallenge-201610-due-diligence/sd2/
+   :alt: Bus Pirate SD Adapter

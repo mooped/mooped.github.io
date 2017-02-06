@@ -2,7 +2,8 @@ Arcade Control Panels
 #####################
 :date: 2014-02-17 23:20
 :author: moop
-:category: Arcade Controllers, Things
+:category: Things
+:tags: Arcade Controllers, Things
 :slug: arcade-control-panels
 :status: published
 
@@ -215,33 +216,40 @@ build the controller.
    :width: 1024px
    :height: 613px
    :target: http://www.moop.org.uk/index.php/2014/02/17/arcade-control-panels/2014-02-17-19-25-35/
+   :alt: Finished Controller
 .. |Initial parts| image:: http://www.moop.org.uk/wp-content/uploads/2014/02/2014-01-23-19.16.01.jpg
    :class: alignnone size-full wp-image-615
    :width: 1024px
    :height: 613px
    :target: http://www.moop.org.uk/index.php/2014/02/17/arcade-control-panels/2014-01-23-19-16-01/
+   :alt: Initial parts
 .. |Controller Layout and Structure| image:: http://www.moop.org.uk/wp-content/uploads/2014/02/3-view.png
    :class: alignnone size-full wp-image-686
    :width: 1012px
    :height: 778px
    :target: http://www.moop.org.uk/index.php/2014/02/17/arcade-control-panels/3-view/
+   :alt: Controller Layout and Structure
 .. |Attaching the outer frame| image:: http://www.moop.org.uk/wp-content/uploads/2014/02/2014-02-06-19.31.01.jpg
    :class: alignnone size-full wp-image-688
    :width: 1024px
    :height: 613px
    :target: http://www.moop.org.uk/index.php/2014/02/17/arcade-control-panels/2014-02-06-19-31-01/
+   :alt: Attaching the outer frame
 .. |Front panel marked out| image:: http://www.moop.org.uk/wp-content/uploads/2014/02/2014-02-07-20.22.53.jpg
    :class: alignnone size-full wp-image-689
    :width: 1024px
    :height: 613px
    :target: http://www.moop.org.uk/index.php/2014/02/17/arcade-control-panels/2014-02-07-20-22-53/
+   :alt: Front panel marked out
 .. |Finishing the wood| image:: http://www.moop.org.uk/wp-content/uploads/2014/02/2014-02-16-00.06.32.jpg
    :class: alignnone size-full wp-image-680
    :width: 1024px
    :height: 613px
    :target: http://www.moop.org.uk/index.php/2014/02/17/arcade-control-panels/2014-02-16-00-06-32/
+   :alt: Finishing the wood
 .. |Finished| image:: http://www.moop.org.uk/wp-content/uploads/2014/02/2014-02-17-19.25.18.jpg
    :class: alignnone size-full wp-image-683
    :width: 1024px
    :height: 613px
    :target: http://www.moop.org.uk/index.php/2014/02/17/arcade-control-panels/2014-02-17-19-25-18/
+   :alt: Finished

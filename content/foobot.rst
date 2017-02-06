@@ -2,7 +2,8 @@ Foobot
 ######
 :date: 2015-03-15 21:25
 :author: moop
-:category: Foobot, Games
+:category: Games
+:tags: Foobot, Games
 :slug: foobot
 :status: published
 

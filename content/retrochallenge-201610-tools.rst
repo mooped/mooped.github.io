@@ -2,7 +2,8 @@ Retrochallenge 2016/10 - Tools
 ##############################
 :date: 2016-11-01 20:00
 :author: moop
-:category: RC2014, Retrochallenge
+:category: Retrochallenge
+:tags: RC2014, Retrochallenge
 :slug: retrochallenge-201610-tools
 :status: published
 

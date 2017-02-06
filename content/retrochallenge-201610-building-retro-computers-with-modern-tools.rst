@@ -2,7 +2,8 @@ Retrochallenge 2016/10 - Building retro computers with modern tools
 ###################################################################
 :date: 2016-10-23 20:26
 :author: moop
-:category: RC2014, Retrochallenge
+:category: Retrochallenge
+:tags: RC2014, Retrochallenge
 :slug: retrochallenge-201610-building-retro-computers-with-modern-tools
 :status: published
 
@@ -12,8 +13,7 @@ breadboards and other fun things. To work around this, and still
 simulator so I could work on it with my laptop whenever and wherever
 there was time.
 
-[caption id="attachment\_975" align="alignnone" width="804"]\ |LogiSim
-Edge Detector| LogiSim Edge Detector[/caption]
+|LogiSim Edge Detector|
 
 For an earlier RC2014 project I used
 `LogiSim <http://www.cburch.com/logisim/>`__ which is simple and easy to
@@ -32,8 +32,7 @@ ModelSim Altera Edition to simulate it. I mainly chose this because I've
 used it previously for FPGA projects, and because if some functionality
 is missing I can implement it in Verilog.
 
-[caption id="attachment\_974" align="alignnone"
-width="1438"]\ |Autoshift Circuit| Autoshift Circuit[/caption]
+|Autoshift Circuit|
 
 When redesigning the autoshifter circuit (to shift out 8 bits of data
 after each IO write) I built it as a Block Diagram/Schematic File (.bdf)
@@ -53,8 +52,7 @@ shift register in Verilog, but to save time I opted to stick with the
 LPM\_SHIFTREG version and ensure that the timings seen in simulation
 were such that the transparent latches wouldn't cause a problem.
 
-[caption id="attachment\_976" align="alignnone"
-width="1438"]\ |Simulation| Simulation[/caption]
+|Simulation|
 
 In order to test the design I set Quartus up to launch ModelSim and run
 Gate Level Simulation after compilation. ModelSim can be driven manually
@@ -93,13 +91,16 @@ find some time to build and test the physical version!
    :width: 804px
    :height: 460px
    :target: http://www.moop.org.uk/index.php/2016/10/23/retrochallenge-201610-building-retro-computers-with-modern-tools/logisim/
+   :alt: LogiSim Edge Detector
 .. |Autoshift Circuit| image:: http://www.moop.org.uk/wp-content/uploads/2016/10/board2.png
    :class: size-full wp-image-974
    :width: 1438px
    :height: 898px
    :target: http://www.moop.org.uk/index.php/2016/10/23/retrochallenge-201610-building-retro-computers-with-modern-tools/board2/
+   :alt: Autoshift Circuit
 .. |Simulation| image:: http://www.moop.org.uk/wp-content/uploads/2016/10/simulation2.png
    :class: size-full wp-image-976
    :width: 1438px
    :height: 898px
    :target: http://www.moop.org.uk/index.php/2016/10/23/retrochallenge-201610-building-retro-computers-with-modern-tools/simulation2/
+   :alt: Simulation

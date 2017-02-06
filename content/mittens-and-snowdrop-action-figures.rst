@@ -3,6 +3,7 @@ Mittens and Snowdrop action figures
 :date: 2012-12-28 18:43
 :author: moop
 :category: Things
+:tags: Things
 :slug: mittens-and-snowdrop-action-figures
 :status: published
 
@@ -19,8 +20,7 @@ bonus let me make a set for myself.
 
 First up, here's the finished product:
 
-[caption id="attachment\_83" align="alignnone" width="1024"]\ |Finished
-Product| Finished Product[/caption]
+|Finished Product|
 
 To start off with I decided to have some fun, and ended up building a
 mini lathe to make the basic body shape.  This allowed me to use cheap
@@ -28,8 +28,7 @@ mini lathe to make the basic body shape.  This allowed me to use cheap
 more) expensive putty, it also made getting the body shape smooth and
 uniform a lot easier.
 
-[caption id="attachment\_73" align="alignnone" width="1024"]\ |Mini
-lathe in action| Mini lathe in action[/caption]
+|Mini lathe in action|
 
 The lathe is very light duty but works well to shape a piece of balsa
 with sandpaper or a craft knife. There's a `separate blog
@@ -43,8 +42,7 @@ feet were added in a similar fashion over several days to allow the
 putty to cure and prevent accidental damage to bits of detail that were
 still setting.
 
-[caption id="attachment\_74" align="alignnone" width="1024"]\ |Basic
-Body Shapes| Basic Body Shapes[/caption]
+|Basic Body Shapes|
 
 More complex features such as Mittens' hands and the ears were made by
 rolling out sheets of putty and cutting it to shape with a sharp
@@ -52,8 +50,7 @@ sculpting tool.  In the case of the ears they were rolled onto a curved
 bit of clay and cut to shape then allowed to cure and trimmed down to
 size before being attached with fillets of putty.
 
-[caption id="attachment\_75" align="alignnone" width="1024"]\ |Masters|
-Masters[/caption]
+|Masters|
 
 Once the masters were finished I brushed them with polyurethane varnish
 to ensure they'd release cleanly from the mould.  I should have used
@@ -67,8 +64,7 @@ masters into the clay and pour silicone over.  Unfortunately the clay I
 had dried up, so I ended up using salt dough and surprisingly it worked
 well though it was very soft.
 
-[caption id="attachment\_76" align="alignnone" width="1024"]\ |The first
-mould half is poured| The first mould half is poured[/caption]
+|The first mould half is poured|
 
 I build the mould box out of cardboard protected with parcel tape.  The
 base is some 0.5mm sheet styrene I had lying around.  The card was just
@@ -86,8 +82,7 @@ alignment nubs in the first mould half.  These will translate to
 matching holes in the second half.  I made once larger than the others
 to make it obvious which corners should match up.
 
-[caption id="attachment\_77" align="alignnone" width="941"]\ |First
-mould half| First mould half[/caption]
+|First mould half|
 
 After leaving this overnight I removed the box and washed off the salt
 dough from the models.  A downside of the salt dough is that it gets
@@ -104,16 +99,14 @@ add when making the first mould half as they could be set into the clay.
  The Vaseline didn't help either as everything was very slippy at this
 point.
 
-[caption id="attachment\_78" align="alignnone" width="1024"]\ |Adding
-vents (a little late)| Adding vents (a little late)[/caption]
+|Adding vents (a little late)|
 
 The second mould half was then poured in a similar fashion to the first.
  A day later once it had cured I cracked open the box and managed to
 separate the two mould halves with relatively little hack and slash with
 the craft knife.
 
-[caption id="attachment\_79" align="alignnone" width="1024"]\ |Completed
-mould| Completed mould[/caption]
+|Completed mould|
 
 Once the mould was complete I mixed up some resin and did a test pour.
  The results were quite promising but highlighted a few flaws in the
@@ -127,8 +120,7 @@ nylon so they can be easily removed with some pliers, leaving a little
 stick of cast resin which easily breaks off (useful for parts that can't
 be aligned with the mould line).
 
-[caption id="attachment\_80" align="alignnone" width="1024"]\ |Pouring
-the resin| Pouring the resin[/caption]
+|Pouring the resin|
 
 I used some more sheet styrene and elastic bands to hold the mould shut.
  It doesn't need too much pressure as the resin is quite thick and you
@@ -139,8 +131,7 @@ roughly 10:1 ratio with a catalyst, which required some very accurate
 scales.  It's possible to get stuff that can be mixed 1:1 by volume
 which is a lot less hassle if you can get it conveniently.
 
-[caption id="attachment\_81" align="alignnone" width="460"]\ |Finished,
-primed, painted| Finished, primed, painted[/caption]
+|Finished, primed, painted|
 
 Once the resin was cured and cracked out of the mould I trimmed off the
 flashing where the mould halves joined and primed them with grey spray
@@ -149,72 +140,82 @@ through from some parts of the bodies and other parts were not so
 smooth. To fix this I used some filler and a few rounds of
 sanding/filing and re-priming until I was happy with the finish.
 
-[caption id="attachment\_82" align="alignnone" width="1024"]\ |Paints|
-Paints[/caption]
+|Paints|
 
 Finally I painted the models with a mix of Citadel and Vallejo paints I
 had to hand and varnished them with some EzeCote polyurethane.
 
-[caption id="attachment\_84" align="alignnone" width="1024"]\ |Finished
-product| Finished product[/caption]
+|Finished product|
 
 .. |Finished Product| image:: http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-17-19-50-12.jpeg
    :class: wp-image-83
    :width: 1024px
    :height: 613px
    :target: http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-17-19-50-12/
+   :alt: Finished Product
 .. |Mini lathe in action| image:: http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-05-20-41-33.jpeg
    :class: size-full wp-image-73
    :width: 1024px
    :height: 613px
    :target: http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-05-20-41-33/
+   :alt: Mini lathe in action
 .. |Basic Body Shapes| image:: http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-07-06-18-45.jpeg
    :class: size-full wp-image-74
    :width: 1024px
    :height: 613px
    :target: http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-07-06-18-45/
+   :alt: Basic Body Shapes
 .. |Masters| image:: http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-12-06-35-41.jpeg
    :class: size-full wp-image-75
    :width: 1024px
    :height: 613px
    :target: http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-12-06-35-41/
+   :alt: Masters
 .. |The first mould half is poured| image:: http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-12-22-15-35.jpeg
    :class: size-full wp-image-76
    :width: 1024px
    :height: 613px
    :target: http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-12-22-15-35/
+   :alt: The first mould half is poured
 .. |First mould half| image:: http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-13-21-24-31.jpeg
    :class: size-full wp-image-77
    :width: 941px
    :height: 768px
    :target: http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-13-21-24-31/
+   :alt: First mould half
 .. |Adding vents (a little late)| image:: http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-13-21-47-51.jpeg
    :class: size-full wp-image-78
    :width: 1024px
    :height: 613px
    :target: http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-13-21-47-51/
+   :alt: Adding vents (a little late)
 .. |Completed mould| image:: http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-14-23-04-24.jpeg
    :class: size-full wp-image-79
    :width: 1024px
    :height: 710px
    :target: http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-14-23-04-24/
+   :alt: Completed mould
 .. |Pouring the resin| image:: http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-15-01-09-58.jpeg
    :class: size-full wp-image-80
    :width: 1024px
    :height: 613px
    :target: http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-15-01-09-58/
+   :alt: Pouring the resin
 .. |Finished, primed, painted| image:: http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-17-16-57-51-2.jpeg
    :class: size-full wp-image-81
    :width: 460px
    :height: 768px
    :target: http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-17-16-57-51-2/
+   :alt: Finished, primed, painted
 .. |Paints| image:: http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-17-17-15-01.jpeg
    :class: size-full wp-image-82
    :width: 1024px
    :height: 613px
    :target: http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-17-17-15-01/
+   :alt: Paints
 .. |Finished product| image:: http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-17-20.55.00.jpeg
    :class: size-full wp-image-84
    :width: 1024px
    :height: 613px
    :target: http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-17-20-55-00/
+   :alt: Finished product

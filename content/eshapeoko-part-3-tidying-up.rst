@@ -2,7 +2,8 @@ eShapeOko Part 3 - Tidying up
 #############################
 :date: 2014-09-13 22:53
 :author: moop
-:category: ShapeOko, Things
+:category: Things
+:tags: ShapeOko, Things
 :slug: eshapeoko-part-3-tidying-up
 :status: published
 
@@ -44,7 +45,7 @@ mounting in a case.
 With all of the boards made and (a few months later, once a burst of
 motivation turned up) assembled, I needed to build a case to keep the
 parts together. I decided to laser cut the case from perspex in order to
-get it made quickly—and because I thought a clear perspex case would
+get it made quickly and because I thought a clear perspex case would
 look cool.
 
 Due to my earlier experiences with fried Stepper Controllers I decided

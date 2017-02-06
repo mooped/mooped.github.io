@@ -2,7 +2,8 @@ Unholy Chalupa MKIII
 ####################
 :date: 2013-07-08 20:58
 :author: moop
-:category: Things, Unholy Chalupa
+:category: Things
+:tags: Things, Unholy Chalupa
 :slug: unholy-chalupa-mkiii
 :status: published
 
@@ -40,16 +41,14 @@ absorb some impact in the case of a bad landing.
 As you can see from the comparison above, I also redesigned the fuselage
 to be much less boxy.
 
-[caption id="attachment\_243" align="alignnone" width="2592"]\ |MKIII
-Chalupa Parts| MKIII Chalupa Parts[/caption]
+|MKIII Chalupa Parts|
 
 I cut the parts for the MKIII Unholy Chalupa at the start of May, using
 the laser cutter at Nottingham Hackspace. The model was finished around
 the 21st of June. Since then it's mostly been cluttering up my desk,
 waiting for a good day for a test flight.
 
-[caption id="attachment\_263" align="alignnone" width="1024"]\ |Fuselage
-sides| Fuselage sides[/caption]
+|Fuselage sides|
 
 The first step was to build up the fuselage sides. The side panels could
 have been built as a single piece if they were hand cut, but using the
@@ -91,8 +90,7 @@ the sides were pulled in, held vertical using blocks and set squares. I
 also glued the 1/8th strips to the top of the tail section at this
 point, to lock in the bend.
 
-[caption id="attachment\_270" align="alignnone" width="1024"]\ |Desk
-fly| Desk fly[/caption]
+|Desk fly|
 
 At this point it was possible to put the model together to see how it
 would look and provide a motivation boost. The wings were held together
@@ -110,8 +108,7 @@ glued vertically to the side of the hatch, then glued and pinned in
 sections once the glue set. This took several days, but very little
 actual work. Most of the time was spent waiting for the glue to dry.
 
-[caption id="attachment\_274" align="alignnone" width="1024"]\ |Spine|
-Spine[/caption]
+|Spine|
 
 The spine for the rest of the fuselage was glued in sections, taking
 advantage of the doubler on the rear former to provide extra surface
@@ -147,8 +144,7 @@ while the glue cured. A tiny sub fin was attached below the stabiliser,
 to give a place to hinge the lower part of the rudder. On the original
 model this was a big problem and lead to a very sloppy rudder response.
 
-[caption id="attachment\_286" align="alignnone" width="1024"]\ |Complete
-fuselage| Complete fuselage[/caption]
+|Complete fuselage|
 
 At this point the fuselage was mostly complete, and I moved onto the
 wings. You can see here that I've shortened the model a bit since the
@@ -184,16 +180,14 @@ difficult to get at once the model is covered. Fortunately this
 shouldn't be necessary except in rare cases, in which case the covering
 can be cut off to gain access.
 
-[caption id="attachment\_293" align="alignnone" width="460"]\ |Wingtip
-installation.| Wingtip installation[/caption]
+|Wingtip installation.|
 
 The wingtips were installed with the wings attached and the model
 standing on its nose. I used some 1/8" strip packed around the tips to
 to keep them horizontal, as the slight bevel left by the laser cutter
 would create problems if they were just glued on directly.
 
-[caption id="attachment\_294" align="alignnone" width="1024"]\ |Servo
-hatch| Servo hatch[/caption]
+|Servo hatch|
 
 Sub ribs were added to the wings for servo mounting. They slot onto the
 wing spars and the carbon rods that attach the wings to the fuselage.
@@ -226,8 +220,7 @@ The leading edge of the wing was built up from a stack of 1/8" and 1/16"
 strip. I used parcel tape to protect the wing ribs while sanding these
 to match the desired profile.
 
-[caption id="attachment\_307" align="alignnone" width="1024"]\ |Tail
-install| Tail install[/caption]
+|Tail install|
 
 After covering the tail and fuselage, I installed the tail. I took a lot
 of care to make sure it sat correctly and that the stabiliser was
@@ -251,59 +244,67 @@ so it's been cluttering my desk. Since I was out of hooks to wall mount
 it in the usual way, I ended up bending a large wire hook that clips to
 the landing gear and could be screwed to the wall.
 
-[caption id="attachment\_315" align="alignnone" width="1024"]\ |Wall
-mounting| Wall mounting[/caption]
+|Wall mounting|
 
-[caption id="attachment\_318" align="alignnone" width="1024"]\ |Wall
-mounted| Wall mounted[/caption]
+|Wall mounted|
 
 .. |MKIII Chalupa Parts| image:: http://www.moop.org.uk/wp-content/uploads/2013/05/2013-05-05-17.10.25.jpg
    :class: size-full wp-image-243
    :width: 2592px
    :height: 1552px
    :target: http://www.moop.org.uk/index.php/2013/05/19/update/2013-05-05-17-10-25/
+   :alt: MKIII Chalupa Parts
 .. |Fuselage sides| image:: http://www.moop.org.uk/wp-content/uploads/2013/07/2013-05-20-20.56.28.jpg
    :class: size-full wp-image-263
    :width: 1024px
    :height: 613px
    :target: http://www.moop.org.uk/index.php/2013/07/08/unholy-chalupa-mkiii/2013-05-20-20-56-28/
+   :alt: Fuselage sides
 .. |Desk fly| image:: http://www.moop.org.uk/wp-content/uploads/2013/07/2013-05-24-22.56.58.jpg
    :class: size-full wp-image-270
    :width: 1024px
    :height: 613px
    :target: http://www.moop.org.uk/index.php/2013/07/08/unholy-chalupa-mkiii/2013-05-24-22-56-58/
+   :alt: Desk fly
 .. |Spine| image:: http://www.moop.org.uk/wp-content/uploads/2013/07/2013-05-27-00.58.11.jpg
    :class: size-full wp-image-274
    :width: 1024px
    :height: 613px
    :target: http://www.moop.org.uk/index.php/2013/07/08/unholy-chalupa-mkiii/2013-05-27-00-58-11/
+   :alt: Spine
 .. |Complete fuselage| image:: http://www.moop.org.uk/wp-content/uploads/2013/07/2013-05-30-21.40.35.jpg
    :class: size-full wp-image-286
    :width: 1024px
    :height: 613px
    :target: http://www.moop.org.uk/index.php/2013/07/08/unholy-chalupa-mkiii/2013-05-30-21-40-35/
+   :alt: Complete fuselage
 .. |Wingtip installation.| image:: http://www.moop.org.uk/wp-content/uploads/2013/07/2013-06-02-18.14.22.jpg
    :class: size-full wp-image-293
    :width: 460px
    :height: 768px
    :target: http://www.moop.org.uk/index.php/2013/07/08/unholy-chalupa-mkiii/2013-06-02-18-14-22/
+   :alt: Wingtip installation.
 .. |Servo hatch| image:: http://www.moop.org.uk/wp-content/uploads/2013/07/2013-06-02-18.55.36.jpg
    :class: size-full wp-image-294
    :width: 1024px
    :height: 613px
    :target: http://www.moop.org.uk/index.php/2013/07/08/unholy-chalupa-mkiii/2013-06-02-18-55-36/
+   :alt: Servo hatch
 .. |Tail install| image:: http://www.moop.org.uk/wp-content/uploads/2013/07/2013-06-10-22.47.21.jpg
    :class: size-full wp-image-307
    :width: 1024px
    :height: 613px
    :target: http://www.moop.org.uk/index.php/2013/07/08/unholy-chalupa-mkiii/2013-06-10-22-47-21/
+   :alt: Tail install
 .. |Wall mounting| image:: http://www.moop.org.uk/wp-content/uploads/2013/07/2013-07-07-20.09.38.jpg
    :class: size-full wp-image-315
    :width: 1024px
    :height: 613px
    :target: http://www.moop.org.uk/index.php/2013/07/08/unholy-chalupa-mkiii/2013-07-07-20-09-38/
+   :alt: Wall mounting
 .. |Wall mounted| image:: http://www.moop.org.uk/wp-content/uploads/2013/07/2013-07-07-12.26.20.jpg
    :class: size-full wp-image-318
    :width: 1024px
    :height: 613px
    :target: http://www.moop.org.uk/index.php/2013/07/08/unholy-chalupa-mkiii/2013-07-07-12-26-20/
+   :alt: Wall mounted

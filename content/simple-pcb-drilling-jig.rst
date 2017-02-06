@@ -2,7 +2,8 @@ Simple PCB drilling jig
 #######################
 :date: 2014-06-12 21:16
 :author: moop
-:category: PCB Drilling Jig, Things
+:category: Things
+:tags: PCB Drilling Jig, Things
 :slug: simple-pcb-drilling-jig
 :status: published
 
@@ -90,23 +91,28 @@ it will be useful to someone.
    :width: 935px
    :height: 526px
    :target: http://www.moop.org.uk/index.php/2014/06/12/simple-pcb-drilling-jig/20140612_165348/
+   :alt: Drilling jig in action
 .. |Wonky pin headers| image:: http://www.moop.org.uk/wp-content/uploads/2014/06/2013-10-26-22.31.25.jpg
    :class: alignnone size-full wp-image-708
    :width: 935px
    :height: 560px
    :target: http://www.moop.org.uk/index.php/2014/06/12/simple-pcb-drilling-jig/2013-10-26-22-31-25/
+   :alt: Wonky pin headers
 .. |Simple PCB Drilling Jig| image:: http://www.moop.org.uk/wp-content/uploads/2014/06/20140612_214508.jpg
    :class: alignnone size-full wp-image-714
    :width: 935px
    :height: 526px
    :target: http://www.moop.org.uk/index.php/2014/06/12/simple-pcb-drilling-jig/20140612_214508/
+   :alt: Simple PCB Drilling Jig
 .. |FTDI breakout breakout| image:: http://www.moop.org.uk/wp-content/uploads/2014/06/20140612_171146.jpg
    :class: alignnone size-full wp-image-710
    :width: 935px
    :height: 526px
    :target: http://www.moop.org.uk/index.php/2014/06/12/simple-pcb-drilling-jig/20140612_171146/
+   :alt: FTDI breakout breakout
 .. |Perfect fit| image:: http://www.moop.org.uk/wp-content/uploads/2014/06/20140612_171159.jpg
    :class: alignnone size-full wp-image-711
    :width: 935px
    :height: 526px
    :target: http://www.moop.org.uk/index.php/2014/06/12/simple-pcb-drilling-jig/20140612_171159/
+   :alt: Perfect fit

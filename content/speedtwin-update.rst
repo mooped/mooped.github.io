@@ -2,7 +2,8 @@ SpeedTwin Update
 ################
 :date: 2015-08-02 19:59
 :author: moop
-:category: Speed Twin, Things
+:category: Things
+:tags: Speed Twin, Things
 :slug: speedtwin-update
 :status: published
 
@@ -164,28 +165,34 @@ the last 10% which will probably take 90% of the time!
    :width: 1024px
    :height: 622px
    :target: http://www.moop.org.uk/index.php/2015/08/02/speedtwin-update/20150720_191352_cropped-2/
+   :alt: This thing is pretty huge!
 .. |Receiver and Antenna Mounting| image:: http://www.moop.org.uk/wp-content/uploads/2015/08/20150310_215453.jpg
    :class: alignnone size-full wp-image-887
    :width: 1024px
    :height: 576px
    :target: http://www.moop.org.uk/index.php/2015/08/02/speedtwin-update/20150310_215453/
+   :alt: Receiver and Antenna Mounting
 .. |Glassing the fuselage| image:: http://www.moop.org.uk/wp-content/uploads/2015/08/20150608_172335.jpg
    :class: alignnone size-full wp-image-843
    :width: 1024px
    :height: 576px
    :target: http://www.moop.org.uk/index.php/2015/08/02/speedtwin-update/20150608_172335/
+   :alt: Glassing the fuselage
 .. |Unfinished wing and fuselage| image:: http://www.moop.org.uk/wp-content/uploads/2015/08/20150203_195916.jpg
    :class: alignnone size-full wp-image-853
    :width: 1024px
    :height: 576px
    :target: http://www.moop.org.uk/index.php/2015/08/02/speedtwin-update/20150203_195916/
+   :alt: Unfinished wing and fuselage
 .. |Wing locating gubbins| image:: http://www.moop.org.uk/wp-content/uploads/2015/08/20150301_110013.jpg
    :class: alignnone size-full wp-image-855
    :width: 1024px
    :height: 576px
    :target: http://www.moop.org.uk/index.php/2015/08/02/speedtwin-update/20150301_110013/
+   :alt: Wing locating gubbins
 .. |Wingtips| image:: http://www.moop.org.uk/wp-content/uploads/2015/08/20150802_203543.jpg
    :class: alignnone size-full wp-image-896
    :width: 1024px
    :height: 576px
    :target: http://www.moop.org.uk/index.php/2015/08/02/speedtwin-update/20150802_203543/
+   :alt: Wingtips

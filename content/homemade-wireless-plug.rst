@@ -3,6 +3,7 @@ Homemade Wireless Plug
 :date: 2013-05-27 15:02
 :author: charlie
 :category: Things
+:tags: Things
 :tags: AVR, Bluetooth, DigiSpark, Electronics, Home automation, Wireless
 :slug: homemade-wireless-plug
 :status: published

@@ -2,7 +2,8 @@ Hot Wire Cutter
 ###############
 :date: 2015-03-15 21:58
 :author: moop
-:category: Hot Wire, Things
+:category: Things
+:tags: Hot Wire, Things
 :slug: hot-wire-cutter
 :status: published
 
@@ -47,13 +48,16 @@ be dangerous and I take no responsibility for what you do with it.
    :width: 1134px
    :height: 542px
    :target: http://www.moop.org.uk/index.php/2015/03/15/hot-wire-cutter/hotwire/
+   :alt: Hot wire in CAD
 .. |Hotwire| image:: http://www.moop.org.uk/wp-content/uploads/2015/03/20150303_215110.jpg
    :class: alignnone size-full wp-image-813
    :width: 1024px
    :height: 576px
    :target: http://www.moop.org.uk/index.php/2015/03/15/hot-wire-cutter/20150303_215110/
+   :alt: Hotwire
 .. |Hotwire results| image:: http://www.moop.org.uk/wp-content/uploads/2015/03/20150305_211051.jpg
    :class: alignnone size-full wp-image-814
    :width: 1024px
    :height: 576px
    :target: http://www.moop.org.uk/index.php/2015/03/15/hot-wire-cutter/20150305_211051/
+   :alt: Hotwire results

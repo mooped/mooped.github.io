@@ -2,7 +2,8 @@ Loot of the Forest
 ##################
 :date: 2013-12-15 23:18
 :author: moop
-:category: Games, Loot of the Forest, Ludum Dare
+:category: Games
+:tags: Games, Loot of the Forest, Ludum Dare
 :slug: loot-of-the-forest
 :status: published
 
@@ -14,8 +15,7 @@ up with Loot of the Forest. It's a game about bribing forest guardian
 creatures as you make your way through their forest maze, but you only
 have a single item per species of guardian.
 
-[caption id="attachment\_512" align="alignnone" width="571"]\ |Loot of
-the Forest| Loot of the Forest[/caption]
+|Loot of the Forest|
 
 Expect puzzles and weird animal based puns.
 
@@ -31,3 +31,4 @@ It was fueled by sleep deprivation and cold pizza.
    :width: 571px
    :height: 479px
    :target: http://www.moop.org.uk/index.php/2013/12/15/loot-of-the-forest/level2/
+   :alt: Loot of the Forest

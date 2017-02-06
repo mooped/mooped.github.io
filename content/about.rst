@@ -2,6 +2,7 @@ About
 #####
 :date: 2012-12-22 19:01
 :author: moop
+:category: About
 :slug: about
 :status: published
 

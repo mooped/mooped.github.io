@@ -2,7 +2,8 @@ Retrochallenge 2016/10 - Breadboard Fun
 #######################################
 :date: 2016-10-30 23:13
 :author: moop
-:category: RC2014, Things
+:category: Things
+:tags: RC2014, Things
 :slug: retrochallenge-201610-breadboard-fun
 :status: published
 
@@ -18,8 +19,7 @@ the usual 90 pin header and a socket header below it. The protoboard can
 still be used later (minus one row of holes) and now provides something
 that wires can be plugged into that can be removed from the RC2014.
 
-[caption id="attachment\_992" align="alignnone" width="1024"]\ |RC2014
-Protoboard| RC2014 Protoboard[/caption]
+|RC2014 Protoboard|
 
 With the edge trigger circuit built I tested it using my `Open Logic
 Sniffer <http://dangerousprototypes.com/blog/open-logic-sniffer/>`__,
@@ -29,14 +29,12 @@ Sniffer quite close to its limits. The 200mhz maximum sample rate
 provides resolution for only about 12 steps within each clock cycle, so
 there is limited scope for playing with gate delays.
 
-[caption id="attachment\_994" align="alignnone" width="1024"]\ |Edge
-Detect| Edge Detect[/caption]
+|Edge Detect|
 
 Once the edge detect circuit was proven to work I started building the
 rest of the circuit and things quickly got complicated.
 
-[caption id="attachment\_995" align="alignnone"
-width="1024"]\ |Blinkenlights| Blinkenlights[/caption]
+|Blinkenlights|
 
 The image above shows the almost complete circuit, but with a loopback
 between the input and output shift registers where the SD card would
@@ -74,26 +72,29 @@ changed. This turned out to be a lot more convenient than keeping track
 of the design in KiCAD as it was easy to search for a signal by name and
 the paper was easier to reach on my desk.
 
-[caption id="attachment\_997" align="alignnone" width="1024"]\ |Paper
-Netlist| Paper Netlist[/caption]
+|Paper Netlist|
 
 .. |RC2014 Protoboard| image:: http://www.moop.org.uk/wp-content/uploads/2016/10/IMG_20161024_211944.jpg.sm_.jpg
    :class: size-full wp-image-992
    :width: 1024px
    :height: 766px
    :target: http://www.moop.org.uk/index.php/2016/10/30/retrochallenge-201610-breadboard-fun/img_20161024_211944-jpg-sm/
+   :alt: RC2014 Protoboard
 .. |Edge Detect| image:: http://www.moop.org.uk/wp-content/uploads/2016/10/IMG_20161024_214406.jpg.sm_.jpg
    :class: size-full wp-image-994
    :width: 1024px
    :height: 766px
    :target: http://www.moop.org.uk/index.php/2016/10/30/retrochallenge-201610-breadboard-fun/img_20161024_214406-jpg-sm/
+   :alt: Edge Detect
 .. |Blinkenlights| image:: http://www.moop.org.uk/wp-content/uploads/2016/10/IMG_20161030_161426.jpg.sm_.jpg
    :class: size-full wp-image-995
    :width: 1024px
    :height: 766px
    :target: http://www.moop.org.uk/index.php/2016/10/30/retrochallenge-201610-breadboard-fun/img_20161030_161426-jpg-sm/
+   :alt: Blinkenlights
 .. |Paper Netlist| image:: http://www.moop.org.uk/wp-content/uploads/2016/10/IMG_20161030_221905.jpg.sm_.jpg
    :class: size-full wp-image-997
    :width: 1024px
    :height: 766px
    :target: http://www.moop.org.uk/index.php/2016/10/30/retrochallenge-201610-breadboard-fun/img_20161030_221905-jpg-sm/
+   :alt: Paper Netlist

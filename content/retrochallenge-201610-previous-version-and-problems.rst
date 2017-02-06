@@ -2,7 +2,8 @@ Retrochallenge 2016/10 - Previous version and problems
 ######################################################
 :date: 2016-10-15 13:51
 :author: moop
-:category: RC2014, Retrochallenge
+:category: Retrochallenge
+:tags: RC2014, Retrochallenge
 :slug: retrochallenge-201610-previous-version-and-problems
 :status: published
 
@@ -10,9 +11,7 @@ In my previous post I promised to show the previous implementation of my
 Z80 SD interface, and to run through the problems which I intend to fix
 this month.
 
-[caption id="attachment\_966" align="alignnone" width="2048"]\ |Original
-Z80 SD Interface Schematic| Original Z80 SD Interface Schematic (Click
-to Zoom)[/caption]
+|Original Z80 SD Interface Schematic|
 
 The 74138 (U1) in the top left of the schematic is used to detect and
 decode IO reads and writes from the Z80. Three bits of the address bus
@@ -64,9 +63,7 @@ solve a timing issue, but has caused more trouble than it was worth.
 The timing diagram below shows the behaviour of the device when the
 SHIFT8 bit is set and a write is issued to the DATA address.
 
-[caption id="attachment\_965" align="alignnone" width="1652"]\ |Original
-SD Interface Timings| Original SD Interface Timings (Click to
-Zoom)[/caption]
+|Original SD Interface Timings|
 
 A couple of issues are noticeable:
 
@@ -118,8 +115,10 @@ Hopefully I will have a write up of this new version soon.
    :width: 2048px
    :height: 1448px
    :target: http://www.moop.org.uk/index.php/2016/10/15/retrochallenge-201610-previous-version-and-problems/z80-sd-interface-74hc299-schematic_2048/
+   :alt: Original Z80 SD Interface Schematic
 .. |Original SD Interface Timings| image:: http://www.moop.org.uk/wp-content/uploads/2016/10/Z80-SD-Interface-74HC299.png
    :class: size-full wp-image-965
    :width: 1652px
    :height: 936px
    :target: http://www.moop.org.uk/index.php/2016/10/15/retrochallenge-201610-previous-version-and-problems/z80-sd-interface-74hc299/
+   :alt: Original SD Interface Timings

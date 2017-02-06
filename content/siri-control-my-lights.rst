@@ -2,7 +2,8 @@ Siri, control my lights
 #######################
 :date: 2013-08-15 20:08
 :author: charlie
-:category: Uncategorized
+:category: Things
+:tags: Charlie
 :slug: siri-control-my-lights
 :status: published
 

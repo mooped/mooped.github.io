@@ -2,7 +2,8 @@ Retrochallenge 2016/10
 ######################
 :date: 2016-10-05 20:04
 :author: moop
-:category: RC2014, Retrochallenge
+:category: Retrochallenge
+:tags: RC2014, Retrochallenge
 :slug: retrochallenge-201610
 :status: published
 
@@ -12,8 +13,7 @@ I decided to join in with
 to write more posts and updates about other projects once I'm back into
 the swing of things!
 
-[caption id="attachment\_952" align="alignnone" width="1024"]\ |RC2014
-Z80 computer| RC2014 Z80 computer[/caption]
+|RC2014 Z80 computer|
 
 My goal for this Retrochallenge is to finish an SD card interface I
 started designing for Spencer Owen's ` <http://rc2014.co.uk/>`__\ RC2014
@@ -101,8 +101,7 @@ configuration byte. The following bits are currently used:
    </ul>
    </ul>
 
-[caption id="attachment\_953" align="alignnone" width="1024"]\ |Original
-version on breadboard| Original version on breadboard[/caption]
+|Original version on breadboard|
 
 An initial version similar to this design has been built on a breadboard
 using a 74ALS299. In addition to the issues with the synchronous control
@@ -120,8 +119,10 @@ remind myself of) the problems.
    :width: 1024px
    :height: 576px
    :target: http://www.moop.org.uk/?attachment_id=952
+   :alt: RC2014 Z80 computer
 .. |Original version on breadboard| image:: http://www.moop.org.uk/wp-content/uploads/2016/10/original_breadboard.jpg
    :class: size-full wp-image-953
    :width: 1024px
    :height: 576px
    :target: http://www.moop.org.uk/?attachment_id=953
+   :alt: Original version on breadboard

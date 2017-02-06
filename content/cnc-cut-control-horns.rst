@@ -2,7 +2,8 @@ CNC cut control horns
 #####################
 :date: 2015-05-04 19:35
 :author: moop
-:category: ShapeOko, Speed Twin, Things
+:category: Things
+:tags: ShapeOko, Speed Twin, Things
 :slug: cnc-cut-control-horns
 :status: published
 
@@ -84,23 +85,28 @@ current futuristic look), drill the holes and cut off the sprue.
    :width: 1024px
    :height: 576px
    :target: http://www.moop.org.uk/index.php/2015/05/04/cnc-cut-control-horns/drawing/
+   :alt: Control horns in DraftSight
 .. |The victim| image:: http://www.moop.org.uk/wp-content/uploads/2015/05/20150504_132026.jpg
    :class: alignnone size-full wp-image-823
    :width: 1024px
    :height: 576px
    :target: http://www.moop.org.uk/index.php/2015/05/04/cnc-cut-control-horns/20150504_132026/
+   :alt: The victim
 .. |SpeedTwin| image:: http://www.moop.org.uk/wp-content/uploads/2015/05/20150504_193645.jpg
    :class: alignnone size-full wp-image-828
    :width: 1024px
    :height: 576px
    :target: http://www.moop.org.uk/index.php/2015/05/04/cnc-cut-control-horns/20150504_193645/
+   :alt: SpeedTwin
 .. |Cutting the parts| image:: http://www.moop.org.uk/wp-content/uploads/2015/05/20150504_191802.jpg
    :class: alignnone size-full wp-image-825
    :width: 1024px
    :height: 576px
    :target: http://www.moop.org.uk/index.php/2015/05/04/cnc-cut-control-horns/20150504_191802/
+   :alt: Cutting the parts
 .. |Mostly finished parts| image:: http://www.moop.org.uk/wp-content/uploads/2015/05/20150504_193504.jpg
    :class: alignnone size-full wp-image-827
    :width: 1024px
    :height: 576px
    :target: http://www.moop.org.uk/index.php/2015/05/04/cnc-cut-control-horns/20150504_193504/
+   :alt: Mostly finished parts

@@ -3,6 +3,7 @@ DIY Mini Lathe
 :date: 2012-12-23 14:27
 :author: moop
 :category: Things
+:tags: Things
 :tags: Mini Lathe
 :slug: diy-mini-lathe
 :status: published
@@ -53,3 +54,4 @@ fingers lost attempting to replicate it.
    :width: 933px
    :height: 559px
    :target: http://www.moop.org.uk/index.php/2012/12/23/diy-mini-lathe/2012-12-23-12-05-48/
+   :alt: Mini Lathe

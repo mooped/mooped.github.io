@@ -2,7 +2,8 @@ Retrochallenge 2016/10 - Deadline
 #################################
 :date: 2016-10-31 23:08
 :author: moop
-:category: RC2014, Retrochallenge
+:category: Retrochallenge
+:tags: RC2014, Retrochallenge
 :slug: retrochallenge-201610-deadline
 :status: published
 
@@ -17,8 +18,7 @@ I blamed my level shifter for a while. As an experiment I tried writing
 to the card from the Bus Pirate and reading the response through the
 level shifter works fine, so that can't be the problem.
 
-[caption id="attachment\_1012" align="alignnone" width="1024"]\ |Final
-State Of Play| Final State Of Play[/caption]
+|Final State Of Play|
 
 Bitbang mode was fixed by adding an additional edge trigger circuit.
 Instead of a synchronous edge trigger I used the simple trick of feeding
@@ -45,8 +45,7 @@ input on the output shift register. This ensured the Data Out line
 (MOSI) to the SD card was pulled high, in order to match exactly the Bus
 Pirate's behaviour.
 
-[caption id="attachment\_1010" align="alignnone" width="1024"]\ |CMD0 on
-Bus Pirate| CMD0 on Bus Pirate[/caption]
+|CMD0 on Bus Pirate|
 
 It was difficult to get a screenshot that captured the whole pulse
 train, but the above shot shows the Bus Pirate sending CMD0 (0x40, 0x00,
@@ -54,8 +53,7 @@ train, but the above shot shows the Bus Pirate sending CMD0 (0x40, 0x00,
 0x01 (OK). The shot below shows the commands sent to the Bus Pirate and
 the response.
 
-[caption id="attachment\_1009" align="alignnone" width="1024"]\ |Bus
-Pirate Commands| Bus Pirate Commands[/caption]
+|Bus Pirate Commands|
 
 The next shot shows my circuit sending the same output, but recieving no
 response.
@@ -64,8 +62,7 @@ In both cases a large number of clock pulses were sent with the SD
 card's chip select deasserted, as is apparently required to initialise
 the card.
 
-[caption id="attachment\_1011" align="alignnone" width="1024"]\ |CMD0
-From My Circuit| CMD0 From My Circuit[/caption]
+|CMD0 From My Circuit|
 
 My suspicion is that either my timing is too fast - I'm currently
 running at 330kHz while the Bus Pirate is running at 33kHz - or the
@@ -74,11 +71,9 @@ rising edge of my clock is very subtly off with respect to the data.
 There are still hardware bugs (the off by one issue, mainly), but the
 final schematic and final netlist are included below for posterity.
 
-[caption id="attachment\_1014" align="alignnone" width="1488"]\ |Final
-Schematic| Final Schematic[/caption]
+|Final Schematic|
 
-[caption id="attachment\_1013" align="alignnone" width="1024"]\ |Final
-Netlist| Final Netlist[/caption]
+|Final Netlist|
 
 I plan to continue working on this project after RetroChallenge and will
 and post further updates as I figure it out.
@@ -92,28 +87,34 @@ be able to post that tomorrow.
    :width: 1024px
    :height: 766px
    :target: http://www.moop.org.uk/index.php/2016/10/31/retrochallenge-201610-deadline/img_20161031_222456-jpg-sm/
+   :alt: Final State Of Play
 .. |CMD0 on Bus Pirate| image:: http://www.moop.org.uk/wp-content/uploads/2016/10/IMG_20161031_220127.jpg.sm_.jpg
    :class: size-full wp-image-1010
    :width: 1024px
    :height: 766px
    :target: http://www.moop.org.uk/index.php/2016/10/31/retrochallenge-201610-deadline/img_20161031_220127-jpg-sm/
+   :alt: CMD0 on Bus Pirate
 .. |Bus Pirate Commands| image:: http://www.moop.org.uk/wp-content/uploads/2016/10/IMG_20161031_215925.jpg.sm_.jpg
    :class: size-full wp-image-1009
    :width: 1024px
    :height: 766px
    :target: http://www.moop.org.uk/index.php/2016/10/31/retrochallenge-201610-deadline/img_20161031_215925-jpg-sm/
+   :alt: Bus Pirate Commands
 .. |CMD0 From My Circuit| image:: http://www.moop.org.uk/wp-content/uploads/2016/10/IMG_20161031_221128.jpg.sm_.jpg
    :class: size-full wp-image-1011
    :width: 1024px
    :height: 766px
    :target: http://www.moop.org.uk/index.php/2016/10/31/retrochallenge-201610-deadline/img_20161031_221128-jpg-sm/
+   :alt: CMD0 From My Circuit
 .. |Final Schematic| image:: http://www.moop.org.uk/wp-content/uploads/2016/10/z80_sd_interface.sch_.png
    :class: size-full wp-image-1014
    :width: 1488px
    :height: 1052px
    :target: http://www.moop.org.uk/index.php/2016/10/31/retrochallenge-201610-deadline/z80_sd_interface-sch/
+   :alt: Final Schematic
 .. |Final Netlist| image:: http://www.moop.org.uk/wp-content/uploads/2016/10/IMG_20161031_223638.jpg.sm_.jpg
    :class: size-full wp-image-1013
    :width: 1024px
    :height: 766px
    :target: http://www.moop.org.uk/index.php/2016/10/31/retrochallenge-201610-deadline/img_20161031_223638-jpg-sm/
+   :alt: Final Netlist
