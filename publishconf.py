@@ -13,7 +13,7 @@ from pelicanconf import *
 SITEURL = 'https://www.moop.org.uk'
 RELATIVE_URLS = False
 
-FEED_ALL_ATOM = 'index.php/feed'
+FEED_ALL_ATOM = 'index.php/feed/index.html'
 #FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
 
