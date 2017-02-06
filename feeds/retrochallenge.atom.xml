@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Mooplog - RC2014, Retrochallenge</title><link href="https://mooped.github.io/" rel="alternate"></link><link href="https://mooped.github.io/feeds/rc2014-retrochallenge.atom.xml" rel="self"></link><id>https://mooped.github.io/</id><updated>2016-11-02T21:35:00+00:00</updated><entry><title>RetroChallenge 2016/10 - One bodge to fix them all</title><link href="https://mooped.github.io/retrochallenge-201610-one-bodge-to-fix-them-all.html" rel="alternate"></link><published>2016-11-02T21:35:00+00:00</published><updated>2016-11-02T21:35:00+00:00</updated><author><name>moop</name></author><id>tag:mooped.github.io,2016-11-02:/retrochallenge-201610-one-bodge-to-fix-them-all.html</id><summary type="html">&lt;p&gt;It's two days past the deadline, but I found an extra moment to work on
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Mooplog - Retrochallenge</title><link href="https://mooped.github.io/" rel="alternate"></link><link href="https://mooped.github.io/feeds/retrochallenge.atom.xml" rel="self"></link><id>https://mooped.github.io/</id><updated>2016-11-02T21:35:00+00:00</updated><entry><title>RetroChallenge 2016/10 - One bodge to fix them all</title><link href="https://mooped.github.io/retrochallenge-201610-one-bodge-to-fix-them-all.html" rel="alternate"></link><published>2016-11-02T21:35:00+00:00</published><updated>2016-11-02T21:35:00+00:00</updated><author><name>moop</name></author><id>tag:mooped.github.io,2016-11-02:/retrochallenge-201610-one-bodge-to-fix-them-all.html</id><summary type="html">&lt;p&gt;It's two days past the deadline, but I found an extra moment to work on
 my SD card interface today and I have it working!&lt;/p&gt;
 &lt;p&gt;I switched the clock output to the SD card from SH_CLK to /SH_CLK to
 move the rising edge of the clock to a point where …&lt;/p&gt;</summary><content type="html">&lt;p&gt;It's two days past the deadline, but I found an extra moment to work on
@@ -46,7 +46,7 @@ this RetroChallenge a success (it was definitely good motivation).&lt;/p&gt;
 &lt;p&gt;For bonus points I managed to use exactly all the gates in the 7400 quad
 NAND and 7404 hex inverter that make up my glue logic.&lt;/p&gt;
 &lt;p&gt;Now it's probably time to start reading the CP/M BIOS Alteration Guide!&lt;/p&gt;
-</content></entry><entry><title>Retrochallenge 2016/10 - Tools</title><link href="https://mooped.github.io/retrochallenge-201610-tools.html" rel="alternate"></link><published>2016-11-01T20:00:00+00:00</published><updated>2016-11-01T20:00:00+00:00</updated><author><name>moop</name></author><id>tag:mooped.github.io,2016-11-01:/retrochallenge-201610-tools.html</id><summary type="html">&lt;p&gt;During &lt;a class="reference external" href="http://retrochallenge.net/"&gt;Retro Challenge&lt;/a&gt; I needed a way
+</content><category term="RC2014"></category><category term="Retrochallenge"></category></entry><entry><title>Retrochallenge 2016/10 - Tools</title><link href="https://mooped.github.io/retrochallenge-201610-tools.html" rel="alternate"></link><published>2016-11-01T20:00:00+00:00</published><updated>2016-11-01T20:00:00+00:00</updated><author><name>moop</name></author><id>tag:mooped.github.io,2016-11-01:/retrochallenge-201610-tools.html</id><summary type="html">&lt;p&gt;During &lt;a class="reference external" href="http://retrochallenge.net/"&gt;Retro Challenge&lt;/a&gt; I needed a way
 to run machine code on my rc2014, as BASIC was incapable of the
 performance needed to initialise the SD card in bitbang mode.&lt;/p&gt;
 &lt;p&gt;I didn't (and still don't) have an EEPROM burner when I first got my
@@ -97,7 +97,7 @@ straight into the fast version of the monitor program.&lt;/p&gt;
 Tools&lt;/a&gt; project. They will
 work on a Linux system or similar, or on Windows with some
 modifications.&lt;/p&gt;
-</content></entry><entry><title>Retrochallenge 2016/10 - Deadline</title><link href="https://mooped.github.io/retrochallenge-201610-deadline.html" rel="alternate"></link><published>2016-10-31T23:08:00+00:00</published><updated>2016-10-31T23:08:00+00:00</updated><author><name>moop</name></author><id>tag:mooped.github.io,2016-10-31:/retrochallenge-201610-deadline.html</id><summary type="html">&lt;p&gt;I'm at my deadline for RetroChallenge 2016/10 and unfortunately I'm
+</content><category term="RC2014"></category><category term="Retrochallenge"></category></entry><entry><title>Retrochallenge 2016/10 - Deadline</title><link href="https://mooped.github.io/retrochallenge-201610-deadline.html" rel="alternate"></link><published>2016-10-31T23:08:00+00:00</published><updated>2016-10-31T23:08:00+00:00</updated><author><name>moop</name></author><id>tag:mooped.github.io,2016-10-31:/retrochallenge-201610-deadline.html</id><summary type="html">&lt;p&gt;I'm at my deadline for RetroChallenge 2016/10 and unfortunately I'm
 tantalisingly close to having something that works, but not quite there.&lt;/p&gt;
 &lt;p&gt;I have the bitbang/slow mode working and generating pulses that match
 the output I get from my Bus Pirate when using it to talk to the SD …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I'm at my deadline for RetroChallenge 2016/10 and unfortunately I'm
@@ -156,7 +156,7 @@ and post further updates as I figure it out.&lt;/p&gt;
 &lt;p&gt;I also plan to write a post about the toolchain I have setup for running
 assembly programs quickly and painlessly on the RC2014. Hopefully I'll
 be able to post that tomorrow.&lt;/p&gt;
-</content></entry><entry><title>Retrochallenge 2016/10 - State of Play</title><link href="https://mooped.github.io/retrochallenge-201610-state-of-play.html" rel="alternate"></link><published>2016-10-31T17:11:00+00:00</published><updated>2016-10-31T17:11:00+00:00</updated><author><name>moop</name></author><id>tag:mooped.github.io,2016-10-31:/retrochallenge-201610-state-of-play.html</id><summary type="html">&lt;p&gt;As it stands my RetroChallenge entry is close to working, but not quite
+</content><category term="RC2014"></category><category term="Retrochallenge"></category></entry><entry><title>Retrochallenge 2016/10 - State of Play</title><link href="https://mooped.github.io/retrochallenge-201610-state-of-play.html" rel="alternate"></link><published>2016-10-31T17:11:00+00:00</published><updated>2016-10-31T17:11:00+00:00</updated><author><name>moop</name></author><id>tag:mooped.github.io,2016-10-31:/retrochallenge-201610-state-of-play.html</id><summary type="html">&lt;p&gt;As it stands my RetroChallenge entry is close to working, but not quite
 there.&lt;/p&gt;
 &lt;p&gt;The fast mode appears to work and I was able to decode the SPI packets
 sent to the SD card with
@@ -196,7 +196,7 @@ asserted, so the output from U3 is always a copy of whatever is on bit 7
 of the data bus.&lt;/p&gt;
 &lt;p&gt;This should be fixable if I can find a better way to load this register
 before time runs out.&lt;/p&gt;
-</content></entry><entry><title>Retrochallenge 2016/10 - Due diligence</title><link href="https://mooped.github.io/retrochallenge-201610-due-diligence.html" rel="alternate"></link><published>2016-10-30T22:45:00+00:00</published><updated>2016-10-30T22:45:00+00:00</updated><author><name>moop</name></author><id>tag:mooped.github.io,2016-10-30:/retrochallenge-201610-due-diligence.html</id><summary type="html">&lt;p&gt;To avoid the work done designing my SD interface being wasted I decided
+</content><category term="RC2014"></category><category term="Retrochallenge"></category></entry><entry><title>Retrochallenge 2016/10 - Due diligence</title><link href="https://mooped.github.io/retrochallenge-201610-due-diligence.html" rel="alternate"></link><published>2016-10-30T22:45:00+00:00</published><updated>2016-10-30T22:45:00+00:00</updated><author><name>moop</name></author><id>tag:mooped.github.io,2016-10-30:/retrochallenge-201610-due-diligence.html</id><summary type="html">&lt;p&gt;To avoid the work done designing my SD interface being wasted I decided
 to verify the concept before going any further.&lt;/p&gt;
 &lt;p&gt;I used my &lt;a class="reference external" href="http://dangerousprototypes.com/docs/Bus_Pirate"&gt;Bus
 Pirate&lt;/a&gt; to verify
@@ -228,7 +228,7 @@ to the SD card.&lt;/p&gt;
 adapter and the Bus Pirate I was able to initialise the SD card and read
 blocks of data. This gave me confidence that my project would work and
 would be worthwhile.&lt;/p&gt;
-</content></entry><entry><title>Retrochallenge 2016/10 - Building retro computers with modern tools</title><link href="https://mooped.github.io/retrochallenge-201610-building-retro-computers-with-modern-tools.html" rel="alternate"></link><published>2016-10-23T20:26:00+01:00</published><updated>2016-10-23T20:26:00+01:00</updated><author><name>moop</name></author><id>tag:mooped.github.io,2016-10-23:/retrochallenge-201610-building-retro-computers-with-modern-tools.html</id><summary type="html">&lt;p&gt;I've been struggling for free time this month for poking around with
+</content><category term="RC2014"></category><category term="Retrochallenge"></category></entry><entry><title>Retrochallenge 2016/10 - Building retro computers with modern tools</title><link href="https://mooped.github.io/retrochallenge-201610-building-retro-computers-with-modern-tools.html" rel="alternate"></link><published>2016-10-23T20:26:00+01:00</published><updated>2016-10-23T20:26:00+01:00</updated><author><name>moop</name></author><id>tag:mooped.github.io,2016-10-23:/retrochallenge-201610-building-retro-computers-with-modern-tools.html</id><summary type="html">&lt;p&gt;I've been struggling for free time this month for poking around with
 breadboards and other fun things. To work around this, and still
 (hopefully) get my RetroChallenge entry done, I decided to use a
 simulator so I could work on it with my laptop whenever and wherever
@@ -299,7 +299,7 @@ Quartus. This way everything could be easily translated back to a
 physical circuit once it was verified as working.&lt;/p&gt;
 &lt;p&gt;Now I have the autoshift circuit working, theoretically, I just need to
 find some time to build and test the physical version!&lt;/p&gt;
-</content></entry><entry><title>Retrochallenge 2016/10 - Previous version and problems</title><link href="https://mooped.github.io/retrochallenge-201610-previous-version-and-problems.html" rel="alternate"></link><published>2016-10-15T13:51:00+01:00</published><updated>2016-10-15T13:51:00+01:00</updated><author><name>moop</name></author><id>tag:mooped.github.io,2016-10-15:/retrochallenge-201610-previous-version-and-problems.html</id><summary type="html">&lt;p&gt;In my previous post I promised to show the previous implementation of my
+</content><category term="RC2014"></category><category term="Retrochallenge"></category></entry><entry><title>Retrochallenge 2016/10 - Previous version and problems</title><link href="https://mooped.github.io/retrochallenge-201610-previous-version-and-problems.html" rel="alternate"></link><published>2016-10-15T13:51:00+01:00</published><updated>2016-10-15T13:51:00+01:00</updated><author><name>moop</name></author><id>tag:mooped.github.io,2016-10-15:/retrochallenge-201610-previous-version-and-problems.html</id><summary type="html">&lt;p&gt;In my previous post I promised to show the previous implementation of my
 Z80 SD interface, and to run through the problems which I intend to fix
 this month.&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/15/retrochallenge-201610-previous-version-and-problems/z80-sd-interface-74hc299-schematic_2048/"&gt;&lt;img alt="Original Z80 SD Interface Schematic" class="size-full wp-image-966" src="http://www.moop.org.uk/wp-content/uploads/2016/10/Z80-SD-Interface-74HC299-Schematic_2048.png" style="width: 2048px; height: 1448px;" /&gt;&lt;/a&gt;&lt;/p&gt;
@@ -390,7 +390,7 @@ less plentiful.&lt;/p&gt;
 with a simple edge trigger circuit to limit the /DATAWR pulse to a
 single clock.&lt;/p&gt;
 &lt;p&gt;Hopefully I will have a write up of this new version soon.&lt;/p&gt;
-</content></entry><entry><title>Retrochallenge 2016/10</title><link href="https://mooped.github.io/retrochallenge-201610.html" rel="alternate"></link><published>2016-10-05T20:04:00+01:00</published><updated>2016-10-05T20:04:00+01:00</updated><author><name>moop</name></author><id>tag:mooped.github.io,2016-10-05:/retrochallenge-201610.html</id><summary type="html">&lt;p&gt;I decided to join in with
+</content><category term="RC2014"></category><category term="Retrochallenge"></category></entry><entry><title>Retrochallenge 2016/10</title><link href="https://mooped.github.io/retrochallenge-201610.html" rel="alternate"></link><published>2016-10-05T20:04:00+01:00</published><updated>2016-10-05T20:04:00+01:00</updated><author><name>moop</name></author><id>tag:mooped.github.io,2016-10-05:/retrochallenge-201610.html</id><summary type="html">&lt;p&gt;I decided to join in with
 ` &amp;lt;&lt;a class="reference external" href="http://www.wickensonline.co.uk/retrochallenge-2012sc/"&gt;http://www.wickensonline.co.uk/retrochallenge-2012sc/&lt;/a&gt;&amp;gt;`__Retrochallenge
 2016/10 this October. I'm also hoping this will provide some incentive
 to write more posts and updates about other projects once I'm back into
@@ -467,4 +467,4 @@ logic that enables the high speed mode to work.&lt;/p&gt;
 &lt;p&gt;Before I take the previous version apart to rebuild, I'll take some
 logic analyser captures indicating the timing issues, and write up (and
 remind myself of) the problems.&lt;/p&gt;
-</content></entry></feed>
+</content><category term="RC2014"></category><category term="Retrochallenge"></category></entry></feed>

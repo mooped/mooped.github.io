@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Mooplog - Foobot, Games</title><link href="https://mooped.github.io/" rel="alternate"></link><link href="https://mooped.github.io/feeds/foobot-games.atom.xml" rel="self"></link><id>https://mooped.github.io/</id><updated>2015-03-15T21:25:00+00:00</updated><entry><title>Foobot</title><link href="https://mooped.github.io/foobot.html" rel="alternate"></link><published>2015-03-15T21:25:00+00:00</published><updated>2015-03-15T21:25:00+00:00</updated><author><name>moop</name></author><id>tag:mooped.github.io,2015-03-15:/foobot.html</id><summary type="html">&lt;p&gt;Foobot is a project I started around November 2014. It's still a work in
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Mooplog - Games</title><link href="https://mooped.github.io/" rel="alternate"></link><link href="https://mooped.github.io/feeds/games.atom.xml" rel="self"></link><id>https://mooped.github.io/</id><updated>2015-03-15T21:25:00+00:00</updated><entry><title>Foobot</title><link href="https://mooped.github.io/foobot.html" rel="alternate"></link><published>2015-03-15T21:25:00+00:00</published><updated>2015-03-15T21:25:00+00:00</updated><author><name>moop</name></author><id>tag:mooped.github.io,2015-03-15:/foobot.html</id><summary type="html">&lt;p&gt;Foobot is a project I started around November 2014. It's still a work in
 progress, but the time when I should have written it up is more than
 due.&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2015/03/15/foobot/foobot_complete/"&gt;&lt;img alt="Foobot" class="alignnone size-full wp-image-804" src="http://www.moop.org.uk/wp-content/uploads/2015/03/foobot_complete.jpg" style="width: 1024px; height: 576px;" /&gt;&lt;/a&gt;&lt;/p&gt;
@@ -93,4 +93,4 @@ use these, but please bear in mind that the project is still a work in
 progress.&lt;/p&gt;
 &lt;p&gt;Finally, here's a video of some Foobots in action (before the over the
 air PWM tuning feature went in):&lt;/p&gt;
-</content></entry></feed>
+</content><category term="Foobot"></category><category term="Games"></category></entry></feed>
