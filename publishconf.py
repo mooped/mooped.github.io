@@ -10,7 +10,7 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-SITEURL = 'https://www.moop.org.uk'
+SITEURL = 'http://www.moop.org.uk'
 RELATIVE_URLS = False
 
 FEED_ALL_ATOM = 'index.php/feed/index.html'

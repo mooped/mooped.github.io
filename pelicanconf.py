@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Steve Barnett'
 SITENAME = 'Mooplog'
-SITEURL = 'https://www.moop.org.uk'
+SITEURL = 'http://www.moop.org.uk'
 
 PATH = 'content'
 
