@@ -57,8 +57,7 @@
 </footer><!-- /.post-info -->      <p>In my previous post I promised to show the previous implementation of my
 Z80 SD interface, and to run through the problems which I intend to fix
 this month.</p>
-<p>[caption id=&quot;attachment_966&quot; align=&quot;alignnone&quot; width=&quot;2048&quot;]<a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/15/retrochallenge-201610-previous-version-and-problems/z80-sd-interface-74hc299-schematic_2048/"><img alt="Original Z80 SD Interface Schematic" class="size-full wp-image-966" src="http://www.moop.org.uk/wp-content/uploads/2016/10/Z80-SD-Interface-74HC299-Schematic_2048.png" style="width: 2048px; height: 1448px;" /></a> Original Z80 SD Interface Schematic (Click
-to Zoom)[/caption]</p>
+<p><a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/15/retrochallenge-201610-previous-version-and-problems/z80-sd-interface-74hc299-schematic_2048/"><img alt="Original Z80 SD Interface Schematic" class="size-full wp-image-966" src="http://www.moop.org.uk/wp-content/uploads/2016/10/Z80-SD-Interface-74HC299-Schematic_2048.png" style="width: 2048px; height: 1448px;" /></a></p>
 <p>The 74138 (U1) in the top left of the schematic is used to detect and
 decode IO reads and writes from the Z80. Three bits of the address bus
 (A7, A1, A0) are decoded along with the /RD line, M1 line and /IORQ
@@ -102,8 +101,7 @@ signal (CLK) by four to produce (Q_CLK). This was initially intended to
 solve a timing issue, but has caused more trouble than it was worth.</p>
 <p>The timing diagram below shows the behaviour of the device when the
 SHIFT8 bit is set and a write is issued to the DATA address.</p>
-<p>[caption id=&quot;attachment_965&quot; align=&quot;alignnone&quot; width=&quot;1652&quot;]<a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/15/retrochallenge-201610-previous-version-and-problems/z80-sd-interface-74hc299/"><img alt="Original SD Interface Timings" class="size-full wp-image-965" src="http://www.moop.org.uk/wp-content/uploads/2016/10/Z80-SD-Interface-74HC299.png" style="width: 1652px; height: 936px;" /></a> Original SD Interface Timings (Click to
-Zoom)[/caption]</p>
+<p><a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/15/retrochallenge-201610-previous-version-and-problems/z80-sd-interface-74hc299/"><img alt="Original SD Interface Timings" class="size-full wp-image-965" src="http://www.moop.org.uk/wp-content/uploads/2016/10/Z80-SD-Interface-74HC299.png" style="width: 1652px; height: 936px;" /></a></p>
 <p>A couple of issues are noticeable:</p>
 <ul class="simple">
 <li>SH_CLK is producing one partial pulse, followed by a gap, followed

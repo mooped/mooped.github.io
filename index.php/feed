@@ -108,7 +108,7 @@ card. However, the Bus Pirate gets a response and my circuit does not.&lt;/p&gt;
 &lt;p&gt;I blamed my level shifter for a while. As an experiment I tried writing
 to the card from the Bus Pirate and reading the response through the
 level shifter works fine, so that can't be the problem.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_1012&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/31/retrochallenge-201610-deadline/img_20161031_222456-jpg-sm/"&gt;&lt;img alt="Final State Of Play" class="size-full wp-image-1012" src="http://www.moop.org.uk/wp-content/uploads/2016/10/IMG_20161031_222456.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /&gt;&lt;/a&gt; Final State Of Play[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/31/retrochallenge-201610-deadline/img_20161031_222456-jpg-sm/"&gt;&lt;img alt="Final State Of Play" class="size-full wp-image-1012" src="http://www.moop.org.uk/wp-content/uploads/2016/10/IMG_20161031_222456.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Bitbang mode was fixed by adding an additional edge trigger circuit.
 Instead of a synchronous edge trigger I used the simple trick of feeding
 a signal and an inverted copy of the signal into an AND gate. When the
@@ -131,26 +131,26 @@ included adding a new bit to the CONFIG register to drive the serial
 input on the output shift register. This ensured the Data Out line
 (MOSI) to the SD card was pulled high, in order to match exactly the Bus
 Pirate's behaviour.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_1010&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/31/retrochallenge-201610-deadline/img_20161031_220127-jpg-sm/"&gt;&lt;img alt="CMD0 on Bus Pirate" class="size-full wp-image-1010" src="http://www.moop.org.uk/wp-content/uploads/2016/10/IMG_20161031_220127.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /&gt;&lt;/a&gt; CMD0 on Bus Pirate[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/31/retrochallenge-201610-deadline/img_20161031_220127-jpg-sm/"&gt;&lt;img alt="CMD0 on Bus Pirate" class="size-full wp-image-1010" src="http://www.moop.org.uk/wp-content/uploads/2016/10/IMG_20161031_220127.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;It was difficult to get a screenshot that captured the whole pulse
 train, but the above shot shows the Bus Pirate sending CMD0 (0x40, 0x00,
 0x00, 0x00, 0x00, 0x95) and receiving 0xFF (no response) followed by
 0x01 (OK). The shot below shows the commands sent to the Bus Pirate and
 the response.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_1009&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/31/retrochallenge-201610-deadline/img_20161031_215925-jpg-sm/"&gt;&lt;img alt="Bus Pirate Commands" class="size-full wp-image-1009" src="http://www.moop.org.uk/wp-content/uploads/2016/10/IMG_20161031_215925.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /&gt;&lt;/a&gt; Bus Pirate Commands[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/31/retrochallenge-201610-deadline/img_20161031_215925-jpg-sm/"&gt;&lt;img alt="Bus Pirate Commands" class="size-full wp-image-1009" src="http://www.moop.org.uk/wp-content/uploads/2016/10/IMG_20161031_215925.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The next shot shows my circuit sending the same output, but recieving no
 response.&lt;/p&gt;
 &lt;p&gt;In both cases a large number of clock pulses were sent with the SD
 card's chip select deasserted, as is apparently required to initialise
 the card.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_1011&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/31/retrochallenge-201610-deadline/img_20161031_221128-jpg-sm/"&gt;&lt;img alt="CMD0 From My Circuit" class="size-full wp-image-1011" src="http://www.moop.org.uk/wp-content/uploads/2016/10/IMG_20161031_221128.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /&gt;&lt;/a&gt; CMD0 From My Circuit[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/31/retrochallenge-201610-deadline/img_20161031_221128-jpg-sm/"&gt;&lt;img alt="CMD0 From My Circuit" class="size-full wp-image-1011" src="http://www.moop.org.uk/wp-content/uploads/2016/10/IMG_20161031_221128.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;My suspicion is that either my timing is too fast - I'm currently
 running at 330kHz while the Bus Pirate is running at 33kHz - or the
 rising edge of my clock is very subtly off with respect to the data.&lt;/p&gt;
 &lt;p&gt;There are still hardware bugs (the off by one issue, mainly), but the
 final schematic and final netlist are included below for posterity.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_1014&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1488&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/31/retrochallenge-201610-deadline/z80_sd_interface-sch/"&gt;&lt;img alt="Final Schematic" class="size-full wp-image-1014" src="http://www.moop.org.uk/wp-content/uploads/2016/10/z80_sd_interface.sch_.png" style="width: 1488px; height: 1052px;" /&gt;&lt;/a&gt; Final Schematic[/caption]&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_1013&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/31/retrochallenge-201610-deadline/img_20161031_223638-jpg-sm/"&gt;&lt;img alt="Final Netlist" class="size-full wp-image-1013" src="http://www.moop.org.uk/wp-content/uploads/2016/10/IMG_20161031_223638.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /&gt;&lt;/a&gt; Final Netlist[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/31/retrochallenge-201610-deadline/z80_sd_interface-sch/"&gt;&lt;img alt="Final Schematic" class="size-full wp-image-1014" src="http://www.moop.org.uk/wp-content/uploads/2016/10/z80_sd_interface.sch_.png" style="width: 1488px; height: 1052px;" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/31/retrochallenge-201610-deadline/img_20161031_223638-jpg-sm/"&gt;&lt;img alt="Final Netlist" class="size-full wp-image-1013" src="http://www.moop.org.uk/wp-content/uploads/2016/10/IMG_20161031_223638.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I plan to continue working on this project after RetroChallenge and will
 and post further updates as I figure it out.&lt;/p&gt;
 &lt;p&gt;I also plan to write a post about the toolchain I have setup for running
@@ -162,14 +162,14 @@ there.&lt;/p&gt;
 sent to the SD card with
 &lt;a class="reference external" href="http://dangerousprototypes.com/blog/open-logic-sniffer/"&gt;OpenLogicSniffer's&lt;/a&gt;
 SPI analyser module.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_996&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/30/retrochallenge-201610-breadboard-fun/img_20161030_211120-jpg-sm/"&gt;&lt;img alt="Decoded Messages" class="size-full wp-image-996" src="http://www.moop.org.uk/wp-content/uploads/2016/10/IMG_20161030_211120.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /&gt;&lt;/a&gt; Decoded Messages[/caption]&lt;/p&gt;
-&lt;p&gt;The …&lt;/p&gt;</summary><content type="html">&lt;p&gt;As it stands my RetroChallenge entry is close to working, but not quite
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/30/retrochallenge-201610-breadboard-fun/img_20161030_211120-jpg-sm/"&gt;&lt;img alt="Decoded Messages" class="size-full wp-image-996" src="http://www.moop.org.uk/wp-content/uploads/2016/10/IMG_20161030_211120.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The picture above shows the signals and the decoded data for …&lt;/p&gt;</summary><content type="html">&lt;p&gt;As it stands my RetroChallenge entry is close to working, but not quite
 there.&lt;/p&gt;
 &lt;p&gt;The fast mode appears to work and I was able to decode the SPI packets
 sent to the SD card with
 &lt;a class="reference external" href="http://dangerousprototypes.com/blog/open-logic-sniffer/"&gt;OpenLogicSniffer's&lt;/a&gt;
 SPI analyser module.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_996&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/30/retrochallenge-201610-breadboard-fun/img_20161030_211120-jpg-sm/"&gt;&lt;img alt="Decoded Messages" class="size-full wp-image-996" src="http://www.moop.org.uk/wp-content/uploads/2016/10/IMG_20161030_211120.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /&gt;&lt;/a&gt; Decoded Messages[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/30/retrochallenge-201610-breadboard-fun/img_20161030_211120-jpg-sm/"&gt;&lt;img alt="Decoded Messages" class="size-full wp-image-996" src="http://www.moop.org.uk/wp-content/uploads/2016/10/IMG_20161030_211120.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The picture above shows the signals and the decoded data for the SD card
 CMD0 (Software Reset) message which is the first step in initialising
 the card. The message is the 6 byte string 0x40 0x00 0x00 0x00 0x00 0x95
@@ -183,7 +183,7 @@ therefore the device is running in fast mode. For the SD to initialise
 correctly it needs to be initially clocked slowly (100-400kHz).&lt;/p&gt;
 &lt;p&gt;Unfortunately, the slow mode, which I was expecting to be the easy bit
 is currently not working due to a hack I used to get fast mode working.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_1005&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1488&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/31/retrochallenge-201610-state-of-play/z80_sd_interface_20161031am/"&gt;&lt;img alt="Current Schematic" class="size-full wp-image-1005" src="http://www.moop.org.uk/wp-content/uploads/2016/10/z80_sd_interface_20161031am.png" style="width: 1488px; height: 1052px;" /&gt;&lt;/a&gt; Current Schematic[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/31/retrochallenge-201610-state-of-play/z80_sd_interface_20161031am/"&gt;&lt;img alt="Current Schematic" class="size-full wp-image-1005" src="http://www.moop.org.uk/wp-content/uploads/2016/10/z80_sd_interface_20161031am.png" style="width: 1488px; height: 1052px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The current schematic, seen above, shows that the 'Shift /Load' input of
 the output data shift register (U3 pin 1) is driven by the SHIFTING net.
 This gave the correct timings to load the register when data was
@@ -210,7 +210,7 @@ this time I took an unused RC2014 protoboard module and soldered on just
 the usual 90 pin header and a socket header below it. The protoboard can
 still be used later (minus one row of holes) and now provides something
 that wires can be plugged into that can be removed from the RC2014.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_992&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/30/retrochallenge-201610-breadboard-fun/img_20161024_211944-jpg-sm/"&gt;&lt;img alt="RC2014 Protoboard" class="size-full wp-image-992" src="http://www.moop.org.uk/wp-content/uploads/2016/10/IMG_20161024_211944.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /&gt;&lt;/a&gt; RC2014 Protoboard[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/30/retrochallenge-201610-breadboard-fun/img_20161024_211944-jpg-sm/"&gt;&lt;img alt="RC2014 Protoboard" class="size-full wp-image-992" src="http://www.moop.org.uk/wp-content/uploads/2016/10/IMG_20161024_211944.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;With the edge trigger circuit built I tested it using my &lt;a class="reference external" href="http://dangerousprototypes.com/blog/open-logic-sniffer/"&gt;Open Logic
 Sniffer&lt;/a&gt;,
 which has been an invaluable tool for many projects. I did however
@@ -218,11 +218,10 @@ notice that running on the RC2014's 8mhz clock brings the Open Logic
 Sniffer quite close to its limits. The 200mhz maximum sample rate
 provides resolution for only about 12 steps within each clock cycle, so
 there is limited scope for playing with gate delays.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_994&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/30/retrochallenge-201610-breadboard-fun/img_20161024_214406-jpg-sm/"&gt;&lt;img alt="Edge Detect" class="size-full wp-image-994" src="http://www.moop.org.uk/wp-content/uploads/2016/10/IMG_20161024_214406.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /&gt;&lt;/a&gt; Edge Detect[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/30/retrochallenge-201610-breadboard-fun/img_20161024_214406-jpg-sm/"&gt;&lt;img alt="Edge Detect" class="size-full wp-image-994" src="http://www.moop.org.uk/wp-content/uploads/2016/10/IMG_20161024_214406.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Once the edge detect circuit was proven to work I started building the
 rest of the circuit and things quickly got complicated.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_995&amp;quot; align=&amp;quot;alignnone&amp;quot;
-width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/30/retrochallenge-201610-breadboard-fun/img_20161030_161426-jpg-sm/"&gt;&lt;img alt="Blinkenlights" class="size-full wp-image-995" src="http://www.moop.org.uk/wp-content/uploads/2016/10/IMG_20161030_161426.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /&gt;&lt;/a&gt; Blinkenlights[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/30/retrochallenge-201610-breadboard-fun/img_20161030_161426-jpg-sm/"&gt;&lt;img alt="Blinkenlights" class="size-full wp-image-995" src="http://www.moop.org.uk/wp-content/uploads/2016/10/IMG_20161030_161426.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The image above shows the almost complete circuit, but with a loopback
 between the input and output shift registers where the SD card would
 normally fit, and some blinkenlights on the outputs from the input shift
@@ -254,7 +253,7 @@ breadboarded design onto the sheet, then kept it up to date as things
 changed. This turned out to be a lot more convenient than keeping track
 of the design in KiCAD as it was easy to search for a signal by name and
 the paper was easier to reach on my desk.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_997&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/30/retrochallenge-201610-breadboard-fun/img_20161030_221905-jpg-sm/"&gt;&lt;img alt="Paper Netlist" class="size-full wp-image-997" src="http://www.moop.org.uk/wp-content/uploads/2016/10/IMG_20161030_221905.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /&gt;&lt;/a&gt; Paper Netlist[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/30/retrochallenge-201610-breadboard-fun/img_20161030_221905-jpg-sm/"&gt;&lt;img alt="Paper Netlist" class="size-full wp-image-997" src="http://www.moop.org.uk/wp-content/uploads/2016/10/IMG_20161030_221905.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 </content></entry><entry><title>Retrochallenge 2016/10 - Due diligence</title><link href="https://mooped.github.io/retrochallenge-201610-due-diligence.html" rel="alternate"></link><published>2016-10-30T22:45:00+00:00</published><updated>2016-10-30T22:45:00+00:00</updated><author><name>moop</name></author><id>tag:mooped.github.io,2016-10-30:/retrochallenge-201610-due-diligence.html</id><summary type="html">&lt;p&gt;To avoid the work done designing my SD interface being wasted I decided
 to verify the concept before going any further.&lt;/p&gt;
 &lt;p&gt;I used my &lt;a class="reference external" href="http://dangerousprototypes.com/docs/Bus_Pirate"&gt;Bus
@@ -273,13 +272,12 @@ the SD card supports in the mode I'm using.&lt;/p&gt;
 card with a standard SD adapter and soldering some right angle pin
 headers to the pads. This gave me an SD adapter that would plug into a
 breadboard.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_987&amp;quot; align=&amp;quot;alignnone&amp;quot;
-width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/30/retrochallenge-201610-due-diligence/sd1/"&gt;&lt;img alt="Makeshift SD Adapter" class="size-full wp-image-987" src="http://www.moop.org.uk/wp-content/uploads/2016/10/SD1.jpg" style="width: 1024px; height: 766px;" /&gt;&lt;/a&gt; Makeshift SD Adapter[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/30/retrochallenge-201610-due-diligence/sd1/"&gt;&lt;img alt="Makeshift SD Adapter" class="size-full wp-image-987" src="http://www.moop.org.uk/wp-content/uploads/2016/10/SD1.jpg" style="width: 1024px; height: 766px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I initially used the Bus Pirate's probe cable as a quick way to connect
 to this adapter, but this got frustrating as the mini grabbers had a
 habit of letting go at inconvenient times. To get around this I made a
 quick adapter on some stripboard.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_988&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/30/retrochallenge-201610-due-diligence/sd2/"&gt;&lt;img alt="Bus Pirate SD Adapter" class="size-full wp-image-988" src="http://www.moop.org.uk/wp-content/uploads/2016/10/SD2.jpg" style="width: 1024px; height: 766px;" /&gt;&lt;/a&gt; Bus Pirate SD Adapter[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/30/retrochallenge-201610-due-diligence/sd2/"&gt;&lt;img alt="Bus Pirate SD Adapter" class="size-full wp-image-988" src="http://www.moop.org.uk/wp-content/uploads/2016/10/SD2.jpg" style="width: 1024px; height: 766px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;This little adapter also makes it easy to remove the SD adapter from the
 Bus Pirate without having to look up the pinout again. It should come in
 handy on future SD card related projects and maybe for writing raw data
@@ -297,7 +295,7 @@ breadboards and other fun things. To work around this, and still
 (hopefully) get my RetroChallenge entry done, I decided to use a
 simulator so I could work on it with my laptop whenever and wherever
 there was time.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_975&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;804&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/23/retrochallenge-201610-building-retro-computers-with-modern-tools/logisim/"&gt;&lt;img alt="LogiSim Edge Detector" class="size-full wp-image-975" src="http://www.moop.org.uk/wp-content/uploads/2016/10/logisim.png" style="width: 804px; height: 460px;" /&gt;&lt;/a&gt; LogiSim Edge Detector[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/23/retrochallenge-201610-building-retro-computers-with-modern-tools/logisim/"&gt;&lt;img alt="LogiSim Edge Detector" class="size-full wp-image-975" src="http://www.moop.org.uk/wp-content/uploads/2016/10/logisim.png" style="width: 804px; height: 460px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;For an earlier RC2014 project I used
 &lt;a class="reference external" href="http://www.cburch.com/logisim/"&gt;LogiSim&lt;/a&gt; which is simple and easy to
 use, but I quickly hit some limitations. The built in sequential
@@ -313,8 +311,7 @@ Quartus&lt;/a&gt; to build a model of the circuit and
 ModelSim Altera Edition to simulate it. I mainly chose this because I've
 used it previously for FPGA projects, and because if some functionality
 is missing I can implement it in Verilog.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_974&amp;quot; align=&amp;quot;alignnone&amp;quot;
-width=&amp;quot;1438&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/23/retrochallenge-201610-building-retro-computers-with-modern-tools/board2/"&gt;&lt;img alt="Autoshift Circuit" class="size-full wp-image-974" src="http://www.moop.org.uk/wp-content/uploads/2016/10/board2.png" style="width: 1438px; height: 898px;" /&gt;&lt;/a&gt; Autoshift Circuit[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/23/retrochallenge-201610-building-retro-computers-with-modern-tools/board2/"&gt;&lt;img alt="Autoshift Circuit" class="size-full wp-image-974" src="http://www.moop.org.uk/wp-content/uploads/2016/10/board2.png" style="width: 1438px; height: 898px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;When redesigning the autoshifter circuit (to shift out 8 bits of data
 after each IO write) I built it as a Block Diagram/Schematic File (.bdf)
 in Quartus. This allows the design to be entered as a schematic with
@@ -331,8 +328,7 @@ has D flip flops rather than transparent latches. I could build my own
 shift register in Verilog, but to save time I opted to stick with the
 LPM_SHIFTREG version and ensure that the timings seen in simulation
 were such that the transparent latches wouldn't cause a problem.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_976&amp;quot; align=&amp;quot;alignnone&amp;quot;
-width=&amp;quot;1438&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/23/retrochallenge-201610-building-retro-computers-with-modern-tools/simulation2/"&gt;&lt;img alt="Simulation" class="size-full wp-image-976" src="http://www.moop.org.uk/wp-content/uploads/2016/10/simulation2.png" style="width: 1438px; height: 898px;" /&gt;&lt;/a&gt; Simulation[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/23/retrochallenge-201610-building-retro-computers-with-modern-tools/simulation2/"&gt;&lt;img alt="Simulation" class="size-full wp-image-976" src="http://www.moop.org.uk/wp-content/uploads/2016/10/simulation2.png" style="width: 1438px; height: 898px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;In order to test the design I set Quartus up to launch ModelSim and run
 Gate Level Simulation after compilation. ModelSim can be driven manually
 through the GUI, but this is fairly fiddly and repetitive. Fortunately
@@ -364,13 +360,12 @@ find some time to build and test the physical version!&lt;/p&gt;
 </content></entry><entry><title>Retrochallenge 2016/10 - Previous version and problems</title><link href="https://mooped.github.io/retrochallenge-201610-previous-version-and-problems.html" rel="alternate"></link><published>2016-10-15T13:51:00+01:00</published><updated>2016-10-15T13:51:00+01:00</updated><author><name>moop</name></author><id>tag:mooped.github.io,2016-10-15:/retrochallenge-201610-previous-version-and-problems.html</id><summary type="html">&lt;p&gt;In my previous post I promised to show the previous implementation of my
 Z80 SD interface, and to run through the problems which I intend to fix
 this month.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_966&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;2048&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/15/retrochallenge-201610-previous-version-and-problems/z80-sd-interface-74hc299-schematic_2048/"&gt;&lt;img alt="Original Z80 SD Interface Schematic" class="size-full wp-image-966" src="http://www.moop.org.uk/wp-content/uploads/2016/10/Z80-SD-Interface-74HC299-Schematic_2048.png" style="width: 2048px; height: 1448px;" /&gt;&lt;/a&gt; Original Z80 SD Interface Schematic (Click
-to Zoom)[/caption]&lt;/p&gt;
-&lt;p&gt;The 74138 (U1) in the …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In my previous post I promised to show the previous implementation of my
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/15/retrochallenge-201610-previous-version-and-problems/z80-sd-interface-74hc299-schematic_2048/"&gt;&lt;img alt="Original Z80 SD Interface Schematic" class="size-full wp-image-966" src="http://www.moop.org.uk/wp-content/uploads/2016/10/Z80-SD-Interface-74HC299-Schematic_2048.png" style="width: 2048px; height: 1448px;" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The 74138 (U1) in the top left of the schematic is used to detect and
+decode IO reads and writes from …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In my previous post I promised to show the previous implementation of my
 Z80 SD interface, and to run through the problems which I intend to fix
 this month.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_966&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;2048&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/15/retrochallenge-201610-previous-version-and-problems/z80-sd-interface-74hc299-schematic_2048/"&gt;&lt;img alt="Original Z80 SD Interface Schematic" class="size-full wp-image-966" src="http://www.moop.org.uk/wp-content/uploads/2016/10/Z80-SD-Interface-74HC299-Schematic_2048.png" style="width: 2048px; height: 1448px;" /&gt;&lt;/a&gt; Original Z80 SD Interface Schematic (Click
-to Zoom)[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/15/retrochallenge-201610-previous-version-and-problems/z80-sd-interface-74hc299-schematic_2048/"&gt;&lt;img alt="Original Z80 SD Interface Schematic" class="size-full wp-image-966" src="http://www.moop.org.uk/wp-content/uploads/2016/10/Z80-SD-Interface-74HC299-Schematic_2048.png" style="width: 2048px; height: 1448px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The 74138 (U1) in the top left of the schematic is used to detect and
 decode IO reads and writes from the Z80. Three bits of the address bus
 (A7, A1, A0) are decoded along with the /RD line, M1 line and /IORQ
@@ -414,8 +409,7 @@ signal (CLK) by four to produce (Q_CLK). This was initially intended to
 solve a timing issue, but has caused more trouble than it was worth.&lt;/p&gt;
 &lt;p&gt;The timing diagram below shows the behaviour of the device when the
 SHIFT8 bit is set and a write is issued to the DATA address.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_965&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1652&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/15/retrochallenge-201610-previous-version-and-problems/z80-sd-interface-74hc299/"&gt;&lt;img alt="Original SD Interface Timings" class="size-full wp-image-965" src="http://www.moop.org.uk/wp-content/uploads/2016/10/Z80-SD-Interface-74HC299.png" style="width: 1652px; height: 936px;" /&gt;&lt;/a&gt; Original SD Interface Timings (Click to
-Zoom)[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/15/retrochallenge-201610-previous-version-and-problems/z80-sd-interface-74hc299/"&gt;&lt;img alt="Original SD Interface Timings" class="size-full wp-image-965" src="http://www.moop.org.uk/wp-content/uploads/2016/10/Z80-SD-Interface-74HC299.png" style="width: 1652px; height: 936px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;A couple of issues are noticeable:&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;SH_CLK is producing one partial pulse, followed by a gap, followed
@@ -459,12 +453,13 @@ single clock.&lt;/p&gt;
 2016/10 this October. I'm also hoping this will provide some incentive
 to write more posts and updates about other projects once I'm back into
 the swing of things!&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_952&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/?attachment_id=952"&gt;&lt;img alt="RC2014 Z80 computer" class="size-full wp-image-952" src="http://www.moop.org.uk/wp-content/uploads/2016/10/rc2104.jpg" style="width: 1024px; height: 576px;" /&gt;&lt;/a&gt; RC2014 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I decided to join in with
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/?attachment_id=952"&gt;&lt;img alt="RC2014 Z80 computer" class="size-full wp-image-952" src="http://www.moop.org.uk/wp-content/uploads/2016/10/rc2104.jpg" style="width: 1024px; height: 576px;" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;My goal for this Retrochallenge is to finish …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I decided to join in with
 ` &amp;lt;&lt;a class="reference external" href="http://www.wickensonline.co.uk/retrochallenge-2012sc/"&gt;http://www.wickensonline.co.uk/retrochallenge-2012sc/&lt;/a&gt;&amp;gt;`__Retrochallenge
 2016/10 this October. I'm also hoping this will provide some incentive
 to write more posts and updates about other projects once I'm back into
 the swing of things!&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_952&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/?attachment_id=952"&gt;&lt;img alt="RC2014 Z80 computer" class="size-full wp-image-952" src="http://www.moop.org.uk/wp-content/uploads/2016/10/rc2104.jpg" style="width: 1024px; height: 576px;" /&gt;&lt;/a&gt; RC2014 Z80 computer[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/?attachment_id=952"&gt;&lt;img alt="RC2014 Z80 computer" class="size-full wp-image-952" src="http://www.moop.org.uk/wp-content/uploads/2016/10/rc2104.jpg" style="width: 1024px; height: 576px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;My goal for this Retrochallenge is to finish an SD card interface I
 started designing for Spencer Owen's ` &amp;lt;&lt;a class="reference external" href="http://rc2014.co.uk/"&gt;http://rc2014.co.uk/&lt;/a&gt;&amp;gt;`__RC2014
 Z80 based computer (which was spawned by a previous Retrochallenge,
@@ -520,7 +515,7 @@ efficient, but allows the slower speed required for the SD card
 initialisation process without much extra logic.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/ul&gt;
-&lt;/ul&gt;&lt;p&gt;[caption id=&amp;quot;attachment_953&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/?attachment_id=953"&gt;&lt;img alt="Original version on breadboard" class="size-full wp-image-953" src="http://www.moop.org.uk/wp-content/uploads/2016/10/original_breadboard.jpg" style="width: 1024px; height: 576px;" /&gt;&lt;/a&gt; Original version on breadboard[/caption]&lt;/p&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/?attachment_id=953"&gt;&lt;img alt="Original version on breadboard" class="size-full wp-image-953" src="http://www.moop.org.uk/wp-content/uploads/2016/10/original_breadboard.jpg" style="width: 1024px; height: 576px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;An initial version similar to this design has been built on a breadboard
 using a 74ALS299. In addition to the issues with the synchronous control
 signals needed to load this shift register, there were also
@@ -980,7 +975,7 @@ mounting in a case.&lt;/p&gt;
 &lt;p&gt;With all of the boards made and (a few months later, once a burst of
 motivation turned up) assembled, I needed to build a case to keep the
 parts together. I decided to laser cut the case from perspex in order to
-get it made quickly—and because I thought a clear perspex case would
+get it made quickly and because I thought a clear perspex case would
 look cool.&lt;/p&gt;
 &lt;p&gt;Due to my earlier experiences with fried Stepper Controllers I decided
 to use locking connectors to prevent accidental disconnection while the
@@ -1282,7 +1277,7 @@ around the theme was 'You Only Get One'.&lt;/p&gt;
 up with Loot of the Forest. It's a game about bribing forest guardian
 creatures as you make your way through their forest maze, but you only
 have a single item per species of guardian.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_512&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;571&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/12/15/loot-of-the-forest/level2/"&gt;&lt;img alt="Loot of the Forest" class="size-full wp-image-512" src="http://www.moop.org.uk/wp-content/uploads/2013/12/level2.png" style="width: 571px; height: 479px;" /&gt;&lt;/a&gt; Loot of the Forest[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/12/15/loot-of-the-forest/level2/"&gt;&lt;img alt="Loot of the Forest" class="size-full wp-image-512" src="http://www.moop.org.uk/wp-content/uploads/2013/12/level2.png" style="width: 571px; height: 479px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Expect puzzles and weird animal based puns.&lt;/p&gt;
 &lt;p&gt;Play it
 &lt;a class="reference external" href="http://www.ludumdare.com/compo/ludum-dare-28/?action=preview&amp;amp;uid=2573"&gt;here&lt;/a&gt;.&lt;/p&gt;
@@ -1303,20 +1298,17 @@ shift registers to control the servos. This in turn is controlled
 through an SPI bus to a Minimus USB AVR board, pretending to be a USB to
 serial device. The data sent over the serial line is interpreted as
 servo IDs followed by the desired position of the servo.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_506&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;2592&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/12/12/stomp-stomp-stomp-stomp/2013-12-11-21-54-59/"&gt;&lt;img alt="Mark 2 servo controller board" class="size-full wp-image-506" src="http://www.moop.org.uk/wp-content/uploads/2013/12/2013-12-11-21.54.59.jpg" style="width: 2592px; height: 1552px;" /&gt;&lt;/a&gt; Mark 2 servo controller board[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/12/12/stomp-stomp-stomp-stomp/2013-12-11-21-54-59/"&gt;&lt;img alt="Mark 2 servo controller board" class="size-full wp-image-506" src="http://www.moop.org.uk/wp-content/uploads/2013/12/2013-12-11-21.54.59.jpg" style="width: 2592px; height: 1552px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The control software I wrote for the hexapod can run on any Linux
 computer with a USB port. For dev I use a netbook but it also runs
 nicely on a Raspberry Pi.&lt;/p&gt;
-&lt;div class="line-block"&gt;
-&lt;div class="line"&gt;The original plan was to use the Raspberry Pi's SPI port to control
+&lt;p&gt;The original plan was to use the Raspberry Pi's SPI port to control
 the servo board directly, unfortunately due to Linux's scheduling not
 being particularly real time even in real time mode there was a lot of
 timing jitter leading to real life servo jitter. Switching to the
 Minimus meant having a very dedicated if much slower CPU generating
-the pulses resulting in much smoother control of the servos.&lt;/div&gt;
-&lt;div class="line"&gt;[caption id=&amp;quot;attachment_507&amp;quot; align=&amp;quot;alignnone&amp;quot;
-width=&amp;quot;2592&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/12/12/stomp-stomp-stomp-stomp/2013-10-23-19-15-36/"&gt;&lt;img alt="Hexapod" class="size-full wp-image-507" src="http://www.moop.org.uk/wp-content/uploads/2013/12/2013-10-23-19.15.36.jpg" style="width: 2592px; height: 1552px;" /&gt;&lt;/a&gt; Hexapod[/caption]&lt;/div&gt;
-&lt;/div&gt;
+the pulses resulting in much smoother control of the servos.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/12/12/stomp-stomp-stomp-stomp/2013-10-23-19-15-36/"&gt;&lt;img alt="Hexapod" class="size-full wp-image-507" src="http://www.moop.org.uk/wp-content/uploads/2013/12/2013-10-23-19.15.36.jpg" style="width: 2592px; height: 1552px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I'll hopefully post a full making of post on the hexapod soon, but for
 now I just wanted to post a video of some stomping!&lt;/p&gt;
 </content></entry><entry><title>The Minigun (A mini Super Gun)</title><link href="https://mooped.github.io/the-minigun-a-mini-super-gun.html" rel="alternate"></link><published>2013-11-24T14:54:00+00:00</published><updated>2013-11-24T14:54:00+00:00</updated><author><name>charlie</name></author><id>tag:mooped.github.io,2013-11-24:/the-minigun-a-mini-super-gun.html</id><summary type="html">&lt;p&gt;&lt;em&gt;Guest post by Charlie again as he continues his quest to take over
@@ -1626,9 +1618,7 @@ with driving them via a Minimus USB microcontroller board. Thanks to the
 simplicity of the stepper controllers I had it driving the motors nicely
 within an hour, though unfortunately I shortly after discovered several
 ways to fry the Allegro A3967 chip that the EasyDriver is based on.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_380&amp;quot; align=&amp;quot;alignnone&amp;quot;
-width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/08/27/eshapeoko-part-1/2013-03-01-06-31-13/"&gt;&lt;img alt="EasyDriver stepper boards" class="size-full wp-image-380" src="http://www.moop.org.uk/wp-content/uploads/2013/08/2013-03-01-06.31.13.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt; EasyDriver stepper
-boards[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/08/27/eshapeoko-part-1/2013-03-01-06-31-13/"&gt;&lt;img alt="EasyDriver stepper boards" class="size-full wp-image-380" src="http://www.moop.org.uk/wp-content/uploads/2013/08/2013-03-01-06.31.13.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The first mistake was forgetting to power off the boards while
 unplugging a motor. The controller keeps the coils in the stepper motor
 energised continuously in order to hold the motor steady. Suddenly
@@ -1665,7 +1655,7 @@ along with some
 provided by Reading Hackspace. With a Minimus acting as a USB to serial
 adapter, I had the electronics side of the machine in place (albeit
 cobbled together).&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_390&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/08/27/eshapeoko-part-1/2013-04-06-13-00-37/"&gt;&lt;img alt="Cobbled together CNC controller" class="size-full wp-image-390" src="http://www.moop.org.uk/wp-content/uploads/2013/08/2013-04-06-13.00.37.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt; Cobbled together CNC controller[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/08/27/eshapeoko-part-1/2013-04-06-13-00-37/"&gt;&lt;img alt="Cobbled together CNC controller" class="size-full wp-image-390" src="http://www.moop.org.uk/wp-content/uploads/2013/08/2013-04-06-13.00.37.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I'll cover the mechanical side of it in another post.&lt;/p&gt;
 </content></entry><entry><title>Lightwave RF Mood Controller Hack</title><link href="https://mooped.github.io/lightwaverfmoodcontrollerhack.html" rel="alternate"></link><published>2013-08-25T21:46:00+01:00</published><updated>2013-08-25T21:46:00+01:00</updated><author><name>charlie</name></author><id>tag:mooped.github.io,2013-08-25:/lightwaverfmoodcontrollerhack.html</id><summary type="html">&lt;p&gt;It's me, Charlie again, continuing with my scheme to take over Moop's
 blog with nothing but home automation articles.&lt;/p&gt;
@@ -1925,12 +1915,12 @@ inner three sets of wing ribs. They should have enough flex in them to
 absorb some impact in the case of a bad landing.&lt;/p&gt;
 &lt;p&gt;As you can see from the comparison above, I also redesigned the fuselage
 to be much less boxy.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_243&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;2592&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/05/19/update/2013-05-05-17-10-25/"&gt;&lt;img alt="MKIII Chalupa Parts" class="size-full wp-image-243" src="http://www.moop.org.uk/wp-content/uploads/2013/05/2013-05-05-17.10.25.jpg" style="width: 2592px; height: 1552px;" /&gt;&lt;/a&gt; MKIII Chalupa Parts[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/05/19/update/2013-05-05-17-10-25/"&gt;&lt;img alt="MKIII Chalupa Parts" class="size-full wp-image-243" src="http://www.moop.org.uk/wp-content/uploads/2013/05/2013-05-05-17.10.25.jpg" style="width: 2592px; height: 1552px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I cut the parts for the MKIII Unholy Chalupa at the start of May, using
 the laser cutter at Nottingham Hackspace. The model was finished around
 the 21st of June. Since then it's mostly been cluttering up my desk,
 waiting for a good day for a test flight.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_263&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/07/08/unholy-chalupa-mkiii/2013-05-20-20-56-28/"&gt;&lt;img alt="Fuselage sides" class="size-full wp-image-263" src="http://www.moop.org.uk/wp-content/uploads/2013/07/2013-05-20-20.56.28.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt; Fuselage sides[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/07/08/unholy-chalupa-mkiii/2013-05-20-20-56-28/"&gt;&lt;img alt="Fuselage sides" class="size-full wp-image-263" src="http://www.moop.org.uk/wp-content/uploads/2013/07/2013-05-20-20.56.28.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The first step was to build up the fuselage sides. The side panels could
 have been built as a single piece if they were hand cut, but using the
 laser meant I could rely on the accuracy of the wing mounting holes.
@@ -1966,7 +1956,7 @@ the rear former to ensure it remained straight. Once glue was applied,
 the sides were pulled in, held vertical using blocks and set squares. I
 also glued the 1/8th strips to the top of the tail section at this
 point, to lock in the bend.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_270&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/07/08/unholy-chalupa-mkiii/2013-05-24-22-56-58/"&gt;&lt;img alt="Desk fly" class="size-full wp-image-270" src="http://www.moop.org.uk/wp-content/uploads/2013/07/2013-05-24-22.56.58.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt; Desk fly[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/07/08/unholy-chalupa-mkiii/2013-05-24-22-56-58/"&gt;&lt;img alt="Desk fly" class="size-full wp-image-270" src="http://www.moop.org.uk/wp-content/uploads/2013/07/2013-05-24-22.56.58.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;At this point it was possible to put the model together to see how it
 would look and provide a motivation boost. The wings were held together
 by friction.&lt;/p&gt;
@@ -1980,8 +1970,7 @@ sheet was used for the skin. This was a slow process as it was initially
 glued vertically to the side of the hatch, then glued and pinned in
 sections once the glue set. This took several days, but very little
 actual work. Most of the time was spent waiting for the glue to dry.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_274&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/07/08/unholy-chalupa-mkiii/2013-05-27-00-58-11/"&gt;&lt;img alt="Spine" class="size-full wp-image-274" src="http://www.moop.org.uk/wp-content/uploads/2013/07/2013-05-27-00.58.11.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt;
-Spine[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/07/08/unholy-chalupa-mkiii/2013-05-27-00-58-11/"&gt;&lt;img alt="Spine" class="size-full wp-image-274" src="http://www.moop.org.uk/wp-content/uploads/2013/07/2013-05-27-00.58.11.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The spine for the rest of the fuselage was glued in sections, taking
 advantage of the doubler on the rear former to provide extra surface
 area. At this point some 1/16&amp;quot; strip was added to provide a nice area
@@ -2010,7 +1999,7 @@ perpendicular, so blocks and clamps were used to hold them in place
 while the glue cured. A tiny sub fin was attached below the stabiliser,
 to give a place to hinge the lower part of the rudder. On the original
 model this was a big problem and lead to a very sloppy rudder response.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_286&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/07/08/unholy-chalupa-mkiii/2013-05-30-21-40-35/"&gt;&lt;img alt="Complete fuselage" class="size-full wp-image-286" src="http://www.moop.org.uk/wp-content/uploads/2013/07/2013-05-30-21.40.35.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt; Complete fuselage[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/07/08/unholy-chalupa-mkiii/2013-05-30-21-40-35/"&gt;&lt;img alt="Complete fuselage" class="size-full wp-image-286" src="http://www.moop.org.uk/wp-content/uploads/2013/07/2013-05-30-21.40.35.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;At this point the fuselage was mostly complete, and I moved onto the
 wings. You can see here that I've shortened the model a bit since the
 last picture of the fuselage. The original intention was to hide the
@@ -2039,12 +2028,12 @@ the fuselage. On this model it's a tight fit, and the receiver will be
 difficult to get at once the model is covered. Fortunately this
 shouldn't be necessary except in rare cases, in which case the covering
 can be cut off to gain access.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_293&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;460&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/07/08/unholy-chalupa-mkiii/2013-06-02-18-14-22/"&gt;&lt;img alt="Wingtip installation." class="size-full wp-image-293" src="http://www.moop.org.uk/wp-content/uploads/2013/07/2013-06-02-18.14.22.jpg" style="width: 460px; height: 768px;" /&gt;&lt;/a&gt; Wingtip installation[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/07/08/unholy-chalupa-mkiii/2013-06-02-18-14-22/"&gt;&lt;img alt="Wingtip installation." class="size-full wp-image-293" src="http://www.moop.org.uk/wp-content/uploads/2013/07/2013-06-02-18.14.22.jpg" style="width: 460px; height: 768px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The wingtips were installed with the wings attached and the model
 standing on its nose. I used some 1/8&amp;quot; strip packed around the tips to
 to keep them horizontal, as the slight bevel left by the laser cutter
 would create problems if they were just glued on directly.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_294&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/07/08/unholy-chalupa-mkiii/2013-06-02-18-55-36/"&gt;&lt;img alt="Servo hatch" class="size-full wp-image-294" src="http://www.moop.org.uk/wp-content/uploads/2013/07/2013-06-02-18.55.36.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt; Servo hatch[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/07/08/unholy-chalupa-mkiii/2013-06-02-18-55-36/"&gt;&lt;img alt="Servo hatch" class="size-full wp-image-294" src="http://www.moop.org.uk/wp-content/uploads/2013/07/2013-06-02-18.55.36.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Sub ribs were added to the wings for servo mounting. They slot onto the
 wing spars and the carbon rods that attach the wings to the fuselage.
 The servo is screwed into a slot the thicker of these sub ribs. The
@@ -2069,7 +2058,7 @@ the rods instead of the wing.&lt;/p&gt;
 &lt;p&gt;The leading edge of the wing was built up from a stack of 1/8&amp;quot; and 1/16&amp;quot;
 strip. I used parcel tape to protect the wing ribs while sanding these
 to match the desired profile.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_307&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/07/08/unholy-chalupa-mkiii/2013-06-10-22-47-21/"&gt;&lt;img alt="Tail install" class="size-full wp-image-307" src="http://www.moop.org.uk/wp-content/uploads/2013/07/2013-06-10-22.47.21.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt; Tail install[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/07/08/unholy-chalupa-mkiii/2013-06-10-22-47-21/"&gt;&lt;img alt="Tail install" class="size-full wp-image-307" src="http://www.moop.org.uk/wp-content/uploads/2013/07/2013-06-10-22.47.21.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;After covering the tail and fuselage, I installed the tail. I took a lot
 of care to make sure it sat correctly and that the stabiliser was
 horizontal, before adding glue and clamping it in place.&lt;/p&gt;
@@ -2087,8 +2076,8 @@ finished and ready to go.&lt;/p&gt;
 so it's been cluttering my desk. Since I was out of hooks to wall mount
 it in the usual way, I ended up bending a large wire hook that clips to
 the landing gear and could be screwed to the wall.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_315&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/07/08/unholy-chalupa-mkiii/2013-07-07-20-09-38/"&gt;&lt;img alt="Wall mounting" class="size-full wp-image-315" src="http://www.moop.org.uk/wp-content/uploads/2013/07/2013-07-07-20.09.38.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt; Wall mounting[/caption]&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_318&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/07/08/unholy-chalupa-mkiii/2013-07-07-12-26-20/"&gt;&lt;img alt="Wall mounted" class="size-full wp-image-318" src="http://www.moop.org.uk/wp-content/uploads/2013/07/2013-07-07-12.26.20.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt; Wall mounted[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/07/08/unholy-chalupa-mkiii/2013-07-07-20-09-38/"&gt;&lt;img alt="Wall mounting" class="size-full wp-image-315" src="http://www.moop.org.uk/wp-content/uploads/2013/07/2013-07-07-20.09.38.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/07/08/unholy-chalupa-mkiii/2013-07-07-12-26-20/"&gt;&lt;img alt="Wall mounted" class="size-full wp-image-318" src="http://www.moop.org.uk/wp-content/uploads/2013/07/2013-07-07-12.26.20.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 </content></entry><entry><title>Homemade Wireless Plug</title><link href="https://mooped.github.io/homemade-wireless-plug.html" rel="alternate"></link><published>2013-05-27T15:02:00+01:00</published><updated>2013-05-27T15:02:00+01:00</updated><author><name>charlie</name></author><id>tag:mooped.github.io,2013-05-27:/homemade-wireless-plug.html</id><summary type="html">&lt;p&gt;Hello readers! First off, if you were expecting one of Moop's awesome
 posts then prepare for disappointment as today you have me, Charlie,
 posting instead as a special guest contributor.&lt;/p&gt;
@@ -2357,9 +2346,8 @@ Magazine&lt;/a&gt;,
 designed by Tim Hooper. I'm cheating a bit by using a CNC cut short kit
 they offer. Once I find some time I'll hopefully make a series of posts
 on the construction process.&lt;/p&gt;
-&lt;p&gt;[caption width=&amp;quot;733&amp;quot; align=&amp;quot;aligncenter&amp;quot;]&lt;img alt="Speed Twin ST2" src="http://www.modelflying.co.uk/sites/3/images/member_albums/42584/parked-egka-002.jpg" style="width: 733px; height: 500px;" /&gt; Speed Twin
-ST2[/caption][caption id=&amp;quot;attachment_234&amp;quot; align=&amp;quot;alignnone&amp;quot;
-width=&amp;quot;2592&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/05/19/update/2013-04-14-21-34-54/"&gt;&lt;img alt="Speed Twin Progress" class="size-full wp-image-234" src="http://www.moop.org.uk/wp-content/uploads/2013/05/2013-04-14-21.34.54.jpg" style="width: 2592px; height: 1552px;" /&gt;&lt;/a&gt; Speed Twin Progress[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Speed Twin ST2" src="http://www.modelflying.co.uk/sites/3/images/member_albums/42584/parked-egka-002.jpg" style="width: 733px; height: 500px;" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/05/19/update/2013-04-14-21-34-54/"&gt;&lt;img alt="Speed Twin Progress" class="size-full wp-image-234" src="http://www.moop.org.uk/wp-content/uploads/2013/05/2013-04-14-21.34.54.jpg" style="width: 2592px; height: 1552px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Work on the Speed Twin has mostly stalled for the past few months. This
 was due to a holiday immediately followed by the arrival of my eShapeOko
 CNC machine, which stole a large chunk of my working space. In the short
@@ -2367,23 +2355,20 @@ term, I'm planning on using the machine to experiment with mechanical
 PCB etching. The controller for the machine is currently built on a
 breadboard. If all goes to plan it'll be used to build itself a more
 permanent controller, and a nice housing for it too.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_236&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;2592&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/05/19/update/2013-04-24-17-30-17/"&gt;&lt;img alt="ShapeOko parts" class="size-full wp-image-236" src="http://www.moop.org.uk/wp-content/uploads/2013/05/2013-04-24-17.30.17.jpg" style="width: 2592px; height: 1552px;" /&gt;&lt;/a&gt; ShapeOko parts[/caption]&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_237&amp;quot; align=&amp;quot;alignnone&amp;quot;
-width=&amp;quot;2592&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/05/19/update/2013-05-11-17-03-55/"&gt;&lt;img alt="Breadboarded CNC controller" class="size-full wp-image-237" src="http://www.moop.org.uk/wp-content/uploads/2013/05/2013-05-11-17.03.55.jpg" style="width: 2592px; height: 1552px;" /&gt;&lt;/a&gt; Breadboarded CNC
-controller[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/05/19/update/2013-04-24-17-30-17/"&gt;&lt;img alt="ShapeOko parts" class="size-full wp-image-236" src="http://www.moop.org.uk/wp-content/uploads/2013/05/2013-04-24-17.30.17.jpg" style="width: 2592px; height: 1552px;" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/05/19/update/2013-05-11-17-03-55/"&gt;&lt;img alt="Breadboarded CNC controller" class="size-full wp-image-237" src="http://www.moop.org.uk/wp-content/uploads/2013/05/2013-05-11-17.03.55.jpg" style="width: 2592px; height: 1552px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The controller is based on an Arduino running
 &lt;a class="reference external" href="https://github.com/grbl/grbl"&gt;GRBL&lt;/a&gt; and four
 &lt;a class="reference external" href="http://www.schmalzhaus.com/EasyDriver/"&gt;EasyDriver&lt;/a&gt; stepper
 controller boards. The DIY Arduino (made during a workshop at Nottingham
 Hackspace) doesn't include a USB to serial adapter, so I've hacked one
 together using a Minimus USB microcontroller board.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_238&amp;quot; align=&amp;quot;alignnone&amp;quot;
-width=&amp;quot;2592&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/05/19/update/2013-05-12-18-38-43/"&gt;&lt;img alt="eShapeOko" class="size-full wp-image-238" src="http://www.moop.org.uk/wp-content/uploads/2013/05/2013-05-12-18.38.43.jpg" style="width: 2592px; height: 1552px;" /&gt;&lt;/a&gt; eShapeOko[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/05/19/update/2013-05-12-18-38-43/"&gt;&lt;img alt="eShapeOko" class="size-full wp-image-238" src="http://www.moop.org.uk/wp-content/uploads/2013/05/2013-05-12-18.38.43.jpg" style="width: 2592px; height: 1552px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Unfortunately, I'm waiting on some PCB milling bits to be delivered,
 along with a few other parts, before I can use it in anger. Experiments
 with it acting as a pencil plotter are promising, and the accuracy seems
 more than sufficient for the job.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_235&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;2592&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/05/19/update/2013-05-05-17-18-56/"&gt;&lt;img alt="PCB plotting test" class="size-full wp-image-235" src="http://www.moop.org.uk/wp-content/uploads/2013/05/2013-05-05-17.18.56.jpg" style="width: 2592px; height: 1552px;" /&gt;&lt;/a&gt; PCB plotting test[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/05/19/update/2013-05-05-17-18-56/"&gt;&lt;img alt="PCB plotting test" class="size-full wp-image-235" src="http://www.moop.org.uk/wp-content/uploads/2013/05/2013-05-05-17.18.56.jpg" style="width: 2592px; height: 1552px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I'll hopefully write a few posts about some of the mods I've done to the
 machine shortly, and about building the final version of the controller
 once the parts arrive.&lt;/p&gt;
@@ -2391,14 +2376,14 @@ once the parts arrive.&lt;/p&gt;
 design model aircraft. The original Chalupa is a 22&amp;quot; span low wing
 trainer I designed in early 2012 and built over the Easter bank holiday
 weekend that year. It was designed in CAD but the parts were hand cut.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_241&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;2048&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/05/19/update/img_20120408_220254/"&gt;&lt;img alt="Original Chalupa" class="size-full wp-image-241" src="http://www.moop.org.uk/wp-content/uploads/2013/05/IMG_20120408_220254.jpg" style="width: 2048px; height: 1536px;" /&gt;&lt;/a&gt; Original Chalupa[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/05/19/update/img_20120408_220254/"&gt;&lt;img alt="Original Chalupa" class="size-full wp-image-241" src="http://www.moop.org.uk/wp-content/uploads/2013/05/IMG_20120408_220254.jpg" style="width: 2048px; height: 1536px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The original model flew well but the wing was overly delicate and became
 quite twisted after a few repairs. After shelving the model for a few
 months I redrew the wing with laser cutting in mind. I borrowed a lot of
 ideas from the style of &lt;a class="reference external" href="http://www.radicalrc.com/category/Radical-RC-E-Kits-190"&gt;Dave
 Thacker's&lt;/a&gt;
 micro scale models, which I'm rather fond of.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_240&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;648&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/05/19/update/imag0174/"&gt;&lt;img alt="Laser cut MKII wing" class="size-full wp-image-240" src="http://www.moop.org.uk/wp-content/uploads/2013/05/IMAG0174.jpg" style="width: 648px; height: 1023px;" /&gt;&lt;/a&gt; Laser cut MKII wing[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/05/19/update/imag0174/"&gt;&lt;img alt="Laser cut MKII wing" class="size-full wp-image-240" src="http://www.moop.org.uk/wp-content/uploads/2013/05/IMAG0174.jpg" style="width: 648px; height: 1023px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The new laser cut wing flew nicely initially, but was lightly built for
 this model. This wing broke during a crash caused by the motor working
 its way loose from the mount in flight. The wing was repaired, but due
@@ -2409,7 +2394,7 @@ sides of the fuselage. This will limit any damage taken to a single wing
 panel. Since this design change will require a new fuselage, I took the
 opportunity to redesign that too. The new design will be a lot less
 boxy.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_243&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;2592&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/05/19/update/2013-05-05-17-10-25/"&gt;&lt;img alt="MKIII Chalupa Parts" class="size-full wp-image-243" src="http://www.moop.org.uk/wp-content/uploads/2013/05/2013-05-05-17.10.25.jpg" style="width: 2592px; height: 1552px;" /&gt;&lt;/a&gt; MKIII Chalupa Parts[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/05/19/update/2013-05-05-17-10-25/"&gt;&lt;img alt="MKIII Chalupa Parts" class="size-full wp-image-243" src="http://www.moop.org.uk/wp-content/uploads/2013/05/2013-05-05-17.10.25.jpg" style="width: 2592px; height: 1552px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I have the parts cut for the new design now, I'll post more about it
 once I get around to putting it together.&lt;/p&gt;
 </content></entry><entry><title>Glider Restoration Part 4 - Finishing touches</title><link href="https://mooped.github.io/glider-restoration-part-4-finishing-touches.html" rel="alternate"></link><published>2013-03-03T00:31:00+00:00</published><updated>2013-03-03T00:31:00+00:00</updated><author><name>moop</name></author><id>tag:mooped.github.io,2013-03-03:/glider-restoration-part-4-finishing-touches.html</id><summary type="html">&lt;p&gt;The weather today was unexpectedly awesome so it would have been a crime
@@ -2423,7 +2408,7 @@ motor was mounted to the pylon. Ultimately, this needs further finishing
 work, but I'd like to make sure the motor is suited to the job before
 doing anything more permanent. The elastic band will keep the wires
 clear of the prop.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_224&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/?attachment_id=224"&gt;&lt;img alt="Motor pod/pylon" class="size-full wp-image-224" src="http://www.moop.org.uk/wp-content/uploads/2013/03/2013-03-03-00.03.55.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt; Motor pod/pylon[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/?attachment_id=224"&gt;&lt;img alt="Motor pod" class="size-full wp-image-224" src="http://www.moop.org.uk/wp-content/uploads/2013/03/2013-03-03-00.03.55.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The clearance between the pod and the wing limits the prop to about 5
 inches. I'm running a 5x5 prop with a 1650Kv (ie. 1650 RPM/volt) motor
 from a 3 cell Lithium Polymer battery. Hopefully this will provide
@@ -2438,7 +2423,7 @@ were then recovered with a small rectangle of film to neaten them up.&lt;/p&gt;
 &lt;p&gt;With this done the model is now in a state where it is ready to fly, and
 can be stored fully assembled. This made storing it a bit easier since
 it can hang on the wall above my desk.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_222&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/?attachment_id=222"&gt;&lt;img alt="New home" class="size-full wp-image-222" src="http://www.moop.org.uk/wp-content/uploads/2013/03/2013-03-02-22.06.37.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt; New home[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/?attachment_id=222"&gt;&lt;img alt="New home" class="size-full wp-image-222" src="http://www.moop.org.uk/wp-content/uploads/2013/03/2013-03-02-22.06.37.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Finally, I took it out to the field for a test flight. Fortunately a few
 other members of the Derby Model Aero Club were also out making use of
 the nice weather, so I was able to get a hand launch and a cameraman.&lt;/p&gt;
@@ -2581,11 +2566,12 @@ motor[/caption]&lt;/p&gt;
 tip skins based on the plans. These were glued and pinned into place
 then sanded to provide a smooth finish and to blend in with the leading
 and trailing edges.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_145&amp;quot; align …&lt;/p&gt;</summary><content type="html">&lt;p&gt;To finish off the wingtips, I cut off the spars at an angle and cut some
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/02/19/glider-restoration-part-2-finishing-the-wings/2013-02-03-14-03-41/"&gt;&lt;img alt="Wingtips sheeted and sanded" class="size-full wp-image-145" src="http://www.moop.org.uk/wp-content/uploads/2013/02/2013-02-03-14.03.41.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;With the tips finished …&lt;/p&gt;</summary><content type="html">&lt;p&gt;To finish off the wingtips, I cut off the spars at an angle and cut some
 tip skins based on the plans. These were glued and pinned into place
 then sanded to provide a smooth finish and to blend in with the leading
 and trailing edges.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_145&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/02/19/glider-restoration-part-2-finishing-the-wings/2013-02-03-14-03-41/"&gt;&lt;img alt="Wingtips sheeted and sanded" class="size-full wp-image-145" src="http://www.moop.org.uk/wp-content/uploads/2013/02/2013-02-03-14.03.41.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt; Wingtips sheeted and sanded[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/02/19/glider-restoration-part-2-finishing-the-wings/2013-02-03-14-03-41/"&gt;&lt;img alt="Wingtips sheeted and sanded" class="size-full wp-image-145" src="http://www.moop.org.uk/wp-content/uploads/2013/02/2013-02-03-14.03.41.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;With the tips finished I drilled holes into the inner three ribs of each
 wing. This was a process that would have been much easier earlier on,
 but would have resulted in the ribs being delicate and fiddly until the
@@ -2597,7 +2583,7 @@ repair but frustrating.&lt;/p&gt;
 joiner, so I settled for taking some undersized tubing and cutting a
 slit in it to allow it to expand slightly. Cutting this with a rotary
 tool worked but was messy and went through several cutting discs.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_147&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/02/19/glider-restoration-part-2-finishing-the-wings/2013-02-03-20-49-24/"&gt;&lt;img alt="Slotted aluminium tubing" class="size-full wp-image-147" src="http://www.moop.org.uk/wp-content/uploads/2013/02/2013-02-03-20.49.24.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt; Slotted aluminium tubing[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/02/19/glider-restoration-part-2-finishing-the-wings/2013-02-03-20-49-24/"&gt;&lt;img alt="Slotted aluminium tubing" class="size-full wp-image-147" src="http://www.moop.org.uk/wp-content/uploads/2013/02/2013-02-03-20.49.24.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I first test fitted the tubing to make sure it the wing joiner would
 fit. Then I wrapped it in tape to make it easier to remove should I need
 to, before epoxying it into the slot in the wing. Once both wings were
@@ -2605,20 +2591,20 @@ done I installed the joiner as a test only to find there was a slight
 misalignment that I'd missed. I was glad of the tape at this point as it
 made it much easier to remove the tubing before re-drilling and
 refitting the tubing!&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_149&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;460&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/02/19/glider-restoration-part-2-finishing-the-wings/2013-02-03-21-20-17-2/"&gt;&lt;img alt="Wing joiner tube" class="size-full wp-image-149" src="http://www.moop.org.uk/wp-content/uploads/2013/02/2013-02-03-21.20.171.jpg" style="width: 460px; height: 768px;" /&gt;&lt;/a&gt; Wing joiner tube[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/02/19/glider-restoration-part-2-finishing-the-wings/2013-02-03-21-20-17-2/"&gt;&lt;img alt="Wing joiner tube" class="size-full wp-image-149" src="http://www.moop.org.uk/wp-content/uploads/2013/02/2013-02-03-21.20.171.jpg" style="width: 460px; height: 768px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Once the joiner tube was in place and both wings lined up I cut some
 wood for the sheeting on the inner section of the wing. This was quite
 straightforward as the shapes were simple and the dimensions could be
 directly taken from the wing. Once these were cured I glued on the 1/32&amp;quot;
 ply faceplates to the root rib, using the wing jointer to align them.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_150&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/02/19/glider-restoration-part-2-finishing-the-wings/2013-02-03-21-40-52/"&gt;&lt;img alt="Finished wing root" class="size-full wp-image-150" src="http://www.moop.org.uk/wp-content/uploads/2013/02/2013-02-03-21.40.52.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt; Finished wing root[/caption]&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_151&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/02/19/glider-restoration-part-2-finishing-the-wings/2013-02-03-22-39-01/"&gt;&lt;img alt="Finished wing structure" class="size-full wp-image-151" src="http://www.moop.org.uk/wp-content/uploads/2013/02/2013-02-03-22.39.01.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt; Finished wing structure[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/02/19/glider-restoration-part-2-finishing-the-wings/2013-02-03-21-40-52/"&gt;&lt;img alt="Finished wing root" class="size-full wp-image-150" src="http://www.moop.org.uk/wp-content/uploads/2013/02/2013-02-03-21.40.52.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/02/19/glider-restoration-part-2-finishing-the-wings/2013-02-03-22-39-01/"&gt;&lt;img alt="Finished wing structure" class="size-full wp-image-151" src="http://www.moop.org.uk/wp-content/uploads/2013/02/2013-02-03-22.39.01.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;With the wings complete it was time to cover them. As usual I used an
 iron on film, in this case LightTex. I prefer to tack the film to the
 trailing and leading edges first, to avoid it moving about. After this,
 I worked from one end of the wing to the other to avoid the shrinking
 film creating too much tension and pulling a warp into the wing.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_154&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/02/19/glider-restoration-part-2-finishing-the-wings/2013-02-17-15-39-04/"&gt;&lt;img alt="Original decals" class="size-full wp-image-154" src="http://www.moop.org.uk/wp-content/uploads/2013/02/2013-02-17-15.39.04.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt; Original decals[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/02/19/glider-restoration-part-2-finishing-the-wings/2013-02-17-15-39-04/"&gt;&lt;img alt="Original decals" class="size-full wp-image-154" src="http://www.moop.org.uk/wp-content/uploads/2013/02/2013-02-17-15.39.04.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I kept the original decals from the previous model when I removed the
 covering, and my initial plan was to reuse all of these on the new
 model. Unfortunately the covering that the second of the larger decals
@@ -2636,21 +2622,22 @@ the individual letters, then arranged them on the wing. To iron them
 down I covered the sealing iron with a sock. This was to prevent the
 small pieces of film from shrivelling and attaching their adhesive side
 to the iron.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_157&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/02/19/glider-restoration-part-2-finishing-the-wings/2013-02-17-15-59-13/"&gt;&lt;img alt="Finished Swirl Decal" class="size-full wp-image-157" src="http://www.moop.org.uk/wp-content/uploads/2013/02/2013-02-17-15.59.13.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt; Finished Swirl Decal[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/02/19/glider-restoration-part-2-finishing-the-wings/2013-02-17-15-59-13/"&gt;&lt;img alt="Finished Swirl Decal" class="size-full wp-image-157" src="http://www.moop.org.uk/wp-content/uploads/2013/02/2013-02-17-15.59.13.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I lost some detail in the decals by using this method, but it still
 looks good. The original decals looked quite messy due to air bubbles
 under the transparent parts and dust getting stuck to the adhesive
 around the edges.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_159&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/02/19/glider-restoration-part-2-finishing-the-wings/2013-02-17-22-43-31/"&gt;&lt;img alt="Wings with decals" class="size-full wp-image-159" src="http://www.moop.org.uk/wp-content/uploads/2013/02/2013-02-17-22.43.31.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt; Wings with decals[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/02/19/glider-restoration-part-2-finishing-the-wings/2013-02-17-22-43-31/"&gt;&lt;img alt="Wings with decals" class="size-full wp-image-159" src="http://www.moop.org.uk/wp-content/uploads/2013/02/2013-02-17-22.43.31.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 </content></entry><entry><title>Space saving wall art</title><link href="https://mooped.github.io/space-saving-wall-art.html" rel="alternate"></link><published>2013-02-02T22:44:00+00:00</published><updated>2013-02-02T22:44:00+00:00</updated><author><name>moop</name></author><id>tag:mooped.github.io,2013-02-02:/space-saving-wall-art.html</id><summary type="html">&lt;p&gt;I seem to have too many model planes nowadays, and storage was fast
 becoming a problem. During a bout of boredom, I dug up some screws and
 hooks and attached them to the wall above my desk. Now they look cool,
 and I have loads of extra space!&lt;/p&gt;
-&lt;p&gt;[caption id …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I seem to have too many model planes nowadays, and storage was fast
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/02/02/space-saving-wall-art/2013-01-26-12-23-38/"&gt;&lt;img alt="Space saving wall art" class="size-full wp-image-130" src="http://www.moop.org.uk/wp-content/uploads/2013/02/2013-01-26-12.23.38.jpg" style="width: 2592px; height: 1552px;" /&gt;&lt;/a&gt;&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;I seem to have too many model planes nowadays, and storage was fast
 becoming a problem. During a bout of boredom, I dug up some screws and
 hooks and attached them to the wall above my desk. Now they look cool,
 and I have loads of extra space!&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_130&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;2592&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/02/02/space-saving-wall-art/2013-01-26-12-23-38/"&gt;&lt;img alt="Space saving wall art" class="size-full wp-image-130" src="http://www.moop.org.uk/wp-content/uploads/2013/02/2013-01-26-12.23.38.jpg" style="width: 2592px; height: 1552px;" /&gt;&lt;/a&gt; Space saving wall art[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/02/02/space-saving-wall-art/2013-01-26-12-23-38/"&gt;&lt;img alt="Space saving wall art" class="size-full wp-image-130" src="http://www.moop.org.uk/wp-content/uploads/2013/02/2013-01-26-12.23.38.jpg" style="width: 2592px; height: 1552px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 </content></entry><entry><title>Model glider restoration</title><link href="https://mooped.github.io/model-glider-restoration.html" rel="alternate"></link><published>2013-02-02T22:35:00+00:00</published><updated>2013-02-02T22:35:00+00:00</updated><author><name>moop</name></author><id>tag:mooped.github.io,2013-02-02:/model-glider-restoration.html</id><summary type="html">&lt;p&gt;I've had a Precedent Hi-Fly model glider lying around waiting to be
 repaired for years now. I originally built it with my dad. Well, he did
 most of the building; I suspect my main contribution was nagging him to
@@ -2661,8 +2648,7 @@ get it finished. Unfortunately, we didn't really know what we were
 doing, and it took some damage after very little flight time. We
 attempted to use a plastic AA battery box which broke as we launched the
 glider and left us with no control.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_116&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/02/02/model-glider-restoration/dsc00256-2/"&gt;&lt;img alt="Before" class="size-full wp-image-116" src="http://www.moop.org.uk/wp-content/uploads/2013/02/DSC002561.jpg" style="width: 1024px; height: 768px;" /&gt;&lt;/a&gt;
-Before[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/02/02/model-glider-restoration/dsc00256-2/"&gt;&lt;img alt="Before" class="size-full wp-image-116" src="http://www.moop.org.uk/wp-content/uploads/2013/02/DSC002561.jpg" style="width: 1024px; height: 768px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The nose of the model was damaged when it landed, and it was put in
 storage for many years, during which the wings got warped. A year or so
 ago I decided to restore it, I finally made a start on it last week.&lt;/p&gt;
@@ -2672,7 +2658,7 @@ them. First off I dug out the plans and found an image showing the
 typical wing section. I traced this in Draftsight to provide the shape
 for the various wing ribs. The tip ribs where the wing tapers had to be
 generated by measuring the plan, then scaling and fixing up the slots.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_105&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1160&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/02/02/model-glider-restoration/screen-shot-2013-02-02-at-21-51-38/"&gt;&lt;img alt="Ribs redrawn in Draftsight" class="size-full wp-image-105" src="http://www.moop.org.uk/wp-content/uploads/2013/02/Screen-shot-2013-02-02-at-21.51.38.png" style="width: 1160px; height: 574px;" /&gt;&lt;/a&gt; Ribs redrawn in Draftsight[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/02/02/model-glider-restoration/screen-shot-2013-02-02-at-21-51-38/"&gt;&lt;img alt="Ribs redrawn in Draftsight" class="size-full wp-image-105" src="http://www.moop.org.uk/wp-content/uploads/2013/02/Screen-shot-2013-02-02-at-21.51.38.png" style="width: 1160px; height: 574px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Unfortunately in my hurry to get the ribs cut I drew them in a hurry and
 made a few mistakes. I missed the asymmetrical spar slots on the inner
 ribs and added a slot where the shear webs were drawn on the plan,
@@ -2682,11 +2668,10 @@ the cut parts. I guess the moral of the story is &amp;quot;Don't design in a
 hurry&amp;quot;. The drawing shown above includes the corrections I made later.
 The thin ply end plates had to be cut by hand around a template as I
 couldn't find laser safe 1/32&amp;quot; ply.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_117&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/02/02/model-glider-restoration/2013-01-22-23-50-10/"&gt;&lt;img alt="Cut ribs" class="wp-image-117" src="http://www.moop.org.uk/wp-content/uploads/2013/02/2013-01-22-23.50.10.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt; Cut ribs[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/02/02/model-glider-restoration/2013-01-22-23-50-10/"&gt;&lt;img alt="Cut ribs" class="wp-image-117" src="http://www.moop.org.uk/wp-content/uploads/2013/02/2013-01-22-23.50.10.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I traced the plan onto some greaseproof paper since the original plan
 was too creased to build on top of.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_118&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;460&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/02/02/model-glider-restoration/2013-01-27-17-28-48-2/"&gt;&lt;img alt="Layout" class="size-full wp-image-118" src="http://www.moop.org.uk/wp-content/uploads/2013/02/2013-01-27-17.28.481.jpg" style="width: 460px; height: 768px;" /&gt;&lt;/a&gt;
-Layout[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/02/02/model-glider-restoration/2013-01-27-17-28-48-2/"&gt;&lt;img alt="Layout" class="size-full wp-image-118" src="http://www.moop.org.uk/wp-content/uploads/2013/02/2013-01-27-17.28.481.jpg" style="width: 460px; height: 768px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The actual wings went together fairly quickly once I got started. The
 spars were pinned to the board and the 1/8th inch ply and balsa inner
 ribs were laid on top. They were packed to sit level because they're cut
@@ -2694,7 +2679,7 @@ ribs were laid on top. They were packed to sit level because they're cut
 then top spar and supported it at the other end. A small template was
 used to set the angle of the root rib, to give the wing the correct
 amount of dihedral.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_120&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/02/02/model-glider-restoration/2013-01-27-18-03-30-2/"&gt;&lt;img alt="Inner ribs" class="size-full wp-image-120" src="http://www.moop.org.uk/wp-content/uploads/2013/02/2013-01-27-18.03.301.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt; Inner ribs[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/02/02/model-glider-restoration/2013-01-27-18-03-30-2/"&gt;&lt;img alt="Inner ribs" class="size-full wp-image-120" src="http://www.moop.org.uk/wp-content/uploads/2013/02/2013-01-27-18.03.301.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Between each pair of ribs is a shear web that locks the spars together,
 and prevents the wing from twisting or flexing. These came in handy to
 hold the front end of the ribs in place, meanwhile the rear ends of the
@@ -2704,7 +2689,7 @@ until the glue sets to keep them oriented correctly. Fortunately I had
 enough clamps that by the time I ran out the glue on the first pieces
 was dry, so the clamps could be reused and the build went fairly
 quickly.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_122&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/02/02/model-glider-restoration/2013-02-01-20-47-03/"&gt;&lt;img alt="Lots of clamps" class="size-full wp-image-122" src="http://www.moop.org.uk/wp-content/uploads/2013/02/2013-02-01-20.47.03.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt; Lots of clamps[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/02/02/model-glider-restoration/2013-02-01-20-47-03/"&gt;&lt;img alt="Lots of clamps" class="size-full wp-image-122" src="http://www.moop.org.uk/wp-content/uploads/2013/02/2013-02-01-20.47.03.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Once the rear ribs were in place, I marked the positions of their ends
 on a piece of trailing edge stock. I cut out notches then glued and
 pinned it to the board. This kept the rear ribs safe while I moved on to
@@ -2718,12 +2703,12 @@ rib half at the tip of the wing. This had to be clamped in in place with
 a pair of building blocks to keep it at the right angle. I then pinned
 the leading edge to the board to make sure it was straight according to
 my drawn layout before fitting the rest of the front rib halves.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_123&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;460&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/02/02/model-glider-restoration/2013-01-27-20-57-55-3/"&gt;&lt;img alt="Front rib halves" class="size-full wp-image-123" src="http://www.moop.org.uk/wp-content/uploads/2013/02/2013-01-27-20.57.552.jpg" style="width: 460px; height: 768px;" /&gt;&lt;/a&gt; Front rib halves[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/02/02/model-glider-restoration/2013-01-27-20-57-55-3/"&gt;&lt;img alt="Front rib halves" class="size-full wp-image-123" src="http://www.moop.org.uk/wp-content/uploads/2013/02/2013-01-27-20.57.552.jpg" style="width: 460px; height: 768px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Once the ribs were installed, I had to do some sanding to fix my design
 mistakes. I then fitted a piece of sheeting between the spar and the
 leading edge on the top side of the wing. This is designed to be glued
 into the top of the leading edge and then sanded to blend it in later.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_124&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/02/02/model-glider-restoration/2013-02-02-18-42-40/"&gt;&lt;img alt="Leading edge sheeting" class="size-full wp-image-124" src="http://www.moop.org.uk/wp-content/uploads/2013/02/2013-02-02-18.42.40.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt; Leading edge sheeting[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/02/02/model-glider-restoration/2013-02-02-18-42-40/"&gt;&lt;img alt="Leading edge sheeting" class="size-full wp-image-124" src="http://www.moop.org.uk/wp-content/uploads/2013/02/2013-02-02-18.42.40.jpg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Once sanded, the sheeting gives a very neat and uniform look, which
 hides many of the problems caused by the drawing issues. The curved tips
 play a perspective trick in the photo above, making the sheeting look
@@ -2747,13 +2732,13 @@ through I decided to cast them in resin. &amp;nbsp;This has the advantage of
 being stronger than the master model (depending on materials) and as a
 bonus let me make a set for myself.&lt;/p&gt;
 &lt;p&gt;First up, here's the finished product:&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_83&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-17-19-50-12/"&gt;&lt;img alt="Finished Product" class="wp-image-83" src="http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-17-19-50-12.jpeg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt; Finished Product[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-17-19-50-12/"&gt;&lt;img alt="Finished Product" class="wp-image-83" src="http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-17-19-50-12.jpeg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;To start off with I decided to have some fun, and ended up building a
 mini lathe to make the basic body shape. &amp;nbsp;This allowed me to use cheap
 3/4 inch balsa dowel as stock material instead of wasting (slightly
 more) expensive putty, it also made getting the body shape smooth and
 uniform a lot easier.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_73&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-05-20-41-33/"&gt;&lt;img alt="Mini lathe in action" class="size-full wp-image-73" src="http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-05-20-41-33.jpeg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt; Mini lathe in action[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-05-20-41-33/"&gt;&lt;img alt="Mini lathe in action" class="size-full wp-image-73" src="http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-05-20-41-33.jpeg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The lathe is very light duty but works well to shape a piece of balsa
 with sandpaper or a craft knife. There's a &lt;a class="reference external" href="http://www.moop.org.uk/index.php/2012/12/23/diy-mini-lathe/"&gt;separate blog
 post&lt;/a&gt; on
@@ -2764,14 +2749,13 @@ that, a lip and uvula were sculpted with Milliput epoxy putty. &amp;nbsp;Eyes an
 feet were added in a similar fashion over several days to allow the
 putty to cure and prevent accidental damage to bits of detail that were
 still setting.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_74&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-07-06-18-45/"&gt;&lt;img alt="Basic Body Shapes" class="size-full wp-image-74" src="http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-07-06-18-45.jpeg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt; Basic Body Shapes[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-07-06-18-45/"&gt;&lt;img alt="Basic Body Shapes" class="size-full wp-image-74" src="http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-07-06-18-45.jpeg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;More complex features such as Mittens' hands and the ears were made by
 rolling out sheets of putty and cutting it to shape with a sharp
 sculpting tool. &amp;nbsp;In the case of the ears they were rolled onto a curved
 bit of clay and cut to shape then allowed to cure and trimmed down to
 size before being attached with fillets of putty.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_75&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-12-06-35-41/"&gt;&lt;img alt="Masters" class="size-full wp-image-75" src="http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-12-06-35-41.jpeg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt;
-Masters[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-12-06-35-41/"&gt;&lt;img alt="Masters" class="size-full wp-image-75" src="http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-12-06-35-41.jpeg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Once the masters were finished I brushed them with polyurethane varnish
 to ensure they'd release cleanly from the mould. &amp;nbsp;I should have used
 some filler at this point to get rid of the woodgrain finish, but since
@@ -2782,7 +2766,7 @@ to build a box and fill the bottom half with clay, then press the
 masters into the clay and pour silicone over. &amp;nbsp;Unfortunately the clay I
 had dried up, so I ended up using salt dough and surprisingly it worked
 well though it was very soft.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_76&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-12-22-15-35/"&gt;&lt;img alt="The first mould half is poured" class="size-full wp-image-76" src="http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-12-22-15-35.jpeg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt; The first mould half is poured[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-12-22-15-35/"&gt;&lt;img alt="The first mould half is poured" class="size-full wp-image-76" src="http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-12-22-15-35.jpeg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I build the mould box out of cardboard protected with parcel tape. &amp;nbsp;The
 base is some 0.5mm sheet styrene I had lying around. &amp;nbsp;The card was just
 formed into a box and taped closed I packed the bottom half with salt
@@ -2797,7 +2781,7 @@ handle of a paint brush or similar into the clay to make some small
 alignment nubs in the first mould half. &amp;nbsp;These will translate to
 matching holes in the second half. &amp;nbsp;I made once larger than the others
 to make it obvious which corners should match up.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_77&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;941&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-13-21-24-31/"&gt;&lt;img alt="First mould half" class="size-full wp-image-77" src="http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-13-21-24-31.jpeg" style="width: 941px; height: 768px;" /&gt;&lt;/a&gt; First mould half[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-13-21-24-31/"&gt;&lt;img alt="First mould half" class="size-full wp-image-77" src="http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-13-21-24-31.jpeg" style="width: 941px; height: 768px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;After leaving this overnight I removed the box and washed off the salt
 dough from the models. &amp;nbsp;A downside of the salt dough is that it gets
 very sticky but it wasn't difficult to remove. &amp;nbsp;Although it's advised
@@ -2811,12 +2795,12 @@ to hack them in with some clay. &amp;nbsp;These would have been much easier to
 add when making the first mould half as they could be set into the clay.
 &amp;nbsp;The Vaseline didn't help either as everything was very slippy at this
 point.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_78&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-13-21-47-51/"&gt;&lt;img alt="Adding vents (a little late)" class="size-full wp-image-78" src="http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-13-21-47-51.jpeg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt; Adding vents (a little late)[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-13-21-47-51/"&gt;&lt;img alt="Adding vents (a little late)" class="size-full wp-image-78" src="http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-13-21-47-51.jpeg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The second mould half was then poured in a similar fashion to the first.
 &amp;nbsp;A day later once it had cured I cracked open the box and managed to
 separate the two mould halves with relatively little hack and slash with
 the craft knife.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_79&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-14-23-04-24/"&gt;&lt;img alt="Completed mould" class="size-full wp-image-79" src="http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-14-23-04-24.jpeg" style="width: 1024px; height: 710px;" /&gt;&lt;/a&gt; Completed mould[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-14-23-04-24/"&gt;&lt;img alt="Completed mould" class="size-full wp-image-79" src="http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-14-23-04-24.jpeg" style="width: 1024px; height: 710px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Once the mould was complete I mixed up some resin and did a test pour.
 &amp;nbsp;The results were quite promising but highlighted a few flaws in the
 mould. &amp;nbsp;The pour channels had to be opened up a bit with the craft knife
@@ -2828,7 +2812,7 @@ prevent the channels from closing up. &amp;nbsp;The resin doesn't stick to the
 nylon so they can be easily removed with some pliers, leaving a little
 stick of cast resin which easily breaks off (useful for parts that can't
 be aligned with the mould line).&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_80&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-15-01-09-58/"&gt;&lt;img alt="Pouring the resin" class="size-full wp-image-80" src="http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-15-01-09-58.jpeg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt; Pouring the resin[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-15-01-09-58/"&gt;&lt;img alt="Pouring the resin" class="size-full wp-image-80" src="http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-15-01-09-58.jpeg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I used some more sheet styrene and elastic bands to hold the mould shut.
 &amp;nbsp;It doesn't need too much pressure as the resin is quite thick and you
 can warp the mould.&lt;/p&gt;
@@ -2836,18 +2820,17 @@ can warp the mould.&lt;/p&gt;
 roughly 10:1 ratio with a catalyst, which required some very accurate
 scales. &amp;nbsp;It's possible to get stuff that can be mixed 1:1 by volume
 which is a lot less hassle if you can get it conveniently.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_81&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;460&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-17-16-57-51-2/"&gt;&lt;img alt="Finished, primed, painted" class="size-full wp-image-81" src="http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-17-16-57-51-2.jpeg" style="width: 460px; height: 768px;" /&gt;&lt;/a&gt; Finished, primed, painted[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-17-16-57-51-2/"&gt;&lt;img alt="Finished, primed, painted" class="size-full wp-image-81" src="http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-17-16-57-51-2.jpeg" style="width: 460px; height: 768px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Once the resin was cured and cracked out of the mould I trimmed off the
 flashing where the mould halves joined and primed them with grey spray
 on primer. &amp;nbsp;At this point I noticed the woodgrain had transferred
 through from some parts of the bodies and other parts were not so
 smooth. To fix this I used some filler and a few rounds of
 sanding/filing and re-priming until I was happy with the finish.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_82&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-17-17-15-01/"&gt;&lt;img alt="Paints" class="size-full wp-image-82" src="http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-17-17-15-01.jpeg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt;
-Paints[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-17-17-15-01/"&gt;&lt;img alt="Paints" class="size-full wp-image-82" src="http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-17-17-15-01.jpeg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Finally I painted the models with a mix of Citadel and Vallejo paints I
 had to hand and varnished them with some EzeCote polyurethane.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_84&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;1024&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-17-20-55-00/"&gt;&lt;img alt="Finished product" class="size-full wp-image-84" src="http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-17-20.55.00.jpeg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt; Finished product[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2012/12/28/mittens-and-snowdrop-action-figures/2012-12-17-20-55-00/"&gt;&lt;img alt="Finished product" class="size-full wp-image-84" src="http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-17-20.55.00.jpeg" style="width: 1024px; height: 613px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 </content></entry><entry><title>DIY Mini Lathe</title><link href="https://mooped.github.io/diy-mini-lathe.html" rel="alternate"></link><published>2012-12-23T14:27:00+00:00</published><updated>2012-12-23T14:27:00+00:00</updated><author><name>moop</name></author><id>tag:mooped.github.io,2012-12-23:/diy-mini-lathe.html</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2012/12/23/diy-mini-lathe/2012-12-23-12-05-48/"&gt;&lt;img alt="Mini Lathe" class="alignnone wp-image-7" src="http://www.moop.org.uk/wp-content/uploads/2012/12/2012-12-23-12.05.48.jpg" style="width: 933px; height: 559px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I needed some smooth round parts recently for some models I was building
 and chose to take an unconventional approach by building a mini lathe on

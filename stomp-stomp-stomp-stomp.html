@@ -64,20 +64,17 @@ shift registers to control the servos. This in turn is controlled
 through an SPI bus to a Minimus USB AVR board, pretending to be a USB to
 serial device. The data sent over the serial line is interpreted as
 servo IDs followed by the desired position of the servo.</p>
-<p>[caption id=&quot;attachment_506&quot; align=&quot;alignnone&quot; width=&quot;2592&quot;]<a class="reference external" href="http://www.moop.org.uk/index.php/2013/12/12/stomp-stomp-stomp-stomp/2013-12-11-21-54-59/"><img alt="Mark 2 servo controller board" class="size-full wp-image-506" src="http://www.moop.org.uk/wp-content/uploads/2013/12/2013-12-11-21.54.59.jpg" style="width: 2592px; height: 1552px;" /></a> Mark 2 servo controller board[/caption]</p>
+<p><a class="reference external" href="http://www.moop.org.uk/index.php/2013/12/12/stomp-stomp-stomp-stomp/2013-12-11-21-54-59/"><img alt="Mark 2 servo controller board" class="size-full wp-image-506" src="http://www.moop.org.uk/wp-content/uploads/2013/12/2013-12-11-21.54.59.jpg" style="width: 2592px; height: 1552px;" /></a></p>
 <p>The control software I wrote for the hexapod can run on any Linux
 computer with a USB port. For dev I use a netbook but it also runs
 nicely on a Raspberry Pi.</p>
-<div class="line-block">
-<div class="line">The original plan was to use the Raspberry Pi's SPI port to control
+<p>The original plan was to use the Raspberry Pi's SPI port to control
 the servo board directly, unfortunately due to Linux's scheduling not
 being particularly real time even in real time mode there was a lot of
 timing jitter leading to real life servo jitter. Switching to the
 Minimus meant having a very dedicated if much slower CPU generating
-the pulses resulting in much smoother control of the servos.</div>
-<div class="line">[caption id=&quot;attachment_507&quot; align=&quot;alignnone&quot;
-width=&quot;2592&quot;]<a class="reference external" href="http://www.moop.org.uk/index.php/2013/12/12/stomp-stomp-stomp-stomp/2013-10-23-19-15-36/"><img alt="Hexapod" class="size-full wp-image-507" src="http://www.moop.org.uk/wp-content/uploads/2013/12/2013-10-23-19.15.36.jpg" style="width: 2592px; height: 1552px;" /></a> Hexapod[/caption]</div>
-</div>
+the pulses resulting in much smoother control of the servos.</p>
+<p><a class="reference external" href="http://www.moop.org.uk/index.php/2013/12/12/stomp-stomp-stomp-stomp/2013-10-23-19-15-36/"><img alt="Hexapod" class="size-full wp-image-507" src="http://www.moop.org.uk/wp-content/uploads/2013/12/2013-10-23-19.15.36.jpg" style="width: 2592px; height: 1552px;" /></a></p>
 <p>I'll hopefully post a full making of post on the hexapod soon, but for
 now I just wanted to post a video of some stomping!</p>
 

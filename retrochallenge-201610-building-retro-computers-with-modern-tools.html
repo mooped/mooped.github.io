@@ -59,7 +59,7 @@ breadboards and other fun things. To work around this, and still
 (hopefully) get my RetroChallenge entry done, I decided to use a
 simulator so I could work on it with my laptop whenever and wherever
 there was time.</p>
-<p>[caption id=&quot;attachment_975&quot; align=&quot;alignnone&quot; width=&quot;804&quot;]<a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/23/retrochallenge-201610-building-retro-computers-with-modern-tools/logisim/"><img alt="LogiSim Edge Detector" class="size-full wp-image-975" src="http://www.moop.org.uk/wp-content/uploads/2016/10/logisim.png" style="width: 804px; height: 460px;" /></a> LogiSim Edge Detector[/caption]</p>
+<p><a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/23/retrochallenge-201610-building-retro-computers-with-modern-tools/logisim/"><img alt="LogiSim Edge Detector" class="size-full wp-image-975" src="http://www.moop.org.uk/wp-content/uploads/2016/10/logisim.png" style="width: 804px; height: 460px;" /></a></p>
 <p>For an earlier RC2014 project I used
 <a class="reference external" href="http://www.cburch.com/logisim/">LogiSim</a> which is simple and easy to
 use, but I quickly hit some limitations. The built in sequential
@@ -75,8 +75,7 @@ Quartus</a> to build a model of the circuit and
 ModelSim Altera Edition to simulate it. I mainly chose this because I've
 used it previously for FPGA projects, and because if some functionality
 is missing I can implement it in Verilog.</p>
-<p>[caption id=&quot;attachment_974&quot; align=&quot;alignnone&quot;
-width=&quot;1438&quot;]<a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/23/retrochallenge-201610-building-retro-computers-with-modern-tools/board2/"><img alt="Autoshift Circuit" class="size-full wp-image-974" src="http://www.moop.org.uk/wp-content/uploads/2016/10/board2.png" style="width: 1438px; height: 898px;" /></a> Autoshift Circuit[/caption]</p>
+<p><a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/23/retrochallenge-201610-building-retro-computers-with-modern-tools/board2/"><img alt="Autoshift Circuit" class="size-full wp-image-974" src="http://www.moop.org.uk/wp-content/uploads/2016/10/board2.png" style="width: 1438px; height: 898px;" /></a></p>
 <p>When redesigning the autoshifter circuit (to shift out 8 bits of data
 after each IO write) I built it as a Block Diagram/Schematic File (.bdf)
 in Quartus. This allows the design to be entered as a schematic with
@@ -93,8 +92,7 @@ has D flip flops rather than transparent latches. I could build my own
 shift register in Verilog, but to save time I opted to stick with the
 LPM_SHIFTREG version and ensure that the timings seen in simulation
 were such that the transparent latches wouldn't cause a problem.</p>
-<p>[caption id=&quot;attachment_976&quot; align=&quot;alignnone&quot;
-width=&quot;1438&quot;]<a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/23/retrochallenge-201610-building-retro-computers-with-modern-tools/simulation2/"><img alt="Simulation" class="size-full wp-image-976" src="http://www.moop.org.uk/wp-content/uploads/2016/10/simulation2.png" style="width: 1438px; height: 898px;" /></a> Simulation[/caption]</p>
+<p><a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/23/retrochallenge-201610-building-retro-computers-with-modern-tools/simulation2/"><img alt="Simulation" class="size-full wp-image-976" src="http://www.moop.org.uk/wp-content/uploads/2016/10/simulation2.png" style="width: 1438px; height: 898px;" /></a></p>
 <p>In order to test the design I set Quartus up to launch ModelSim and run
 Gate Level Simulation after compilation. ModelSim can be driven manually
 through the GUI, but this is fairly fiddly and repetitive. Fortunately

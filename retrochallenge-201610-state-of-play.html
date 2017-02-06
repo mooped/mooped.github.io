@@ -60,7 +60,7 @@ there.</p>
 sent to the SD card with
 <a class="reference external" href="http://dangerousprototypes.com/blog/open-logic-sniffer/">OpenLogicSniffer's</a>
 SPI analyser module.</p>
-<p>[caption id=&quot;attachment_996&quot; align=&quot;alignnone&quot; width=&quot;1024&quot;]<a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/30/retrochallenge-201610-breadboard-fun/img_20161030_211120-jpg-sm/"><img alt="Decoded Messages" class="size-full wp-image-996" src="http://www.moop.org.uk/wp-content/uploads/2016/10/IMG_20161030_211120.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /></a> Decoded Messages[/caption]</p>
+<p><a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/30/retrochallenge-201610-breadboard-fun/img_20161030_211120-jpg-sm/"><img alt="Decoded Messages" class="size-full wp-image-996" src="http://www.moop.org.uk/wp-content/uploads/2016/10/IMG_20161030_211120.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /></a></p>
 <p>The picture above shows the signals and the decoded data for the SD card
 CMD0 (Software Reset) message which is the first step in initialising
 the card. The message is the 6 byte string 0x40 0x00 0x00 0x00 0x00 0x95
@@ -74,7 +74,7 @@ therefore the device is running in fast mode. For the SD to initialise
 correctly it needs to be initially clocked slowly (100-400kHz).</p>
 <p>Unfortunately, the slow mode, which I was expecting to be the easy bit
 is currently not working due to a hack I used to get fast mode working.</p>
-<p>[caption id=&quot;attachment_1005&quot; align=&quot;alignnone&quot; width=&quot;1488&quot;]<a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/31/retrochallenge-201610-state-of-play/z80_sd_interface_20161031am/"><img alt="Current Schematic" class="size-full wp-image-1005" src="http://www.moop.org.uk/wp-content/uploads/2016/10/z80_sd_interface_20161031am.png" style="width: 1488px; height: 1052px;" /></a> Current Schematic[/caption]</p>
+<p><a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/31/retrochallenge-201610-state-of-play/z80_sd_interface_20161031am/"><img alt="Current Schematic" class="size-full wp-image-1005" src="http://www.moop.org.uk/wp-content/uploads/2016/10/z80_sd_interface_20161031am.png" style="width: 1488px; height: 1052px;" /></a></p>
 <p>The current schematic, seen above, shows that the 'Shift /Load' input of
 the output data shift register (U3 pin 1) is driven by the SHIFTING net.
 This gave the correct timings to load the register when data was

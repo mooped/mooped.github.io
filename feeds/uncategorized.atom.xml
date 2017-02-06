@@ -13,20 +13,17 @@ shift registers to control the servos. This in turn is controlled
 through an SPI bus to a Minimus USB AVR board, pretending to be a USB to
 serial device. The data sent over the serial line is interpreted as
 servo IDs followed by the desired position of the servo.&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_506&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;2592&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/12/12/stomp-stomp-stomp-stomp/2013-12-11-21-54-59/"&gt;&lt;img alt="Mark 2 servo controller board" class="size-full wp-image-506" src="http://www.moop.org.uk/wp-content/uploads/2013/12/2013-12-11-21.54.59.jpg" style="width: 2592px; height: 1552px;" /&gt;&lt;/a&gt; Mark 2 servo controller board[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/12/12/stomp-stomp-stomp-stomp/2013-12-11-21-54-59/"&gt;&lt;img alt="Mark 2 servo controller board" class="size-full wp-image-506" src="http://www.moop.org.uk/wp-content/uploads/2013/12/2013-12-11-21.54.59.jpg" style="width: 2592px; height: 1552px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The control software I wrote for the hexapod can run on any Linux
 computer with a USB port. For dev I use a netbook but it also runs
 nicely on a Raspberry Pi.&lt;/p&gt;
-&lt;div class="line-block"&gt;
-&lt;div class="line"&gt;The original plan was to use the Raspberry Pi's SPI port to control
+&lt;p&gt;The original plan was to use the Raspberry Pi's SPI port to control
 the servo board directly, unfortunately due to Linux's scheduling not
 being particularly real time even in real time mode there was a lot of
 timing jitter leading to real life servo jitter. Switching to the
 Minimus meant having a very dedicated if much slower CPU generating
-the pulses resulting in much smoother control of the servos.&lt;/div&gt;
-&lt;div class="line"&gt;[caption id=&amp;quot;attachment_507&amp;quot; align=&amp;quot;alignnone&amp;quot;
-width=&amp;quot;2592&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/12/12/stomp-stomp-stomp-stomp/2013-10-23-19-15-36/"&gt;&lt;img alt="Hexapod" class="size-full wp-image-507" src="http://www.moop.org.uk/wp-content/uploads/2013/12/2013-10-23-19.15.36.jpg" style="width: 2592px; height: 1552px;" /&gt;&lt;/a&gt; Hexapod[/caption]&lt;/div&gt;
-&lt;/div&gt;
+the pulses resulting in much smoother control of the servos.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/12/12/stomp-stomp-stomp-stomp/2013-10-23-19-15-36/"&gt;&lt;img alt="Hexapod" class="size-full wp-image-507" src="http://www.moop.org.uk/wp-content/uploads/2013/12/2013-10-23-19.15.36.jpg" style="width: 2592px; height: 1552px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I'll hopefully post a full making of post on the hexapod soon, but for
 now I just wanted to post a video of some stomping!&lt;/p&gt;
 </content></entry><entry><title>The Minigun (A mini Super Gun)</title><link href="https://mooped.github.io/the-minigun-a-mini-super-gun.html" rel="alternate"></link><published>2013-11-24T14:54:00+00:00</published><updated>2013-11-24T14:54:00+00:00</updated><author><name>charlie</name></author><id>tag:mooped.github.io,2013-11-24:/the-minigun-a-mini-super-gun.html</id><summary type="html">&lt;p&gt;&lt;em&gt;Guest post by Charlie again as he continues his quest to take over
@@ -358,9 +355,10 @@ this&amp;nbsp;&lt;a class="reference external" href="http://www.moop.org.uk/wp-c
 becoming a problem. During a bout of boredom, I dug up some screws and
 hooks and attached them to the wall above my desk. Now they look cool,
 and I have loads of extra space!&lt;/p&gt;
-&lt;p&gt;[caption id …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I seem to have too many model planes nowadays, and storage was fast
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/02/02/space-saving-wall-art/2013-01-26-12-23-38/"&gt;&lt;img alt="Space saving wall art" class="size-full wp-image-130" src="http://www.moop.org.uk/wp-content/uploads/2013/02/2013-01-26-12.23.38.jpg" style="width: 2592px; height: 1552px;" /&gt;&lt;/a&gt;&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;I seem to have too many model planes nowadays, and storage was fast
 becoming a problem. During a bout of boredom, I dug up some screws and
 hooks and attached them to the wall above my desk. Now they look cool,
 and I have loads of extra space!&lt;/p&gt;
-&lt;p&gt;[caption id=&amp;quot;attachment_130&amp;quot; align=&amp;quot;alignnone&amp;quot; width=&amp;quot;2592&amp;quot;]&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/02/02/space-saving-wall-art/2013-01-26-12-23-38/"&gt;&lt;img alt="Space saving wall art" class="size-full wp-image-130" src="http://www.moop.org.uk/wp-content/uploads/2013/02/2013-01-26-12.23.38.jpg" style="width: 2592px; height: 1552px;" /&gt;&lt;/a&gt; Space saving wall art[/caption]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.moop.org.uk/index.php/2013/02/02/space-saving-wall-art/2013-01-26-12-23-38/"&gt;&lt;img alt="Space saving wall art" class="size-full wp-image-130" src="http://www.moop.org.uk/wp-content/uploads/2013/02/2013-01-26-12.23.38.jpg" style="width: 2592px; height: 1552px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 </content></entry></feed>

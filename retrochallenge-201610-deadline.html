@@ -62,7 +62,7 @@ card. However, the Bus Pirate gets a response and my circuit does not.</p>
 <p>I blamed my level shifter for a while. As an experiment I tried writing
 to the card from the Bus Pirate and reading the response through the
 level shifter works fine, so that can't be the problem.</p>
-<p>[caption id=&quot;attachment_1012&quot; align=&quot;alignnone&quot; width=&quot;1024&quot;]<a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/31/retrochallenge-201610-deadline/img_20161031_222456-jpg-sm/"><img alt="Final State Of Play" class="size-full wp-image-1012" src="http://www.moop.org.uk/wp-content/uploads/2016/10/IMG_20161031_222456.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /></a> Final State Of Play[/caption]</p>
+<p><a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/31/retrochallenge-201610-deadline/img_20161031_222456-jpg-sm/"><img alt="Final State Of Play" class="size-full wp-image-1012" src="http://www.moop.org.uk/wp-content/uploads/2016/10/IMG_20161031_222456.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /></a></p>
 <p>Bitbang mode was fixed by adding an additional edge trigger circuit.
 Instead of a synchronous edge trigger I used the simple trick of feeding
 a signal and an inverted copy of the signal into an AND gate. When the
@@ -85,26 +85,26 @@ included adding a new bit to the CONFIG register to drive the serial
 input on the output shift register. This ensured the Data Out line
 (MOSI) to the SD card was pulled high, in order to match exactly the Bus
 Pirate's behaviour.</p>
-<p>[caption id=&quot;attachment_1010&quot; align=&quot;alignnone&quot; width=&quot;1024&quot;]<a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/31/retrochallenge-201610-deadline/img_20161031_220127-jpg-sm/"><img alt="CMD0 on Bus Pirate" class="size-full wp-image-1010" src="http://www.moop.org.uk/wp-content/uploads/2016/10/IMG_20161031_220127.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /></a> CMD0 on Bus Pirate[/caption]</p>
+<p><a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/31/retrochallenge-201610-deadline/img_20161031_220127-jpg-sm/"><img alt="CMD0 on Bus Pirate" class="size-full wp-image-1010" src="http://www.moop.org.uk/wp-content/uploads/2016/10/IMG_20161031_220127.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /></a></p>
 <p>It was difficult to get a screenshot that captured the whole pulse
 train, but the above shot shows the Bus Pirate sending CMD0 (0x40, 0x00,
 0x00, 0x00, 0x00, 0x95) and receiving 0xFF (no response) followed by
 0x01 (OK). The shot below shows the commands sent to the Bus Pirate and
 the response.</p>
-<p>[caption id=&quot;attachment_1009&quot; align=&quot;alignnone&quot; width=&quot;1024&quot;]<a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/31/retrochallenge-201610-deadline/img_20161031_215925-jpg-sm/"><img alt="Bus Pirate Commands" class="size-full wp-image-1009" src="http://www.moop.org.uk/wp-content/uploads/2016/10/IMG_20161031_215925.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /></a> Bus Pirate Commands[/caption]</p>
+<p><a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/31/retrochallenge-201610-deadline/img_20161031_215925-jpg-sm/"><img alt="Bus Pirate Commands" class="size-full wp-image-1009" src="http://www.moop.org.uk/wp-content/uploads/2016/10/IMG_20161031_215925.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /></a></p>
 <p>The next shot shows my circuit sending the same output, but recieving no
 response.</p>
 <p>In both cases a large number of clock pulses were sent with the SD
 card's chip select deasserted, as is apparently required to initialise
 the card.</p>
-<p>[caption id=&quot;attachment_1011&quot; align=&quot;alignnone&quot; width=&quot;1024&quot;]<a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/31/retrochallenge-201610-deadline/img_20161031_221128-jpg-sm/"><img alt="CMD0 From My Circuit" class="size-full wp-image-1011" src="http://www.moop.org.uk/wp-content/uploads/2016/10/IMG_20161031_221128.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /></a> CMD0 From My Circuit[/caption]</p>
+<p><a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/31/retrochallenge-201610-deadline/img_20161031_221128-jpg-sm/"><img alt="CMD0 From My Circuit" class="size-full wp-image-1011" src="http://www.moop.org.uk/wp-content/uploads/2016/10/IMG_20161031_221128.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /></a></p>
 <p>My suspicion is that either my timing is too fast - I'm currently
 running at 330kHz while the Bus Pirate is running at 33kHz - or the
 rising edge of my clock is very subtly off with respect to the data.</p>
 <p>There are still hardware bugs (the off by one issue, mainly), but the
 final schematic and final netlist are included below for posterity.</p>
-<p>[caption id=&quot;attachment_1014&quot; align=&quot;alignnone&quot; width=&quot;1488&quot;]<a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/31/retrochallenge-201610-deadline/z80_sd_interface-sch/"><img alt="Final Schematic" class="size-full wp-image-1014" src="http://www.moop.org.uk/wp-content/uploads/2016/10/z80_sd_interface.sch_.png" style="width: 1488px; height: 1052px;" /></a> Final Schematic[/caption]</p>
-<p>[caption id=&quot;attachment_1013&quot; align=&quot;alignnone&quot; width=&quot;1024&quot;]<a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/31/retrochallenge-201610-deadline/img_20161031_223638-jpg-sm/"><img alt="Final Netlist" class="size-full wp-image-1013" src="http://www.moop.org.uk/wp-content/uploads/2016/10/IMG_20161031_223638.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /></a> Final Netlist[/caption]</p>
+<p><a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/31/retrochallenge-201610-deadline/z80_sd_interface-sch/"><img alt="Final Schematic" class="size-full wp-image-1014" src="http://www.moop.org.uk/wp-content/uploads/2016/10/z80_sd_interface.sch_.png" style="width: 1488px; height: 1052px;" /></a></p>
+<p><a class="reference external" href="http://www.moop.org.uk/index.php/2016/10/31/retrochallenge-201610-deadline/img_20161031_223638-jpg-sm/"><img alt="Final Netlist" class="size-full wp-image-1013" src="http://www.moop.org.uk/wp-content/uploads/2016/10/IMG_20161031_223638.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /></a></p>
 <p>I plan to continue working on this project after RetroChallenge and will
 and post further updates as I figure it out.</p>
 <p>I also plan to write a post about the toolchain I have setup for running
