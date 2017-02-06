@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Mooplog - Site</title>
+        <link rel="stylesheet" href="https://www.moop.org.uk/theme/css/main.css" />
+        <link href="https://www.moop.org.uk/index.php/feed/index.html" type="application/atom+xml" rel="alternate" title="Mooplog Atom Feed" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="https://www.moop.org.uk/">Mooplog </a></h1>
+                <nav><ul>
+                    <li><a href="https://www.moop.org.uk/category/about.html">About</a></li>
+                    <li><a href="https://www.moop.org.uk/category/games.html">Games</a></li>
+                    <li><a href="https://www.moop.org.uk/category/retrochallenge.html">Retrochallenge</a></li>
+                    <li class="active"><a href="https://www.moop.org.uk/category/site.html">Site</a></li>
+                    <li><a href="https://www.moop.org.uk/category/things.html">Things</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="https://www.moop.org.uk/new-site.html">New Site With Pelican Static Site Generator</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2017-02-06T20:57:00+00:00">
+                Published: Mon 06 February 2017
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://www.moop.org.uk/author/moop.html">moop</a>
+        </address>
+<p>In <a href="https://www.moop.org.uk/category/site.html">Site</a>.</p>
+<p>tags: <a href="https://www.moop.org.uk/tag/site.html">Site</a> <a href="https://www.moop.org.uk/tag/pelican.html">Pelican</a> </p>
+</footer><!-- /.post-info --><p>You may noticee that this site now looks completely different.</p>
+<p>I decided that I was bored of paying for an AWS instance to host WordPress,
+and restarting PHP when it crashed, and so on. I also got tired of the massive
+stall when my tiny AWS instance struggled to create a new post.</p>
+<p>I've been thinking about writing my own static site generator for a while, but I
+didn't want to commit the time to it when there are more interesting projects and
+it's something that's been done before.</p>
+<p>After a bit of research I decided I'd try out Pelican. I'm a fan of Python anyway
+so I'm right at home editing the config files and I know what I'm doing if I need
+to make any tweaks. I've played with reStructuredText when writing documentation
+at work so I know the appropriate syntax for writing content too.</p>
+<p>Even better it supports importing from WordPress. I did have to make a few tweaks
+to remove some markup that didn't convert correctly. Fortunately that was a one off
+job and it became trivial with the aid of some simple vim macros.</p>
+<p>There are probably a few more issues I need to sort out but I'm happy enough with
+the current state of the site that I've switched it over to the Pelican version.</p>
+<p>There's no commenting supported yet. I might bring over the archived comments at
+some point by appending them to the appropriate posts. If I decide to enable
+comments again I'll probably try out Disqus unless I find a better alternative.</p>
+<p>I'm currently hosting this on GitHub pages. We'll see how that pans out, but I
+like git and it's free, so seems like a winner so far!</p>
+<p>I realise that I've namechecked a bunch of marmite software that will make some
+developers howl with joy and others with rage. Maybe it's for the best that there
+is no comment system yet!</p>
+                </article>
+            </aside><!-- /#featured -->
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="https://www.moop.org.uk/index.php/feed/index.html" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

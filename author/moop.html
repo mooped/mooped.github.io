@@ -18,13 +18,62 @@
                     <li><a href="https://www.moop.org.uk/category/about.html">About</a></li>
                     <li><a href="https://www.moop.org.uk/category/games.html">Games</a></li>
                     <li><a href="https://www.moop.org.uk/category/retrochallenge.html">Retrochallenge</a></li>
+                    <li><a href="https://www.moop.org.uk/category/site.html">Site</a></li>
                     <li><a href="https://www.moop.org.uk/category/things.html">Things</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="https://www.moop.org.uk/retrochallenge-201610-one-bodge-to-fix-them-all.html">RetroChallenge 2016/10 - One bodge to fix them all</a></h1>
+                    <h1 class="entry-title"><a href="https://www.moop.org.uk/new-site.html">New Site With Pelican Static Site Generator</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2017-02-06T20:57:00+00:00">
+                Published: Mon 06 February 2017
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://www.moop.org.uk/author/moop.html">moop</a>
+        </address>
+<p>In <a href="https://www.moop.org.uk/category/site.html">Site</a>.</p>
+<p>tags: <a href="https://www.moop.org.uk/tag/site.html">Site</a> <a href="https://www.moop.org.uk/tag/pelican.html">Pelican</a> </p>
+</footer><!-- /.post-info --><p>You may noticee that this site now looks completely different.</p>
+<p>I decided that I was bored of paying for an AWS instance to host WordPress,
+and restarting PHP when it crashed, and so on. I also got tired of the massive
+stall when my tiny AWS instance struggled to create a new post.</p>
+<p>I've been thinking about writing my own static site generator for a while, but I
+didn't want to commit the time to it when there are more interesting projects and
+it's something that's been done before.</p>
+<p>After a bit of research I decided I'd try out Pelican. I'm a fan of Python anyway
+so I'm right at home editing the config files and I know what I'm doing if I need
+to make any tweaks. I've played with reStructuredText when writing documentation
+at work so I know the appropriate syntax for writing content too.</p>
+<p>Even better it supports importing from WordPress. I did have to make a few tweaks
+to remove some markup that didn't convert correctly. Fortunately that was a one off
+job and it became trivial with the aid of some simple vim macros.</p>
+<p>There are probably a few more issues I need to sort out but I'm happy enough with
+the current state of the site that I've switched it over to the Pelican version.</p>
+<p>There's no commenting supported yet. I might bring over the archived comments at
+some point by appending them to the appropriate posts. If I decide to enable
+comments again I'll probably try out Disqus unless I find a better alternative.</p>
+<p>I'm currently hosting this on GitHub pages. We'll see how that pans out, but I
+like git and it's free, so seems like a winner so far!</p>
+<p>I realise that I've namechecked a bunch of marmite software that will make some
+developers howl with joy and others with rage. Maybe it's for the best that there
+is no comment system yet!</p>
+                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://www.moop.org.uk/retrochallenge-201610-one-bodge-to-fix-them-all.html" rel="bookmark"
+                           title="Permalink to RetroChallenge 2016/10 - One bodge to fix them all">RetroChallenge 2016/10 - One bodge to fix them all</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2016-11-02T21:35:00+00:00">
                 Published: Wed 02 November 2016
@@ -35,56 +84,13 @@
         </address>
 <p>In <a href="https://www.moop.org.uk/category/retrochallenge.html">Retrochallenge</a>.</p>
 <p>tags: <a href="https://www.moop.org.uk/tag/rc2014.html">RC2014</a> <a href="https://www.moop.org.uk/tag/retrochallenge.html">Retrochallenge</a> </p>
-</footer><!-- /.post-info --><p>It's two days past the deadline, but I found an extra moment to work on
+</footer><!-- /.post-info -->                <p>It's two days past the deadline, but I found an extra moment to work on
 my SD card interface today and I have it working!</p>
 <p>I switched the clock output to the SD card from SH_CLK to /SH_CLK to
-move the rising edge of the clock to a point where the output from the
-shift register is stable, and now it works nicely.</p>
-<p><a class="reference external" href="http://www.moop.org.uk/index.php/2016/11/02/retrochallenge-201610-one-bodge-to-fix-them-all/img_20161102_210914-jpg-sm/"><img alt="It's always a one character fix!" class="size-full wp-image-1031" src="http://www.moop.org.uk/wp-content/uploads/2016/11/IMG_20161102_210914.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /></a></p>
-<p>This eliminated the critical timing that the Bus Pirate was have gotten
-away with but my circuit did not.</p>
-<p><a class="reference external" href="http://www.moop.org.uk/index.php/2016/11/02/retrochallenge-201610-one-bodge-to-fix-them-all/img_20161102_200157-jpg-sm/"><img alt="0x40" class="size-full wp-image-1027" src="http://www.moop.org.uk/wp-content/uploads/2016/11/IMG_20161102_200157.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /></a></p>
-<p><a class="reference external" href="http://www.moop.org.uk/index.php/2016/11/02/retrochallenge-201610-one-bodge-to-fix-them-all/img_20161102_200226-jpg-sm/"><img alt="0x95 and a response" class="size-full wp-image-1028" src="http://www.moop.org.uk/wp-content/uploads/2016/11/IMG_20161102_200226.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /></a></p>
-<p><a class="reference external" href="http://www.moop.org.uk/index.php/2016/11/02/retrochallenge-201610-one-bodge-to-fix-them-all/img_20161102_200335-jpg-sm/"><img alt="SPI Decoder" class="size-full wp-image-1029" src="http://www.moop.org.uk/wp-content/uploads/2016/11/IMG_20161102_200335.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /></a></p>
-<p>Once I had this working I checked that the 74HCT595 was clocking the
-data coming back from the SD correctly. Since my test program soft
-resets the rc2014 when it finishes I was able to check this from BASIC.</p>
-<p><a class="reference external" href="http://www.moop.org.uk/index.php/2016/11/02/retrochallenge-201610-one-bodge-to-fix-them-all/img_20161102_200739-jpg-sm/"><img alt="Reading back the response" class="size-full wp-image-1030" src="http://www.moop.org.uk/wp-content/uploads/2016/11/IMG_20161102_200739.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /></a></p>
-<p>Now that this is working I need to write a (less messy) program to fully
-initialise the SD card and switch to fast mode. Once that is done I will
-verify the schematic by rebuilding the circuit on stripboard from the
-schematic, before designing a proper PCB for the circuit including a
-proper SD card socket.</p>
-<p>There are also a couple of potential minor hardware improvements to
-investigate:</p>
-<ul class="simple">
-<li>As noted in my last post that it's likely that I can get rid of the
-second 74HCT374 and switch to just using the simple edge trigger
-circuit.</li>
-<li>Fast mode should be pretty optimal when used with the Z80 OTIR
-instruction to write many bytes of data from memory straight to an IO
-port, however for reading data from the card I currently need to
-alternate writing 0xff and then read the result back with with an IN
-instruction. I can use the INI instruction to automatically keep
-track of where the read bytes should go in memory but I can't use the
-INIR instruction which would be faster. Some extra logic to
-(optionally) trigger a write after a read would allow me to use INIR
-to read blocks of data with the implicit write priming the input
-shift register with the next byte after each read.</li>
-</ul>
-<p>Finally, here's the final schematic:</p>
-<p><a class="reference external" href="http://www.moop.org.uk/index.php/2016/11/02/retrochallenge-201610-one-bodge-to-fix-them-all/z80_sd_interface-sch-2/"><img alt="Final Schematic" class="size-full wp-image-1032" src="http://www.moop.org.uk/wp-content/uploads/2016/11/z80_sd_interface.sch_.png" style="width: 1488px; height: 1052px;" /></a></p>
-<p>Even though I didn't quite get it done within the deadline I can call
-this RetroChallenge a success (it was definitely good motivation).</p>
-<p>For bonus points I managed to use exactly all the gates in the 7400 quad
-NAND and 7404 hex inverter that make up my glue logic.</p>
-<p>Now it's probably time to start reading the CP/M BIOS Alteration Guide!</p>
-                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+move the rising edge of the clock to a point where …</p>
+                <a class="readmore" href="https://www.moop.org.uk/retrochallenge-201610-one-bodge-to-fix-them-all.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
