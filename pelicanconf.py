@@ -21,6 +21,7 @@ AUTHOR_FEED_RSS = None
 
 # Copy static images into the output directory
 STATIC_PATHS = (
+	'CNAME',
 	'wp-content/uploads',
 	'images/',
 )
