@@ -2,8 +2,8 @@ New Site With Pelican Static Site Generator
 ###########################################
 :date: 2017-02-06 20:57
 :author: moop
-:category: Site
-:tags: Site, Pelican
+:category: About
+:tags: Pelican
 :slug: new-site
 :status: published
 
