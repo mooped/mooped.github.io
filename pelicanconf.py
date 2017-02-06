@@ -19,6 +19,12 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
+# Copy static images into the output directory
+STATIC_PATHS = (
+	'wp-content/uploads',
+	'images/',
+)
+
 # Blogroll
 LINKS = ()
 #LINKS = (('Pelican', 'http://getpelican.com/'),
