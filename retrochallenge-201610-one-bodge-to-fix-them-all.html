@@ -59,17 +59,16 @@ my SD card interface today and I have it working!</p>
 <p>I switched the clock output to the SD card from SH_CLK to /SH_CLK to
 move the rising edge of the clock to a point where the output from the
 shift register is stable, and now it works nicely.</p>
-<p>[caption id=&quot;attachment_1031&quot; align=&quot;alignnone&quot; width=&quot;1024&quot;]<a class="reference external" href="http://www.moop.org.uk/index.php/2016/11/02/retrochallenge-201610-one-bodge-to-fix-them-all/img_20161102_210914-jpg-sm/"><img alt="It's always a one character Fix!" class="size-full wp-image-1031" src="http://www.moop.org.uk/wp-content/uploads/2016/11/IMG_20161102_210914.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /></a> It's always a one character Fix![/caption]</p>
+<p><a class="reference external" href="http://www.moop.org.uk/index.php/2016/11/02/retrochallenge-201610-one-bodge-to-fix-them-all/img_20161102_210914-jpg-sm/"><img alt="It's always a one character fix!" class="size-full wp-image-1031" src="http://www.moop.org.uk/wp-content/uploads/2016/11/IMG_20161102_210914.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /></a></p>
 <p>This eliminated the critical timing that the Bus Pirate was have gotten
 away with but my circuit did not.</p>
-<p>[caption id=&quot;attachment_1027&quot; align=&quot;alignnone&quot; width=&quot;1024&quot;]<a class="reference external" href="http://www.moop.org.uk/index.php/2016/11/02/retrochallenge-201610-one-bodge-to-fix-them-all/img_20161102_200157-jpg-sm/"><img alt="0x40" class="size-full wp-image-1027" src="http://www.moop.org.uk/wp-content/uploads/2016/11/IMG_20161102_200157.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /></a>
-0x40[/caption]</p>
-<p>[caption id=&quot;attachment_1028&quot; align=&quot;alignnone&quot; width=&quot;1024&quot;]<a class="reference external" href="http://www.moop.org.uk/index.php/2016/11/02/retrochallenge-201610-one-bodge-to-fix-them-all/img_20161102_200226-jpg-sm/"><img alt="0x95 and a response" class="size-full wp-image-1028" src="http://www.moop.org.uk/wp-content/uploads/2016/11/IMG_20161102_200226.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /></a> 0x95 and a response (0x01)[/caption]</p>
-<p>[caption id=&quot;attachment_1029&quot; align=&quot;alignnone&quot; width=&quot;1024&quot;]<a class="reference external" href="http://www.moop.org.uk/index.php/2016/11/02/retrochallenge-201610-one-bodge-to-fix-them-all/img_20161102_200335-jpg-sm/"><img alt="SPI Decoder" class="size-full wp-image-1029" src="http://www.moop.org.uk/wp-content/uploads/2016/11/IMG_20161102_200335.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /></a> SPI Decoder[/caption]</p>
+<p><a class="reference external" href="http://www.moop.org.uk/index.php/2016/11/02/retrochallenge-201610-one-bodge-to-fix-them-all/img_20161102_200157-jpg-sm/"><img alt="0x40" class="size-full wp-image-1027" src="http://www.moop.org.uk/wp-content/uploads/2016/11/IMG_20161102_200157.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /></a></p>
+<p><a class="reference external" href="http://www.moop.org.uk/index.php/2016/11/02/retrochallenge-201610-one-bodge-to-fix-them-all/img_20161102_200226-jpg-sm/"><img alt="0x95 and a response" class="size-full wp-image-1028" src="http://www.moop.org.uk/wp-content/uploads/2016/11/IMG_20161102_200226.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /></a></p>
+<p><a class="reference external" href="http://www.moop.org.uk/index.php/2016/11/02/retrochallenge-201610-one-bodge-to-fix-them-all/img_20161102_200335-jpg-sm/"><img alt="SPI Decoder" class="size-full wp-image-1029" src="http://www.moop.org.uk/wp-content/uploads/2016/11/IMG_20161102_200335.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /></a></p>
 <p>Once I had this working I checked that the 74HCT595 was clocking the
 data coming back from the SD correctly. Since my test program soft
 resets the rc2014 when it finishes I was able to check this from BASIC.</p>
-<p>[caption id=&quot;attachment_1030&quot; align=&quot;alignnone&quot; width=&quot;1024&quot;]<a class="reference external" href="http://www.moop.org.uk/index.php/2016/11/02/retrochallenge-201610-one-bodge-to-fix-them-all/img_20161102_200739-jpg-sm/"><img alt="Reading back the response" class="size-full wp-image-1030" src="http://www.moop.org.uk/wp-content/uploads/2016/11/IMG_20161102_200739.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /></a> Reading back the response[/caption]</p>
+<p><a class="reference external" href="http://www.moop.org.uk/index.php/2016/11/02/retrochallenge-201610-one-bodge-to-fix-them-all/img_20161102_200739-jpg-sm/"><img alt="Reading back the response" class="size-full wp-image-1030" src="http://www.moop.org.uk/wp-content/uploads/2016/11/IMG_20161102_200739.jpg.sm_.jpg" style="width: 1024px; height: 766px;" /></a></p>
 <p>Now that this is working I need to write a (less messy) program to fully
 initialise the SD card and switch to fast mode. Once that is done I will
 verify the schematic by rebuilding the circuit on stripboard from the
@@ -93,7 +92,7 @@ to read blocks of data with the implicit write priming the input
 shift register with the next byte after each read.</li>
 </ul>
 <p>Finally, here's the final schematic:</p>
-<p>[caption id=&quot;attachment_1032&quot; align=&quot;alignnone&quot; width=&quot;1488&quot;]<a class="reference external" href="http://www.moop.org.uk/index.php/2016/11/02/retrochallenge-201610-one-bodge-to-fix-them-all/z80_sd_interface-sch-2/"><img alt="Final Schematic" class="size-full wp-image-1032" src="http://www.moop.org.uk/wp-content/uploads/2016/11/z80_sd_interface.sch_.png" style="width: 1488px; height: 1052px;" /></a> Final Schematic[/caption]</p>
+<p><a class="reference external" href="http://www.moop.org.uk/index.php/2016/11/02/retrochallenge-201610-one-bodge-to-fix-them-all/z80_sd_interface-sch-2/"><img alt="Final Schematic" class="size-full wp-image-1032" src="http://www.moop.org.uk/wp-content/uploads/2016/11/z80_sd_interface.sch_.png" style="width: 1488px; height: 1052px;" /></a></p>
 <p>Even though I didn't quite get it done within the deadline I can call
 this RetroChallenge a success (it was definitely good motivation).</p>
 <p>For bonus points I managed to use exactly all the gates in the 7400 quad
